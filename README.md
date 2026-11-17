@@ -123,7 +123,7 @@ AI in Energy and Petrochemicals
 - [U.S. Energy Information Administration: Hourly Electric Grid Monitor (EIA-930), about the data](https://www.eia.gov/electricity/gridmonitor/about)
 - [NASA Open Data Portal: CMAPSS Jet Engine Simulated Data](https://data.nasa.gov/dataset/cmapss-jet-engine-simulated-data)
 - [Tennessee Eastman process simulation data, the files of the Braatz group (mirror)](https://github.com/camaramm/tennessee-eastman-profBraatz)
-- [Downs and Vogel: A plant-wide industrial process control problem (1993)](https://doi.org/10.1016/0098-1354(93)80018-I)
+- [Downs and Vogel: A plant-wide industrial process control problem (1993)](https://doi.org/10.1016/0098-1354%2893%2980018-I)
 
 ### المنهج والأدلة
 
