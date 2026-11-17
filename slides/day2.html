@@ -1,158 +1,513 @@
 <section class="slide title" id="title" data-auto="title">
-  <aside class="notes">REPLACE: الترحيب، والتعريف بنفسك، وسؤال للقاعة يضبط الإيقاع، وإيقاع اليوم</aside>
+  <aside class="notes"><p>ابدأ بسؤال: من غيّر رأيه أمس في نموذج يستعمله في عمله؟ ثم قدّم اليوم في جملة: أمس سألنا هل يغلب النموذج القاعدة وكم يكلف خطؤه؛ اليوم نسأل من يملك إيقافه، وما الذي يحميه، وأين نبدأ.</p></aside>
 </section>
 
-<section class="slide" id="agenda" data-auto="agenda"></section>
+<section class="slide" id="agenda" data-auto="agenda">
+  <aside class="notes"><p>أربع جلسات. المختبر الأخير يبدأ خريطة المشروع الختامي. المساعد مسموح في مختبرات الحجة والخريطة، وكل ما يكتبه يُفحص بقائمة. الاستراحات بزر B.</p></aside>
+</section>
+
+<section class="slide" id="check-review-day1" data-lo="LO2">
+  <div class="kicker">مراجعة أمس</div>
+  <h2>تقرير مورّد يعود إلى المكتب</h2>
+  <div class="quiz" data-type="single" data-lo="LO2">
+    <p class="lead">بعد شهر يعود «أفلاك» بنسخة جديدة: «خطؤها في ساعات الذروة على 2024 أقل من الاستمرارية». ما الذي ينقص هذا الادعاء لتقبله؟</p>
+    <div class="opts">
+      <div class="opt" data-ok>أن تكون 2024 خارج تدريب النسخة الجديدة، وأن يُسعَّر الخطأ بالتكلفتين</div>
+      <div class="opt" data-why="يظن أن الذروة وحدها تحسم: 2024 صارت سنة يعرفها المورّد، وقد يكون درّب عليها">لا ينقصه شيء: الذروة هي ما طلبناه</div>
+      <div class="opt" data-why="يقيس بالمتوسط من جديد: المتوسط هو ما أخفى الذروة أصلًا">أن يكون متوسط خطئه السنوي أقل أيضًا</div>
+      <div class="opt" data-why="يطلب دليلًا على الطريقة بدل دليل على النتيجة: الخوارزمية لا تقول على أي بيانات قيس">أن يشرح الخوارزمية الجديدة وأسباب تحسنها</div>
+    </div>
+    <div class="callout tip why"><b>لماذا.</b> 2024 نُشرت وصارت متاحة للمورّد، فقد تدخل تدريب النسخة الجديدة. الاختبار يُعاد على فترة لم يرها، والقرار بالتكلفة لا بالخطأ.</div>
+  </div>
+  <aside class="notes"><p>الإجابة: أ. دقيقة واحدة لما بقي من أمس. الفكرة الجديدة فيها: كل بيانات اختبار تنشرها تصير بيانات تدريب محتملة للمورّد، فاحفظ فترة اختبار لا تسلّمها.</p></aside>
+</section>
 
 <!-- الجلسة 1 -->
 
 <section class="slide section" id="s1" data-auto="section" data-session="1"></section>
 
-<section class="slide" id="s1-idea">
-  <div class="kicker">REPLACE: السؤال الذي تجيب عنه الشريحة</div>
-  <h2>REPLACE: فكرة واحدة في جملة</h2>
-  <div class="cols cols-2">
-    <ul class="bullets">
-      <li>REPLACE: ست نقاط على الأكثر، كل منها فكرة تامة</li>
-      <li>REPLACE: أبرز العبارة الأساسية، والأرقام من تشغيل المختبر لا من الذاكرة</li>
-    </ul>
-    <div class="card c-teal"><h4>في دراسة الحالة</h4><p class="small mb0">REPLACE: اربط الفكرة بدراسة الحالة وبياناتها</p></div>
+<section class="slide" id="soft-sensors" data-lo="LO3">
+  <div class="kicker">المستشعر البرمجي</div>
+  <h2>المستشعر البرمجي يقدّر كل دقيقة ما يقيسه المختبر كل ساعات</h2>
+  <div class="flow">
+    <div class="step c-teal"><b>قراءات رخيصة</b>حرارة وضغط وتدفق، كل دقيقة</div>
+    <div class="arrow">←</div>
+    <div class="step c-cyan"><b>نموذج</b>يتعلم العلاقة من عينات المختبر السابقة</div>
+    <div class="arrow">←</div>
+    <div class="step c-purple"><b>تقدير</b>نقاء المنتج بين عينتين</div>
   </div>
-  <div class="callout warn mt"><b>أين يقع الخطأ.</b> REPLACE: الخطأ الذي سيقع فيه المشاركون، وكيف يتعرفون عليه</div>
-  <aside class="notes">REPLACE: ما تقوله، والعرض الحي، والسؤال للقاعة، والخطأ الشائع وحلّه</aside>
+  <div class="callout warn mt"><b>أين يقع الخطأ.</b> المستشعر البرمجي ينحرف حين تتغير التغذية أو تتسخ المعدة، والمختبر وحده يكشف ذلك. اسأل: كم مرة يُقارن التقدير بعينة المختبر، ومن يعيد المعايرة؟</div>
+  <aside class="notes"><p>U03 وU04 في ذُرى: المستشعر نفسه للعرض أو داخل المتحكم المتقدم. القيمة في الثاني أكبر لأن المتحكم يستعمله، والخطر أكبر للسبب نفسه.</p></aside>
 </section>
 
-<section class="slide" id="s1-steps">
-  <div class="kicker">خطوة بخطوة</div>
-  <h2>REPLACE: عملية تظهر خطوة مع كل ضغطة</h2>
-  <div class="flow">
-    <div class="step c-teal"><b>1 · REPLACE: الاسم</b>REPLACE: ما يحدث أولًا</div>
-    <div class="arrow frag" data-frag="b">←</div><div class="step c-cyan frag" data-frag="b"><b>2 · REPLACE: الاسم</b>REPLACE: الجزء التالي</div>
-    <div class="arrow frag" data-frag="c">←</div><div class="step c-coral frag" data-frag="c"><b>3 · REPLACE: الاسم</b>REPLACE: النتيجة</div>
+<section class="slide" id="model-kinds" data-lo="LO3">
+  <div class="kicker">النموذج المتعلَّم والهجين والمستنير بالفيزياء</div>
+  <h2>كلما قلّت البيانات أو خرج التشغيل عن المألوف، احتجت الفيزياء</h2>
+  <div class="cols cols-3">
+    <div class="card c-teal"><h4>متعلَّم من البيانات</h4><p class="small mb0">يتعلم من السجل وحده. قوي داخل ما رآه، وأعمى خارجه.</p></div>
+    <div class="card c-cyan"><h4>هجين</h4><p class="small mb0">معادلات معروفة للجريان أو التوازن، والنموذج يتعلم ما تخطئ فيه المعادلات. مثال: U02 لمحاكاة المكمن.</p></div>
+    <div class="card c-purple"><h4>مستنير بالفيزياء</h4><p class="small mb0">يُدرَّب وهو مقيَّد بقوانين الحفظ، فلا يعطي إجابة تخالفها حين يتنبأ خارج بياناته.</p></div>
   </div>
-  <div class="callout tip mt frag"><b>الخلاصة.</b> REPLACE: الجملة التي تبقى في الذاكرة</div>
-  <aside class="notes">اضغط مرة لكل خطوة، وقل ما تضيفه كل خطوة قبل ظهور التالية. REPLACE: المثال الذي تشرحه</aside>
+  <div class="callout tip mt"><b>السؤال للمورّد.</b> ماذا يفعل نموذجك في حال تشغيل لم يرها؟ المتعلَّم يجيب بثقة، والهجين يستند إلى معادلته.</div>
+  <aside class="notes"><p>لا تدخل في الرياضيات. المهم للمدير: النموذج الهجين أقل حاجة إلى الأعطال الموسومة، وأقل جرأة خارج بياناته. في U02 يعيد مهندس المكمن أفضل ثلاثة سيناريوهات على المحاكي الكامل: النموذج يرتّب ولا يقرر.</p></aside>
+</section>
+
+<section class="slide" id="detector-learns-normal" data-lo="LO3">
+  <div class="kicker">كاشف الأعطال</div>
+  <h2>الكاشف يتعلم التشغيل الطبيعي وحده، فيكشف ما يخالفه دون أن يسمّيه</h2>
+  <div class="cols cols-2">
+    <ul class="bullets">
+      <li>لا يحتاج أعطالًا موسومة: يكفيه سجل تشغيل طبيعي</li>
+      <li>يحسب مؤشر انحراف عن الطبيعي لكل عينة</li>
+      <li>يرفع الإنذار حين يعبر المؤشر حدًّا: الحد هو الإعداد</li>
+      <li>لا يقول ما العطل: هذا عمل المشغّل</li>
+    </ul>
+    <div class="card c-amber"><h4>في المختبر 2.1</h4><p class="small mb0">كاشف بالمكونات الرئيسية دُرّب على التشغيل الطبيعي لعملية محاكاة منشورة، وثلاثة حدود: A الأحسّ، وB، وC الأقل حساسية.</p></div>
+  </div>
+  <aside class="notes"><p>الكاشف في بناء المقرر: تحليل المكونات الرئيسية بتسعة مكونات على التشغيل الطبيعي، ومؤشر الانحراف مسافة العينة عن الطبيعي. هذا كله في <code>labs/_tools/prepare_files.py</code>، والمشاركون يرون المؤشر والإنذارات فقط.</p></aside>
+</section>
+
+<section class="slide" id="tennessee-eastman" data-lo="LO3">
+  <div class="kicker">البيانات</div>
+  <h2>محاكاة منشورة لعملية كيميائية، فيها أعطال معروفة الموعد</h2>
+  <div class="cols cols-3">
+    <div class="stat"><div class="big">13</div><div class="lbl">تشغيلة: واحدة طبيعية، واثنتا عشرة بعطل</div></div>
+    <div class="stat"><div class="big">3</div><div class="lbl">دقائق بين العينة والتالية، 960 عينة لكل تشغيلة</div></div>
+    <div class="stat"><div class="big">483</div><div class="lbl">دقيقة من التشغيل الطبيعي قبل أن يبدأ العطل</div></div>
+  </div>
+  <div class="callout note mt"><b>Tennessee Eastman.</b> عملية صناعية محاكاة نشرها Downs وVogel عام 1993 لاختبار طرق التحكم، وصارت مرجعًا لاختبار كواشف الأعطال. في ملفنا المؤشر المحسوب منها فقط، لا متغيرات العملية.</div>
+  <aside class="notes"><p>لماذا محاكاة؟ لأننا نعرف موعد بدء كل عطل، فنقيس التأخر بالدقيقة. في المعمل الحقيقي يُعرف موعد العطل بعد التحقيق، وقد لا يُعرف. Sources: Downs and Vogel (1993); ملفات مجموعة Braatz من نسخة منشورة على GitHub.</p></aside>
+</section>
+
+<section class="slide" id="three-numbers" data-lo="LO3">
+  <div class="kicker">سجل الكاشف</div>
+  <h2>ثلاثة أرقام لكل تشغيلة: الكاذب، والتأخر، وحصة الإنذار</h2>
+  <table class="t">
+    <tr><th>الرقم</th><th>ما هو</th><th>لماذا</th></tr>
+    <tr><td><b>إنذارات كاذبة</b></td><td>عينات إنذار قبل بدء العطل، وكل إنذار في التشغيلة الطبيعية</td><td>كل منها تحقق مشغّل وفني</td></tr>
+    <tr><td><b>التأخر</b></td><td>الدقائق من بدء العطل إلى أول إنذار</td><td>كل دقيقة يتفاقم فيها العطل</td></tr>
+    <tr><td><b>حصة الإنذار بعد العطل</b></td><td>نسبة العينات التي يبقى فيها الإنذار مرفوعًا</td><td>تفرق الكشف عن المصادفة</td></tr>
+  </table>
+  <div class="callout warn mt"><b>أين يقع الخطأ.</b> عدّ التشغيلة مكشوفة لأن إنذارًا ظهر بعد العطل. كاشف ينذر في 10% من الوقت الطبيعي سيُظهر إنذارًا بعد أي عطل. الشرط: حصة نصف على الأقل.</div>
+  <aside class="notes"><p>اكتب على السبورة شرط الكشف من جدول التكلفة: «حين يكون الإنذار مرفوعًا في 0.5 على الأقل من العينات بعد بدء العطل». هذا قرار، ويمكن أن يكون غيره في جهة أخرى.</p></aside>
+</section>
+
+<section class="slide" id="alarm-flood" data-lo="LO3">
+  <div class="kicker">ما لا يدخل جدول التكلفة</div>
+  <h2>الإنذار الكاذب يكلف أكثر من ثمنه: يعلّم المشغّل أن يتجاهل</h2>
+  <div class="cols cols-2">
+    <ul class="bullets">
+      <li>غرفة التحكم في ذُرى فيها مشغّلان لكل مناوبة</li>
+      <li>كل إنذار جديد يزاحم إنذارات نظام التحكم</li>
+      <li>سيل الإنذارات بعد حدث واحد يخفي الإنذار المهم</li>
+      <li>والمشغّل الذي اعتاد الكاذب يتأخر في الصادق</li>
+    </ul>
+    <div class="card c-coral"><h4>اسأل صاحبة نظام الإنذارات</h4><p class="small mb0">كم إنذارًا في الساعة تتحمله الغرفة اليوم؟ وأين يُعرض إنذار الكاشف: مع إنذارات السلامة أم في شاشة منفصلة؟</p></div>
+  </div>
+  <aside class="notes"><p>إدارة الإنذارات في صناعة العمليات لها سلسلة معايير: ISA-18 من الجمعية الدولية للأتمتة. لا نعرض أرقامها هنا؛ يكفي أن صاحبة نظام الإنذارات، خولة العتيبي، تملك حدًّا للغرفة، وأن الكاشف الجديد يدخل تحته. Sources: International Society of Automation, ISA-18 series.</p></aside>
+</section>
+
+<section class="slide" id="what-it-cannot-see" data-lo="LO3">
+  <div class="kicker">حدود الكاشف</div>
+  <h2>بعض الأعطال تبدو للكاشف تشغيلًا طبيعيًّا</h2>
+  <div class="cols cols-2">
+    <div class="card c-purple"><h4>عطل يغيّر ما تعلّمه الكاشف</h4><p class="small mb0">المؤشر يقفز، والإنذار يبقى مرفوعًا: يُكشف بكل الإعدادات.</p></div>
+    <div class="card c-amber"><h4>عطل صغير أو بطيء أو يعوّضه التحكم</h4><p class="small mb0">المؤشر يبقى في مداه الطبيعي: لا يُكشف بأي حد، مهما خُفض.</p></div>
+  </div>
+  <div class="callout tip mt"><b>ما تكتبه.</b> قائمة بالأعطال التي لا يكشفها الكاشف، باسمها، في ورقة تكلفة الأخطاء وفي حجة السلامة. خفض الحد لا يكشفها، بل يزيد الكاذب.</div>
+  <aside class="notes"><p>لا تكشف أي التشغيلات فائتة: هذا من نتيجة المختبر. بعده ارجع إلى الشريحة واسأل: لماذا لا يحل خفض الحد المشكلة؟ لأن هذه التشغيلات لا تختلف عن الطبيعي في المؤشر نفسه.</p></aside>
+</section>
+
+<section class="slide" id="check-detector-setting" data-lo="LO3">
+  <div class="kicker">نقطة تحقق</div>
+  <h2>اختيار إعداد الكاشف</h2>
+  <div class="quiz" data-type="single" data-lo="LO3">
+    <p class="lead">إعداد يكشف كل الأعطال التي يكشفها غيره بأقل تأخر، لكنه يرفع إنذارًا كاذبًا في نحو عُشر وقت التشغيل الطبيعي. والإعداد الآخر يكشف الأعطال نفسها بتأخر أطول وإنذارات أقل كثيرًا. كيف تختار؟</p>
+    <div class="opts">
+      <div class="opt" data-why="يحكم بسرعة الكشف وحدها: الإنذارات الكاذبة لها ثمن مباشر وثمن في انتباه المشغّل">الأسرع دائمًا، لأن التأخر في العطل أخطر</div>
+      <div class="opt" data-why="يحكم بالكاذب وحده: الإعداد الأهدأ قد يفوّت أعطالًا يكشفها غيره">الأقل إنذارًا كاذبًا، حتى لا يتعب المشغّل</div>
+      <div class="opt" data-ok>أسعّر الكاذب والتأخر والفائت بجدول التكلفة، وأسأل صاحبة الإنذارات عن حد الغرفة</div>
+      <div class="opt" data-why="يجعل الاختيار شأن المورّد: الإعداد يتبع تكاليف المعمل وغرفة التحكم، لا بيانات المعايرة">الإعداد الذي ضبطه المورّد على بيانات المعايرة</div>
+    </div>
+    <div class="callout tip why"><b>لماذا.</b> الاختيار تبادل بين ثلاثة أخطاء بأثمان مختلفة، وفوقها حد ما تتحمله الغرفة. التسعير يحسم الأول، وصاحبة نظام الإنذارات تحسم الثاني.</div>
+  </div>
+  <aside class="notes"><p>الإجابة: ج. «أ» و«ب» نصف الجواب. المختبر يبين أن الإعداد الأقل تكلفة ليس الأسرع ولا الأهدأ.</p></aside>
 </section>
 
 <section class="slide lab" id="lab-2-1" data-auto="lab" data-lab="2.1">
-  <aside class="notes">REPLACE: ما تراقبه أثناء عمل المشاركين، والمشكلات المعتادة، والبديل لمن لم يُنهِ مختبرًا سابقًا</aside>
+  <aside class="notes"><p>من لم يكمل سطر التوربينات يبدأ من <code>start/cost_sheet_after_1_4.csv</code>. راقب: نسيان إنذارات R04 في المجموع، وحساب التأخر للأعطال الفائتة، وعدّ R13 مكشوفة لأن أول إنذار جاء في الدقيقة الأولى. <code>MINIFS</code> موجودة في الإصدارات الحديثة من الجداول؛ من لا يجدها يصفّي ويقرأ أول صف بإنذار.</p></aside>
 </section>
 
 <!-- الجلسة 2 -->
 
 <section class="slide section" id="s2" data-auto="section" data-session="2"></section>
 
-<section class="slide" id="s2-idea">
-  <div class="kicker">REPLACE: السؤال الذي تجيب عنه الشريحة</div>
-  <h2>REPLACE: فكرة واحدة في جملة</h2>
-  <div class="cols cols-2">
-    <ul class="bullets">
-      <li>REPLACE: ست نقاط على الأكثر، كل منها فكرة تامة</li>
-      <li>REPLACE: أبرز العبارة الأساسية، والأرقام من تشغيل المختبر لا من الذاكرة</li>
-    </ul>
-    <div class="card c-teal"><h4>في دراسة الحالة</h4><p class="small mb0">REPLACE: اربط الفكرة بدراسة الحالة وبياناتها</p></div>
-  </div>
-  <div class="callout warn mt"><b>أين يقع الخطأ.</b> REPLACE: الخطأ الذي سيقع فيه المشاركون، وكيف يتعرفون عليه</div>
-  <aside class="notes">REPLACE: ما تقوله، والعرض الحي، والسؤال للقاعة، والخطأ الشائع وحلّه</aside>
+<section class="slide" id="results-2-1" data-lo="LO3">
+  <div class="kicker">ما وجدتموه في المختبر 2.1</div>
+  <h2>الإعداد الأقل تكلفة ليس الأسرع ولا الأهدأ</h2>
+  <table class="t">
+    <tr><th>الإعداد</th><th class="num">كاذبة</th><th class="num">مكشوفة</th><th class="num">فائتة</th><th class="num">دقائق التأخر</th><th class="num">التكلفة (ريال)</th></tr>
+    <tr><td>A الأحسّ</td><td class="num">199</td><td class="num">8</td><td class="num">4</td><td class="num">120</td><td class="num">2,437,000</td></tr>
+    <tr class="hl"><td>B</td><td class="num">46</td><td class="num">8</td><td class="num">4</td><td class="num">306</td><td class="num">2,350,000</td></tr>
+    <tr><td>C الأهدأ</td><td class="num">5</td><td class="num">6</td><td class="num">6</td><td class="num">228</td><td class="num">2,871,000</td></tr>
+  </table>
+  <p class="caption">أربع تشغيلات لا يكشفها أي إعداد: R06 وR10 وR12 وR13. الإعداد A ينذر في 8.6% من عينات التشغيل الطبيعي، والمورّد ضبطه على 1%.</p>
+  <aside class="notes"><p>الأرقام من <code>check.py 2.1</code> على ملفات المشاركين. ورقة تكلفة الأخطاء اكتملت الآن: دليل الناتج الثالث. اسأل: ما الذي تقوله الأعطال الأربعة الفائتة لحجة السلامة التي نكتبها الآن؟ الجواب: كل كاشف له قائمة بما لا يراه، وتُكتب.</p></aside>
 </section>
 
-<section class="slide" id="s2-steps">
-  <div class="kicker">خطوة بخطوة</div>
-  <h2>REPLACE: عملية تظهر خطوة مع كل ضغطة</h2>
-  <div class="flow">
-    <div class="step c-teal"><b>1 · REPLACE: الاسم</b>REPLACE: ما يحدث أولًا</div>
-    <div class="arrow frag" data-frag="b">←</div><div class="step c-cyan frag" data-frag="b"><b>2 · REPLACE: الاسم</b>REPLACE: الجزء التالي</div>
-    <div class="arrow frag" data-frag="c">←</div><div class="step c-coral frag" data-frag="c"><b>3 · REPLACE: الاسم</b>REPLACE: النتيجة</div>
+<section class="slide" id="safety-case-pointer" data-lo="LO4">
+  <div class="kicker">ملف إثبات السلامة</div>
+  <h2>حجة السلامة ادعاء منظم، لكل جزء منه دليل أو ثغرة مكتوبة</h2>
+  <div class="cols cols-2">
+    <ul class="bullets">
+      <li>ملف إثبات السلامة يقدّمه صاحب النظام لمن يوقّع عليه</li>
+      <li>نكتب هنا <b>الجزء الخاص بالذكاء الاصطناعي</b> فقط، نصًّا مرقّمًا</li>
+      <li>الموقّع في ذُرى: مدير سلامة العمليات</li>
+      <li>المقياس: قائمة تحقق من عشرة بنود، 20 درجة</li>
+    </ul>
+    <div class="card c-navy"><h4>العمق في DEV-PHY-401</h4><p class="small mb0">رسم الحجة بترميز الأهداف (GSN)، وتحليل المخاطر بطريقة STPA، والمعايير الوظيفية، ومراقبة ما خارج النطاق أثناء التشغيل.</p></div>
   </div>
-  <div class="callout tip mt frag"><b>الخلاصة.</b> REPLACE: الجملة التي تبقى في الذاكرة</div>
-  <aside class="notes">اضغط مرة لكل خطوة، وقل ما تضيفه كل خطوة قبل ظهور التالية. REPLACE: المثال الذي تشرحه</aside>
+  <aside class="notes"><p>هذه الورشة لا تعلّم كتابة ملف سلامة كامل. تعلّم المدير أن يقرأ الجزء الذي يخص النموذج ويطلبه. من يكتب الملف الكامل لنظام بحلقة مغلقة يأخذ DEV-PHY-401. ترميز الأهداف معيار يحفظه نادي أنظمة السلامة الحرجة (SCSC). Sources: Safety-Critical Systems Club, GSN.</p></aside>
+</section>
+
+<section class="slide" id="nadhir-in-one-picture" data-lo="LO4">
+  <div class="kicker">«نذير»</div>
+  <h2>«نذير» يقرأ ويوصي، والمشغّل يدخل نقاط الضبط بيده</h2>
+  <div class="flow">
+    <div class="step c-teal"><b>السجل التاريخي</b>400 قراءة كل دقيقة، من نسخة للقراءة فقط</div>
+    <div class="arrow">←</div>
+    <div class="step c-cyan"><b>«نذير»</b>توصية بتوزيع الحمل، وتنبيه بهامش الاندفاع</div>
+    <div class="arrow">←</div>
+    <div class="step c-amber"><b>الشاشة والمشغّل</b>يقرأ، وإن اقتنع أدخل نقاط الضبط</div>
+    <div class="arrow">←</div>
+    <div class="step c-coral"><b>نظام التحكم</b>وتحته طبقتا حماية مستقلتان لا يتصل بهما «نذير»</div>
+  </div>
+  <aside class="notes"><p>اقرأ الوصف مع القاعة من <code>nadhir_description.txt</code>. اسأل: أين الإنسان في هذا الخط؟ بين الشاشة ونظام التحكم. لهذا هو استشاري. ثم اسأل: لو غاب الإنسان، ما الذي يمنع التوصية الخاطئة من إيقاف الضاغط؟ متحكم منع الاندفاع ونظام السلامة الآلي، وكلاهما مستقل.</p></aside>
+</section>
+
+<section class="slide" id="six-hazards" data-lo="LO4">
+  <div class="kicker">سجل مصادر الخطر</div>
+  <h2>ستة طرق يساهم بها نظام استشاري في حادث</h2>
+  <table class="t small">
+    <tr><th></th><th>مصدر الخطر</th><th>كيف يساهم «نذير»</th></tr>
+    <tr><td>H1</td><td>توصية خاطئة</td><td>المشغّل ينفذها فيقترب ضاغط من الاندفاع</td></tr>
+    <tr><td>H2</td><td>توصية قديمة</td><td>قراءة مجمّدة أو متأخرة، والشاشة لا تبيّن عمر البيانات</td></tr>
+    <tr><td>H3</td><td>ثقة زائدة</td><td>المشغّل يتبعها خارج ما اختُبرت فيه</td></tr>
+    <tr><td>H4</td><td>سيل تنبيهات</td><td>تشغل المشغّل عن إنذارات نظام التحكم</td></tr>
+    <tr><td>H5</td><td>تشغيل خارج النطاق</td><td>شتاء، أو بدء تشغيل، أو ضاغطان فقط</td></tr>
+    <tr><td>H6</td><td>اختراق أو تسريب</td><td>دخول المورّد عن بعد، وتصدير القراءات</td></tr>
+  </table>
+  <aside class="notes"><p>لاحظ أن ثلاثة من الستة لا علاقة لها بدقة النموذج: القراءة القديمة (H2 من المختبر 1.3)، والسيل (H4 من المختبر 2.1)، والأمن (H6 في الجلسة القادمة). الدقة مصدر خطر واحد من ستة.</p></aside>
+</section>
+
+<section class="slide" id="envelope-from-evidence" data-lo="LO4">
+  <div class="kicker">نطاق التشغيل</div>
+  <h2>ارسم النطاق على ما يغطيه الدليل، لا على ما يتمناه المورّد</h2>
+  <div class="cols cols-2">
+    <div class="card c-teal"><h4>ما رآه النموذج (E3)</h4><p class="small mb0">14 شهرًا من مارس إلى سبتمبر في سنتين، والضواغط الثلاثة عاملة، وتشغيل مستقر.</p></div>
+    <div class="card c-coral"><h4>ما لم يره</h4><p class="small mb0">الشتاء، وبدء التشغيل والإيقاف، والتشغيل بضاغطين.</p></div>
+  </div>
+  <div class="callout tip mt"><b>في الحجة.</b> C1: من مارس إلى سبتمبر، والضواغط الثلاثة، وتشغيل مستقر. وخارج ذلك تُطفأ شاشة التوصيات. ما لم يُختبر يُكتب ثغرة، لا يُضمّ إلى النطاق.</div>
+  <aside class="notes"><p>هذا العيب الأكثر شيوعًا في الحجج المكتوبة بسرعة، والمساعد يقع فيه كثيرًا: «يعمل على مدار السنة». اسأل: من يطفئ الشاشة في أول أيام الشتاء؟ هذا سؤال للتجاوز والبديل بعد شريحتين.</p></aside>
+</section>
+
+<section class="slide" id="argument-in-text" data-lo="LO4">
+  <div class="kicker">الحجة نصًّا</div>
+  <h2>خمسة رموز تكفي لكتابة الحجة سطرًا سطرًا</h2>
+  <pre class="code" data-file="argument_template.txt"><code>G1  goal: a claim that can be refuted
+C1  context: the operating envelope, with measured limits
+C2  context: the control level, and why
+S1  strategy: argue over each hazard in the hazard log
+G2  (H1) claim ...      E1, E4    evidence from the register
+G3  (H2) claim ...      X1        a written gap, with its plan</code></pre>
+  <div class="callout warn mt"><b>القاعدة.</b> الادعاء الذي لا دليل له في السجل يُكتب تحته X لا E. الثغرة المكتوبة أصدق من الدليل المزعوم.</div>
+  <aside class="notes"><p>الرموز من ترميز الأهداف: هدف، وسياق، واستراتيجية، ودليل. أضفنا X للثغرة لأن المدير يحتاج أن يرى ما لم يُثبت بعد. القالب بالعربية في <code>argument_template.txt</code>.</p></aside>
+</section>
+
+<section class="slide" id="evidence-limits" data-lo="LO4">
+  <div class="kicker">حدود الدليل</div>
+  <h2>كل دليل يثبت شيئًا محددًا، ولا يثبت ما بجواره</h2>
+  <table class="t small">
+    <tr><th>الدليل</th><th>ما يثبته</th><th>ما لا يثبته</th></tr>
+    <tr><td>E1 اختبار رجعي</td><td>خطأ 1.9 نقطة مقابل 3.4 للقاعدة البسيطة</td><td>الشتاء والتشغيل غير المستقر</td></tr>
+    <tr><td>E2 تجربة صامتة</td><td>المشغّلون وافقوا على 81% من 212 توصية</td><td>أن التوصيات صحيحة: لم تُنفَّذ أي منها</td></tr>
+    <tr class="hl"><td>E4 طبقتا الحماية</td><td>الخطأ لا يصل إلى الاندفاع</td><td>أن التوصية جيدة</td></tr>
+    <tr><td>E6 التدريب</td><td>9 من 16 مشغّلًا تدربوا</td><td>السبعة الباقون</td></tr>
+  </table>
+  <aside class="notes"><p>اقرأ E2 بتأنٍّ: الموافقة ليست صحة. مشغّل يوافق على توصية لا يعني أنها كانت ستنجح، وهذا باب تحيز الأتمتة في الجلسة القادمة. الأرقام من سجل الأدلة الاصطناعي <code>evidence_register.csv</code>.</p></aside>
+</section>
+
+<section class="slide" id="override-and-fallback" data-lo="LO4">
+  <div class="kicker">التجاوز والبديل</div>
+  <h2>صاحب صلاحية التجاوز وظيفة ووسيلة وزمن، لا «المشغّل»</h2>
+  <div class="cols cols-2">
+    <div class="card c-teal"><h4>التجاوز (G8)</h4><p class="small mb0">من بالوظيفة، وبأي وسيلة، وفي كم من الوقت، وهل جُرّب. مثال: مشرف غرفة التحكم المناوب يطفئ الشاشة بمفتاح في أقل من دقيقة، ومدير سلامة العمليات يقرر إعادتها.</p></div>
+    <div class="card c-purple"><h4>البديل (G9)</h4><p class="small mb0">ماذا يفعل المشغّل حين يغيب النظام أو يُشك في توصيته: جدول توزيع الحمل الثابت المعتمد. ومتى جُرّب آخر مرة؟</p></div>
+  </div>
+  <aside class="notes"><p>في الوصف: «صاحب صلاحية التجاوز: لم يُسمَّ بعد». هذا عملهم في المختبر. قاعدة المشروع الختامي: كل حالة إشرافية أو بحلقة مغلقة تسمّي صاحب صلاحية التجاوز، والخانة الفارغة تمنع النجاح.</p></aside>
+</section>
+
+<section class="slide" id="check-envelope-claim" data-lo="LO4">
+  <div class="kicker">نقطة تحقق</div>
+  <h2>ادعاء في حجة مقدَّمة إلى اللجنة</h2>
+  <div class="quiz" data-type="single" data-lo="LO4">
+    <p class="lead">في حجة لنظام استشاري: «G6: النموذج يعمم جيدًا على كل الفصول. الدليل: تجربة صامتة ثمانية أسابيع في مارس وأبريل، وافق فيها المشغّلون على 81% من التوصيات». ما الخلل الأهم؟</p>
+    <div class="opts">
+      <div class="opt" data-why="يرى المشكلة في حجم العينة: لو طالت التجربة في الفصلين نفسيهما لبقي الشتاء بلا دليل">ثمانية أسابيع مدة قصيرة لتجربة صامتة</div>
+      <div class="opt" data-ok>الادعاء أوسع من دليله، والموافقة ليست دليلًا على صحة التوصية</div>
+      <div class="opt" data-why="يظن أن النسبة هي المشكلة: لو كانت 95% لبقي الخلل نفسه">81% نسبة منخفضة لنظام يُعتمد</div>
+      <div class="opt" data-why="يخلط بين التنسيق والمضمون: رقم الدليل لا يصلح ادعاءً أوسع منه">الدليل غير مذكور برقمه من سجل الأدلة</div>
+    </div>
+    <div class="callout tip why"><b>لماذا.</b> شهران من الربيع لا يغطيان «كل الفصول»، وموافقة المشغّل على توصية لم تُنفَّذ لا تثبت أنها صحيحة. الحل: نطاق مقصور على ما غُطي، وثغرة مكتوبة للباقي.</div>
+  </div>
+  <aside class="notes"><p>الإجابة: ب. هذه الجملة قريبة من سطر في مسودة المختبر 2.3، فلا تطل: المختبر يعود إليها.</p></aside>
 </section>
 
 <section class="slide lab" id="lab-2-2" data-auto="lab" data-lab="2.2">
-  <aside class="notes">REPLACE: ما تراقبه أثناء عمل المشاركين، والمشكلات المعتادة، والبديل لمن لم يُنهِ مختبرًا سابقًا</aside>
+  <aside class="notes"><p>المختبر يبدأ من ملفات <code>safety/</code>، ولا يحتاج شيئًا سابقًا. ثلاثة مصادر خطر الآن (H1 وH2 وH5)، والثلاثة الباقية في 2.3. راقب الاستشهاد بـE4 دليلًا على جودة التوصيات. الدرجة المتوقعة الآن بين 10 و14 من 20. من استعمل مساعدًا يتحقق من كل رقم دليل في السجل.</p></aside>
 </section>
 
 <!-- الجلسة 3 -->
 
 <section class="slide section" id="s3" data-auto="section" data-session="3"></section>
 
-<section class="slide" id="s3-idea">
-  <div class="kicker">REPLACE: السؤال الذي تجيب عنه الشريحة</div>
-  <h2>REPLACE: فكرة واحدة في جملة</h2>
-  <div class="cols cols-2">
-    <ul class="bullets">
-      <li>REPLACE: ست نقاط على الأكثر، كل منها فكرة تامة</li>
-      <li>REPLACE: أبرز العبارة الأساسية، والأرقام من تشغيل المختبر لا من الذاكرة</li>
-    </ul>
-    <div class="card c-teal"><h4>في دراسة الحالة</h4><p class="small mb0">REPLACE: اربط الفكرة بدراسة الحالة وبياناتها</p></div>
+<section class="slide" id="ot-zones" data-lo="LO4">
+  <div class="kicker">الأمن السيبراني للتقنيات التشغيلية</div>
+  <h2>موقع النظام بين مناطق الشبكة يحدد ما يستطيع أن يفسده</h2>
+  <div class="flow v">
+    <div class="step c-navy"><b>خارج الشركة</b>سحابة المورّد «سِناد»</div>
+    <div class="arrow">↓</div>
+    <div class="step c-cyan"><b>المنطقة الوسيطة</b>نسخة للقراءة فقط من السجل، وخادم «نذير»، ونقطة الدخول عن بعد</div>
+    <div class="arrow">↓</div>
+    <div class="step c-amber"><b>منطقة التحكم</b>نظام التحكم الموزع ومحطات المشغّلين والسجل الأصلي</div>
+    <div class="arrow">↓</div>
+    <div class="step c-coral"><b>منطقة السلامة</b>نظام السلامة الآلي ومتحكمات منع الاندفاع</div>
   </div>
-  <div class="callout warn mt"><b>أين يقع الخطأ.</b> REPLACE: الخطأ الذي سيقع فيه المشاركون، وكيف يتعرفون عليه</div>
-  <aside class="notes">REPLACE: ما تقوله، والعرض الحي، والسؤال للقاعة، والخطأ الشائع وحلّه</aside>
+  <aside class="notes"><p>الملف <code>network_and_data_flows.txt</code>. اسأل: أي سهم يقلقك أكثر؟ سهمان يخرجان من المنطقة الوسيطة إلى الخارج: الدخول عن بعد والتصدير. «نذير» لا يكتب في التحكم اليوم، لكنه يجلس في المنطقة التي يدخل منها المورّد.</p></aside>
 </section>
 
-<section class="slide" id="s3-steps">
-  <div class="kicker">خطوة بخطوة</div>
-  <h2>REPLACE: عملية تظهر خطوة مع كل ضغطة</h2>
-  <div class="flow">
-    <div class="step c-teal"><b>1 · REPLACE: الاسم</b>REPLACE: ما يحدث أولًا</div>
-    <div class="arrow frag" data-frag="b">←</div><div class="step c-cyan frag" data-frag="b"><b>2 · REPLACE: الاسم</b>REPLACE: الجزء التالي</div>
-    <div class="arrow frag" data-frag="c">←</div><div class="step c-coral frag" data-frag="c"><b>3 · REPLACE: الاسم</b>REPLACE: النتيجة</div>
+<section class="slide" id="remote-access-otcc" data-lo="LO4">
+  <div class="kicker">الدخول عن بعد</div>
+  <h2>دخول المورّد اليوم مفتوح دائمًا بحساب مشترك، والمرجع الوطني يطلب العكس</h2>
+  <table class="t small">
+    <tr><th>الضابط الوطني يطلب</th><th>«نذير» اليوم</th></tr>
+    <tr><td>الوصول عن بعد استثناء عند الضرورة، بعد تقييم مخاطر</td><td>متاح في كل وقت</td></tr>
+    <tr><td>تحقق من الهوية متعدد العناصر، وقناة مشفرة</td><td>حساب واحد مشترك بين مهندسي المورّد</td></tr>
+    <tr><td>فترة زمنية محددة وصلاحيات محدودة</td><td>لا حد</td></tr>
+    <tr><td>مراقبة الجلسة وتسجيلها</td><td>دون تسجيل للجلسات</td></tr>
+  </table>
+  <p class="caption">ضابط تقييد الوصول عن بعد لشبكات أنظمة التحكم الصناعي، في ضوابط الأمن السيبراني للأنظمة التشغيلية (OTCC-1:2022) من الهيئة الوطنية للأمن السيبراني.</p>
+  <aside class="notes"><p>العمود الأيسر ملخص لضابط تقييد الوصول عن بعد في الضوابط، والوثيقة تطلب أيضًا مراقبة كل عمليات الوصول عن بعد. اقرأ الوثيقة من مصدرها قبل الدفعة: الإصدارات تتغير. المسؤولة في ذُرى شفاء الغامدي. Sources: NCA, Operational Technology Cybersecurity Controls (OTCC-1:2022), nca.gov.sa/otcc_ar.pdf.</p></aside>
+</section>
+
+<section class="slide" id="vendor-data-export" data-lo="LO4">
+  <div class="kicker">بيانات تشغيلية عند المورّد</div>
+  <h2>كل ليلة تخرج 400 قراءة من المعمل، والعقد لا يقول كم تبقى ومن يراها</h2>
+  <div class="cols cols-2">
+    <ul class="bullets">
+      <li><b>ما الذي يخرج؟</b> القراءات كلها، أم ما يلزم لإعادة التدريب فقط؟</li>
+      <li><b>إلى أين؟</b> سحابة المورّد، خارج المملكة</li>
+      <li><b>كم يُحفظ؟</b> العقد لا يذكر</li>
+      <li><b>من يطّلع؟</b> لا قيد</li>
+      <li><b>كيف يُحذف؟</b> لا بند</li>
+    </ul>
+    <div class="card c-amber"><h4>في الحجة والخريطة</h4><p class="small mb0">كل سؤال بلا جواب في العقد ثغرة X في الحجة، وشرط «مشاركة البيانات مغطاة» غير متحقق في الخريطة، فتنقص الجاهزية نقطة.</p></div>
   </div>
-  <div class="callout tip mt frag"><b>الخلاصة.</b> REPLACE: الجملة التي تبقى في الذاكرة</div>
-  <aside class="notes">اضغط مرة لكل خطوة، وقل ما تضيفه كل خطوة قبل ظهور التالية. REPLACE: المثال الذي تشرحه</aside>
+  <aside class="notes"><p>القراءات التشغيلية ليست بيانات شخصية، لكنها تكشف طاقة المعمل وحاله، وتصنيفها لجهتك. السؤال للقاعة: من في جهته عقد مورّد يجيب عن الأسئلة الخمسة؟ لا تطلب تفاصيل حقيقية.</p></aside>
+</section>
+
+<section class="slide" id="automation-bias" data-lo="LO4">
+  <div class="kicker">تحيز الأتمتة</div>
+  <h2>المشغّل الذي يوافق على 81% من التوصيات قد يكون يتبعها، لا يفحصها</h2>
+  <div class="cols cols-2">
+    <ul class="bullets">
+      <li>الثقة الزائدة مصدر خطر مسجل (H3)</li>
+      <li>تزيد حين تبدو التوصية واثقة وحين تصيب كثيرًا</li>
+      <li>سبعة من ستة عشر مشغّلًا لم يتدربوا على حدود النظام</li>
+      <li>والشاشة لا تبيّن عمر البيانات</li>
+    </ul>
+    <div class="card c-teal"><h4>ما يخففها</h4><p class="small mb0">عرض عمر البيانات، وإطفاء الشاشة خارج النطاق، وتدريب قبل التشغيل، ومراجعة دورية لتوصيات نُفذت وخابت.</p></div>
+  </div>
+  <aside class="notes"><p>تذكير من USE-FLU-103 (الوحدة السادسة): تحيز الأتمتة يصيب الخبير أيضًا. الجديد هنا أن له سطرًا في حجة السلامة وثغرة مكتوبة. الأرقام من سجل الأدلة الاصطناعي.</p></aside>
+</section>
+
+<section class="slide" id="phase-two-reopens" data-lo="LO4 LO1">
+  <div class="kicker">من يملك الإيقاف</div>
+  <h2>المرحلة الثانية تضيف سهمًا واحدًا، فتعيد فتح الحجة كلها</h2>
+  <div class="cols cols-2">
+    <div class="card c-teal"><h4>اليوم</h4><p class="small mb0">من «نذير» إلى الشاشة: عرض فقط. المشغّل يكتب. استشاري.</p></div>
+    <div class="card c-coral"><h4>المرحلة الثانية</h4><p class="small mb0">من «نذير» إلى منطقة التحكم: كتابة نقاط الضبط ضمن حدود، والمشغّل يراقب. إشرافي، مهما سمّاه المورّد.</p></div>
+  </div>
+  <div class="callout warn mt"><b>ما يسقط.</b> «لا يكتب في نظام التحكم» و«المشغّل يستطيع أن يتجاهل». وما يلزم: حدود تُفرض خارج النموذج، وتجاوز مجرَّب، ووضع بديل، ومسار كتابة محمي.</div>
+  <aside class="notes"><p>هذا العيب F5 في مسودة المختبر. اسأل: من يملك الإيقاف في المرحلة الثانية؟ الجواب المرجعي: مشرف غرفة التحكم المناوب بتفويض من مدير سلامة العمليات. والأمن السيبراني يتغير أيضًا: سهم كتابة من المنطقة الوسيطة إلى منطقة التحكم.</p></aside>
+</section>
+
+<section class="slide" id="polished-draft" data-lo="LO4">
+  <div class="kicker">مسودة مصقولة</div>
+  <h2>المسودة التي يكتبها مساعد تغطي كل البنود شكلًا، فافحص الأرقام والحدود</h2>
+  <div class="chat">
+    <div class="msg ai bad"><span class="who">المسودة</span>G5 (H4) تنبيهات النظام لا تزعج المشغّل. E9: دراسة معدل التنبيهات.</div>
+    <div class="msg ai bad"><span class="who">المسودة</span>G7 (H6) لا خطر سيبراني لأن النظام استشاري ولا يكتب في نظام التحكم.</div>
+    <div class="msg user"><span class="who">الفحص</span>E9 ليس في السجل. وG7 ادعاء بلا دليل ولا ثغرة، يتجاهل الدخول والتصدير.</div>
+  </div>
+  <aside class="notes"><p>السطران من مسودة المختبر 2.3، وقد كتبها مؤلف المقرر بيده بصيغة ما يكتبه مساعد. لم يُشغَّل نموذج لكتابتها: مسودة مساعد حقيقي ستخطئ في مواضع أخرى، والقائمة نفسها تكشفها. الدرس: الدليل الذي يبدو حقيقيًّا برقم أخطر من الثغرة المكتوبة.</p></aside>
+</section>
+
+<section class="slide" id="check-polished-draft" data-lo="LO4">
+  <div class="kicker">نقطة تحقق</div>
+  <h2>حجة تبدو كاملة</h2>
+  <div class="quiz" data-type="single" data-lo="LO4">
+    <p class="lead">تسلمت حجة سلامة صاغها مساعد: كل مصادر الخطر الستة لها سطر، وكل سطر يذكر دليلًا برقمه، والصياغة ممتازة. ما أول ما تفعله قبل رفعها إلى مدير سلامة العمليات؟</p>
+    <div class="opts">
+      <div class="opt" data-why="يجعل المساعد يفحص نفسه: قد يؤكد الدليل الذي اختلقه بثقة">أطلب من المساعد أن يراجعها ويصحح ما يجده</div>
+      <div class="opt" data-why="يحكم بالشكل: تغطية الستة شكلًا تعطي درجة في بند واحد من عشرة">أرفعها، فالتغطية الكاملة دليل على جودتها</div>
+      <div class="opt" data-why="يعالج الصياغة بدل المضمون: الحجة القصيرة قد تحمل العيوب نفسها">أختصرها إلى صفحة واحدة ليقرأها المدير</div>
+      <div class="opt" data-ok>أطابق كل رقم دليل بالسجل وحدوده، وأقيّمها بقائمة التحقق</div>
+    </div>
+    <div class="callout tip why"><b>لماذا.</b> العيوب الخطرة في حجة مصقولة دليل غير موجود، ونطاق أوسع من دليله، وسطر غائب. لا يكشفها إلا السجل والقائمة.</div>
+  </div>
+  <aside class="notes"><p>الإجابة: د. المختبر التالي هو هذا الفحص بعينه.</p></aside>
 </section>
 
 <section class="slide lab" id="lab-2-3" data-auto="lab" data-lab="2.3">
-  <aside class="notes">REPLACE: ما تراقبه أثناء عمل المشاركين، والمشكلات المعتادة، والبديل لمن لم يُنهِ مختبرًا سابقًا</aside>
+  <aside class="notes"><p>المسودة نقطة البداية لمن لم يكمل 2.2. راقب: من أعطى المسودة أكثر من 8 من 20 فاته عيب. العيب الأصعب غياب G9: سطر غائب لا خاطئ. في الخطوة 3 اطلب الادعاءين بلغة المدير: حساب لكل شخص، وفتح عند الطلب، وتسجيل؛ وبنود الحفظ والاطلاع والحذف.</p></aside>
 </section>
 
 <!-- الجلسة 4 -->
 
 <section class="slide section" id="s4" data-auto="section" data-session="4"></section>
 
-<section class="slide" id="s4-idea">
-  <div class="kicker">REPLACE: السؤال الذي تجيب عنه الشريحة</div>
-  <h2>REPLACE: فكرة واحدة في جملة</h2>
-  <div class="cols cols-2">
-    <ul class="bullets">
-      <li>REPLACE: ست نقاط على الأكثر، كل منها فكرة تامة</li>
-      <li>REPLACE: أبرز العبارة الأساسية، والأرقام من تشغيل المختبر لا من الذاكرة</li>
-    </ul>
-    <div class="card c-teal"><h4>في دراسة الحالة</h4><p class="small mb0">REPLACE: اربط الفكرة بدراسة الحالة وبياناتها</p></div>
+<section class="slide" id="five-columns" data-lo="LO5">
+  <div class="kicker">خريطة الفرص والمخاطر</div>
+  <h2>خمسة أعمدة لكل حالة، وكل درجة من واقعة</h2>
+  <div class="cols cols-4">
+    <div class="card c-teal"><h4>القيمة</h4><p class="small mb0">صافية، على خط أساس مقيس، بعد طاقة الذكاء الاصطناعي</p></div>
+    <div class="card c-cyan"><h4>الجاهزية</h4><p class="small mb0">خمسة شروط للبيانات، نقطة لكل شرط</p></div>
+    <div class="card c-amber"><h4>المستوى</h4><p class="small mb0">استشاري أو إشرافي أو حلقة مغلقة</p></div>
+    <div class="card c-coral"><h4>المخاطر</h4><p class="small mb0">من العاقبة والمستوى معًا</p></div>
   </div>
-  <div class="callout warn mt"><b>أين يقع الخطأ.</b> REPLACE: الخطأ الذي سيقع فيه المشاركون، وكيف يتعرفون عليه</div>
-  <aside class="notes">REPLACE: ما تقوله، والعرض الحي، والسؤال للقاعة، والخطأ الشائع وحلّه</aside>
+  <div class="callout note mt"><b>والعمود الخامس:</b> صاحب صلاحية التجاوز لكل حالة إشرافية أو بحلقة مغلقة.</div>
+  <aside class="notes"><p>كل عمود من يوم في الورشة: القيمة على خط الأساس من الجلستين 2 و3 أمس، والمستوى من الجلسة 1، والمخاطر والتجاوز من اليوم. الخريطة تجمع الورشة كلها. الدليل في <code>scoring_guide.txt</code>.</p></aside>
 </section>
 
-<section class="slide" id="s4-steps">
-  <div class="kicker">خطوة بخطوة</div>
-  <h2>REPLACE: عملية تظهر خطوة مع كل ضغطة</h2>
-  <div class="flow">
-    <div class="step c-teal"><b>1 · REPLACE: الاسم</b>REPLACE: ما يحدث أولًا</div>
-    <div class="arrow frag" data-frag="b">←</div><div class="step c-cyan frag" data-frag="b"><b>2 · REPLACE: الاسم</b>REPLACE: الجزء التالي</div>
-    <div class="arrow frag" data-frag="c">←</div><div class="step c-coral frag" data-frag="c"><b>3 · REPLACE: الاسم</b>REPLACE: النتيجة</div>
+<section class="slide" id="value-on-baseline" data-lo="LO5">
+  <div class="kicker">القيمة</div>
+  <h2>القيمة تُحسب على القاعدة المستعملة اليوم، لا على أضعف قاعدة</h2>
+  <div class="cols cols-2">
+    <div class="stat center"><div class="big">4.1</div><div class="lbl">مليون ريال: قيمة تنبؤ الأحمال في نشرة المورّد، على الموسمي الساذج</div></div>
+    <div class="stat center"><div class="big">0.4</div><div class="lbl">مليون ريال: القيمة نفسها على قاعدة المكتب الحالية</div></div>
   </div>
-  <div class="callout tip mt frag"><b>الخلاصة.</b> REPLACE: الجملة التي تبقى في الذاكرة</div>
-  <aside class="notes">اضغط مرة لكل خطوة، وقل ما تضيفه كل خطوة قبل ظهور التالية. REPLACE: المثال الذي تشرحه</aside>
+  <div class="callout tip mt"><b>في الخريطة.</b> U05 تأخذ درجة القيمة 1، لا 2. وما أمس كان جدول أخطاء صار اليوم سطرًا في الخريطة.</div>
+  <aside class="notes"><p>0.4 رقم اصطناعي في ملف الحالات، اتساقًا مع نتيجة المختبر 1.3: الفرق في التكلفة بين المورّد والاستمرارية أقل من 1%. اسأل: كم قيمة في قائمة جهتك محسوبة على خط أساس مقيس؟</p></aside>
+</section>
+
+<section class="slide" id="readiness-five" data-lo="LO5">
+  <div class="kicker">جاهزية البيانات</div>
+  <h2>خمسة شروط للبيانات، والنموذج لا يعوّض ما ينقص منها</h2>
+  <ol class="bullets">
+    <li>سنتان أو أكثر من السجل التاريخي</li>
+    <li>ثلاثون حدثًا موسومًا أو أكثر، أو حالة لا تحتاجها</li>
+    <li>قراءات محققة الجودة: ما وجدتموه في السجل أمس</li>
+    <li>خط أساس مقيس</li>
+    <li>مشاركة البيانات مع المورّد مغطاة ببنود، أو البيانات لا تخرج</li>
+  </ol>
+  <aside class="notes"><p>الشرط الثاني يعيدنا إلى الأعطال النادرة: كاشف الأعطال U08 له 18 حدثًا موسومًا فقط. والشرط الخامس من الجلسة السابقة: «نذير» يخسر نقطته لأن التصدير بلا بنود. الدرجة أقلها 1.</p></aside>
+</section>
+
+<section class="slide" id="risk-tier" data-lo="LO5 LO1">
+  <div class="kicker">مستوى المخاطر</div>
+  <h2>المخاطر من العاقبة والمستوى معًا</h2>
+  <table class="t">
+    <tr><th>أسوأ عاقبة معقولة</th><th class="num">استشاري</th><th class="num">إشرافي</th><th class="num">حلقة مغلقة</th></tr>
+    <tr><td>مالية فقط</td><td class="num">1</td><td class="num">1</td><td class="num">2</td></tr>
+    <tr><td>توقف إنتاج</td><td class="num">1</td><td class="num">2</td><td class="num">3</td></tr>
+    <tr class="hl"><td>سلامة أو بيئة</td><td class="num">2</td><td class="num">3</td><td class="num">3</td></tr>
+  </table>
+  <div class="callout note mt"><b>سلّم عمل للورشة.</b> جهتك تستعمل سلّمها المعتمد للمخاطر.</div>
+  <aside class="notes"><p>«نذير» اليوم: سلامة واستشاري، مخاطر 2. المرحلة الثانية: سلامة وإشرافي، مخاطر 3. السهم الواحد رفع المخاطر درجة. من المرجعيات الوطنية الإطار الوطني لإدارة مخاطر الذكاء الاصطناعي؛ لم نعرض نصه هنا، والسلّم أعلاه سلّم الورشة لا سلّم الإطار.</p></aside>
+</section>
+
+<section class="slide" id="energy-of-ai" data-lo="LO5">
+  <div class="kicker">طاقة الذكاء الاصطناعي نفسه</div>
+  <h2>الذكاء الاصطناعي يستهلك طاقة، فاطرحها من قيمته</h2>
+  <div class="cols cols-2">
+    <div class="stat center"><div class="big">1.5%</div><div class="lbl">من كهرباء العالم استهلكتها مراكز البيانات في 2024، نحو 415 تيراواط ساعة، وتتوقع الوكالة الدولية للطاقة أن تتضاعف بحلول 2030</div></div>
+    <div class="card c-amber"><h4>في الخريطة</h4><p class="small mb0">تكلفة الطاقة = الميغاواط ساعة في السنة × 180 ريالًا. اقتراح الصدوع U01 يستهلك 6,000 ميغاواط ساعة، فتنزل قيمته الصافية من 5.8 إلى 4.72 مليون، ودرجته من 3 إلى 2.</p></div>
+  </div>
+  <aside class="notes"><p>الرقم العالمي من الملخص التنفيذي لتقرير الوكالة الدولية للطاقة «الطاقة والذكاء الاصطناعي» (2025): نحو 945 تيراواط ساعة في 2030. سعر 180 ريالًا للميغاواط ساعة سعر اصطناعي في الحالة. اكتب الميغاواط ساعة في الخريطة حتى حين لا تغيّر الدرجة: هذا بند في معيار المشروع الختامي. Sources: International Energy Agency, Energy and AI, executive summary (2025).</p></aside>
+</section>
+
+<section class="slide" id="map-rules" data-lo="LO5">
+  <div class="kicker">قاعدتا الخريطة</div>
+  <h2>صاحب صلاحية لكل حالة تحكم، والتجربة تبدأ من الجاهز منخفض المخاطر</h2>
+  <div class="cols cols-2">
+    <div class="card c-coral"><h4>القاعدة الأولى</h4><p class="small mb0">كل حالة إشرافية أو بحلقة مغلقة تسمّي صاحب صلاحية التجاوز بوظيفته. خانة فارغة تمنع النجاح في المشروع الختامي.</p></div>
+    <div class="card c-teal"><h4>القاعدة الثانية</h4><p class="small mb0">المرشحة للتجربة: جاهزية 4 أو 5، ومخاطر 1 أو 2. من المرشحات تختار الأعلى قيمة صافية، مع معيار إيقاف مكتوب.</p></div>
+  </div>
+  <div class="callout tip mt"><b>معيار الإيقاف.</b> رقم يُقاس في التجربة ويوقفها إن لم يتحقق، مكتوب قبل أن تبدأ. مثال: إن لم يغلب الاستمرارية في الذروة خلال ثلاثة أشهر، تتوقف.</div>
+  <aside class="notes"><p>القاعدة الأولى من معيار النجاح في دليل المقررات لهذه الورشة. اسأل: لماذا لا نبدأ بالأعلى قيمة؟ لأن التجربة الأولى تبني الثقة وتختبر الطريقة، والخطأ فيها يجب أن يكون رخيصًا.</p></aside>
+</section>
+
+<section class="slide" id="why-not-top-value" data-lo="LO5">
+  <div class="kicker">لماذا لا</div>
+  <h2>أعلى الحالات قيمة قد تكون آخر ما تبدأ به</h2>
+  <table class="t small">
+    <tr><th>الحالة</th><th class="num">الصافية (مليون)</th><th class="num">الجاهزية</th><th>المستوى</th><th class="num">المخاطر</th></tr>
+    <tr class="hl"><td>«نذير»، المرحلة الثانية</td><td class="num">25.99</td><td class="num">3</td><td>إشرافي</td><td class="num">3</td></tr>
+    <tr><td>«نذير» اليوم</td><td class="num">17.99</td><td class="num">3</td><td>استشاري</td><td class="num">2</td></tr>
+    <tr><td>العمر المتبقي للتوربينات</td><td class="num">14</td><td class="num">4</td><td>استشاري</td><td class="num">1</td></tr>
+  </table>
+  <div class="callout warn mt"><b>سطر «لماذا لا».</b> المرحلة الثانية: مخاطر 3، وجاهزية 3 لأن التصدير بلا بنود، ولا حجة لمستوى إشرافي بعد. ما يغيّر ذلك: البنود، وحجة جديدة، وتجربة المرحلة الأولى.</div>
+  <aside class="notes"><p>هذه ثلاث من الحالات الأربع في المختبر، فلا تعرض الجاهزية قبل أن يحسبوها إن أردت أن يكتشفوها. الرابعة U01. الأرقام من <code>check.py 2.4</code>.</p></aside>
+</section>
+
+<section class="slide" id="capstone-preview" data-lo="LO5">
+  <div class="kicker">المشروع الختامي</div>
+  <h2>خريطة من ثماني حالات ومشروع تجريبي، تدافع عنها أمام لجنة سلامة</h2>
+  <div class="flow">
+    <div class="step c-teal"><b>فحص دون ذكاء اصطناعي</b>مواقف قصيرة تحت إشراف</div>
+    <div class="arrow">←</div>
+    <div class="step c-cyan"><b>العرض</b>خمس دقائق: الخريطة والمشروع التجريبي</div>
+    <div class="arrow">←</div>
+    <div class="step c-coral"><b>إعادة التقييم</b>أربع دقائق: اللجنة تختار حالة، وتعيد تقييمها أمامها</div>
+  </div>
+  <aside class="notes"><p>المختبر الآن يبدأ الخريطة بأربع حالات. الباقي في العمل الموجَّه بعد اليوم. من يأخذ حالات من جهته يغيّر الأسماء ويقرّب الأرقام، ولا يدخل المجلد أي رقم مصنف. التسليم رابط مجلد في Google Drive.</p></aside>
+</section>
+
+<section class="slide" id="check-map-pilot" data-lo="LO5">
+  <div class="kicker">نقطة تحقق</div>
+  <h2>أي حالة تبدأ بها التجربة؟</h2>
+  <div class="quiz" data-type="single" data-lo="LO5">
+    <p class="lead">في خريطة ثلاث حالات. الأولى قيمتها الصافية 30 مليونًا، وجاهزيتها 3، ومخاطرها 3. الثانية 12 مليونًا، وجاهزيتها 5، ومخاطرها 1. الثالثة 20 مليونًا، وجاهزيتها 4، ومخاطرها 2. أيها المشروع التجريبي؟</p>
+    <div class="opts">
+      <div class="opt" data-ok>الثالثة: أعلى قيمة صافية بين الحالتين المرشحتين</div>
+      <div class="opt" data-why="يرتب بالقيمة وحدها: المخاطر 3 والجاهزية 3 تُخرجان الحالة من الترشيح">الأولى: أعلى قيمة صافية في الخريطة</div>
+      <div class="opt" data-why="يختار الأسلم دائمًا: الأمان شرط للترشيح، والاختيار بين المرشحات بالقيمة">الثانية: أعلى جاهزية وأقل مخاطر</div>
+      <div class="opt" data-why="يؤجل القرار: القاعدة تحسمه، والتجربة نفسها هي ما يجمع البيانات الناقصة">لا شيء حتى ترتفع جاهزية الأولى</div>
+    </div>
+    <div class="callout tip why"><b>لماذا.</b> الترشيح أولًا: جاهزية 4 أو 5 ومخاطر 1 أو 2، فتبقى الثانية والثالثة. ثم الأعلى قيمة صافية بينهما، مع معيار إيقاف مكتوب.</div>
+  </div>
+  <aside class="notes"><p>الإجابة: أ (الحالة الثالثة). في ذُرى المشروع التجريبي المرجعي U02، نموذج المكمن الهجين. لا تذكره قبل المختبر إن أراد أحد أن يكتشفه في التمرين الإضافي.</p></aside>
 </section>
 
 <section class="slide lab" id="lab-2-4" data-auto="lab" data-lab="2.4">
-  <aside class="notes">REPLACE: ما تراقبه أثناء عمل المشاركين، والمشكلات المعتادة، والبديل لمن لم يُنهِ مختبرًا سابقًا</aside>
+  <aside class="notes"><p>الخطآن الأشهر: قبول قيمة المورّد في U05، وتصنيف U11 استشاريًّا بتسمية المورّد. ذكّر بأن هذه الخريطة بداية المشروع الختامي: من لم يكمل الحالات الأربع يبدأ من <code>start/map_four_scored.csv</code>.</p></aside>
 </section>
 
 <section class="slide" id="wrap-up">
   <div class="kicker">خلاصة اليوم 2</div>
   <h2>ثلاثة أمور تبقى معك</h2>
   <div class="cols cols-3">
-    <div class="card c-teal"><h4>تذكّر</h4><p class="small mb0">REPLACE: فكرة يحتفظ بها المشاركون</p></div>
-    <div class="card c-coral"><h4>تذكّر</h4><p class="small mb0">REPLACE: فكرة يحتفظ بها المشاركون</p></div>
-    <div class="card c-purple"><h4>تذكّر</h4><p class="small mb0">REPLACE: فكرة يحتفظ بها المشاركون</p></div>
+    <div class="card c-teal"><h4>اكتب ما لا يُكشف</h4><p class="small mb0">لكل كاشف قائمة بما لا يراه، ولكل حجة ثغرات مكتوبة. الثغرة أصدق من الدليل المزعوم.</p></div>
+    <div class="card c-coral"><h4>سمِّ من يوقف</h4><p class="small mb0">وظيفة ووسيلة وزمن وتجربة. والسهم الذي يكتب في التحكم يعيد فتح الحجة.</p></div>
+    <div class="card c-purple"><h4>ابدأ بالجاهز</h4><p class="small mb0">القيمة على خط أساس مقيس، بعد الطاقة، والتجربة من المرشحات لا من الأعلى قيمة.</p></div>
   </div>
+  <aside class="notes"><p>اطلب من كل مشارك أن يكتب الحالة التي يتوقع أن تختارها اللجنة لإعادة التقييم في خريطته، والواقعة الأضعف فيها.</p></aside>
 </section>
 
 <section class="slide dark" id="next" data-label="التالي">
   <div class="kicker">التالي</div>
-  <h2>المناقشة الختامية: REPLACE: عنوان المناقشة الختامية</h2>
-  <p class="lead">REPLACE: ما يجهزه المشاركون قبل ذلك، والمختبرات غير المكتملة يمكن إكمالها في المنزل</p>
-  <aside class="notes">REPLACE: الحسابات أو التثبيتات أو القراءة التي يحتاجها المشاركون قبل الوحدة التالية</aside>
+  <h2>المناقشة الختامية: الخريطة أمام لجنة السلامة</h2>
+  <p class="lead">أكمل الخريطة إلى ثماني حالات على الأقل، واختر المشروع التجريبي بمعيار إيقافه، واجمع في مجلد واحد ورقة تكلفة الأخطاء وحجة السلامة.</p>
+  <aside class="notes"><p>العمل الموجَّه بعد الورشة ساعتان في الخطة. ذكّر بسطر الإفصاح عن استعمال الذكاء الاصطناعي، وبأن الفحص في أول المناقشة دون ذكاء اصطناعي. الملفات المرجعية لا تُعطى للمشاركين قبل المناقشة.</p></aside>
 </section>
