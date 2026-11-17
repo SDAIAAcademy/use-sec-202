@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="ar" dir="rtl" data-ax="lab" data-track="fluency">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>المختبر 2.2 · صياغة حجة السلامة لنظام «نذير» · الذكاء الاصطناعي في الطاقة والبتروكيماويات</title>
+<meta name="generator" content="SDAIA Academy engine 1.0.0">
+<link rel="icon" href="../_engine/icon.svg">
+<link rel="alternate" type="text/markdown" href="D2_2_safety_argument.md">
+<link rel="describedby" href="../llms.txt">
+<link rel="stylesheet" href="../_engine/academy.css">
+</head>
+<body>
+<header>
+<div class="wrap">
+<div class="top"><div class="logo"></div><nav><a href="../index.html">صفحة المقرر</a><a href="../slides/day2.html#lab-2-2">العودة إلى الشرائح</a></nav></div>
+<span class="tag">المختبر 2.2</span>
+<h1>صياغة حجة السلامة لنظام «نذير»</h1>
+<p>تصوغ الجزء الخاص بالذكاء الاصطناعي في ملف إثبات السلامة لنظام «نذير» الاستشاري لسلسلة الضواغط: الهدف، والنطاق، وادعاءات لمصادر الخطر بأدلتها أو ثغراتها، والتجاوز والبديل، ثم تقيّمها بقائمة التحقق.</p>
+<div class="meta"><span>40 دقيقة</span><span>اليوم 2</span><span>الجلسة 2: حجة السلامة: من الادعاء إلى الدليل</span></div>
+</div>
+</header>
+<main class="wrap">
+<article class="lab" data-lab="2.2">
+<div class="box goal">
+  <h3>ستخرج من هذا المختبر بـ</h3>
+  <ul>
+    <li>مسودة الجزء الخاص بالذكاء الاصطناعي في ملف إثبات السلامة لنظام «نذير»: هدف، ونطاق، ومستوى، وادعاءات بأدلتها أو ثغراتها.</li>
+    <li>صاحب صلاحية التجاوز بوظيفته ووسيلته، والبديل الاحتياطي.</li>
+    <li>درجتك على قائمة التحقق من 20، والبنود التي تكملها في المختبر 2.3.</li>
+  </ul>
+</div>
+
+<h2>ما تحتاجه</h2>
+<div class="files">
+  <a href="files/safety/nadhir_description.txt" target="_blank"><b>safety/nadhir_description.txt</b><span>وصف «نذير»: الوظيفة، وما حوله، والتوصيل، والمرحلة الثانية</span></a>
+  <a href="files/safety/hazard_log.csv" target="_blank"><b>safety/hazard_log.csv</b><span>سجل مصادر الخطر: ستة مصادر</span></a>
+  <a href="files/safety/evidence_register.csv" target="_blank"><b>safety/evidence_register.csv</b><span>سجل الأدلة: ثمانية أدلة، ولكل منها حدوده</span></a>
+  <a href="files/safety/argument_template.txt" target="_blank"><b>safety/argument_template.txt</b><span>قالب الحجة بالرموز G وC وS وE وX</span></a>
+  <a href="files/safety/checklist.csv" target="_blank"><b>safety/checklist.csv</b><span>قائمة التحقق: عشرة بنود، لكل بند 0 أو 1 أو 2</span></a>
+</div>
+<p class="small">«نذير» وملفاته اصطناعية. الحجة نص مرقّم على القالب، لا رسم: الرموز من ترميز الأهداف (Goal Structuring Notation). المساعد مسموح في هذا المختبر، والحجة حجتك: كل دليل تذكره يجب أن يكون في السجل.</p>
+
+<h2>الخطوات</h2>
+
+<div class="step">
+  <h3>1 · اقرأ الوصف والسجلين <span class="min">7 دقائق</span></h3>
+  <p>اقرأ <b>nadhir_description.txt</b> كاملًا. ثم اقرأ عمود «حدوده» في سجل الأدلة قبل عمود «ما يثبته»: الحدود هي ما ستكتبه ثغرات.</p>
+</div>
+
+<div class="step">
+  <h3>2 · اكتب الهدف والنطاق والمستوى <span class="min">8 دقائق</span></h3>
+  <p>ثلاثة أسطر في القالب:</p>
+  <ul>
+    <li><b>G1</b> ادعاء يمكن دحضه عن النظام ووظيفته وسياقه، لا «النظام آمن».</li>
+    <li><b>C1</b> نطاق التشغيل بحدود تُقاس: الأشهر، وعدد الضواغط العاملة، وحال التشغيل. ارسمه على ما يغطيه الدليل E3، لا على ما يتمناه المورّد.</li>
+    <li><b>C2</b> المستوى، معلَّلًا بما يحدث لمخرج النظام.</li>
+  </ul>
+</div>
+
+<div class="step">
+  <h3>3 · اكتب لثلاثة مصادر خطر ادعاءً ودليلًا أو ثغرة <span class="min">13 دقيقة</span></h3>
+  <p>ابدأ بـH1 وH2 وH5. لكل منها سطر: الادعاء، ثم <code>E</code> برقم دليل من السجل، أو <code>X</code> ثغرة مكتوبة مع خطتها. الثغرة المكتوبة أصدق من الدليل المزعوم.</p>
+  <div class="prompt" data-tool="مساعد محادثة، إن استعملته">هذا وصف نظام استشاري وسجل مصادر خطره وسجل أدلته: <span class="ph">الصق الملفات الثلاثة</span>. اكتب لمصدر الخطر <span class="ph">H2</span> ادعاءً واحدًا، ثم الدليل من السجل برقمه، أو اكتب «ثغرة» إن لم يكن في السجل دليل يغطيه. لا تذكر أي دليل ليس في السجل.</div>
+  <p class="small">تحقق من كل رقم دليل في السجل بنفسك. ومصادر الخطر الثلاثة الباقية (H3 وH4 وH6) تكملها في المختبر 2.3.</p>
+</div>
+
+<div class="step">
+  <h3>4 · سمِّ صاحب صلاحية التجاوز والبديل <span class="min">7 دقائق</span></h3>
+  <ul>
+    <li><b>G8</b> التجاوز اليدوي: من بالوظيفة، وبأي وسيلة، وفي كم من الوقت، وهل جُرّب. «المشغّل» وحدها لا تكفي.</li>
+    <li><b>G9</b> البديل الاحتياطي: ماذا يفعل المشغّل حين يغيب «نذير» أو يُشك في توصيته.</li>
+    <li><b>G10</b> ما يعيد فتح الحجة.</li>
+  </ul>
+</div>
+
+<div class="step">
+  <h3>5 · قيّم حجتك بقائمة التحقق <span class="min">5 دقائق</span></h3>
+  <p>أعطِ كل بند من العشرة 0 أو 1 أو 2 بحسب أعمدة <b>checklist.csv</b>، واكتب المجموع من 20. علّم البنود التي دون 2: هي عمل المختبر 2.3.</p>
+</div>
+
+<div class="step stretch">
+  <h3>✱ تمرين إضافي</h3>
+  <p>اطلب من مساعد أن يصوغ الحجة كاملة من الوصف وحده، دون السجلين. قيّم مسودته بقائمة التحقق، وقارن ثغراتها بثغراتك: ما الذي ادّعاه بلا دليل؟</p>
+</div>
+
+<h2>أسئلة تحقق</h2>
+<ol class="checks">
+  <li>ما حدود النطاق C1 في حجتك، ومن أي دليل أخذتها؟</li>
+  <li>أي مصدر خطر لم تجد له دليلًا في السجل، فكتبته ثغرة؟</li>
+  <li>من يملك صلاحية التجاوز في حجتك، وبأي وسيلة؟</li>
+</ol>
+
+<details class="instructor">
+  <summary>للمدرّب: المفتاح والفخاخ</summary>
+  <ul>
+    <li>الحجة المرجعية في <code>labs/solutions/argument_reference.txt</code>. يُقيَّم المشارك بقائمة التحقق لا بمطابقة النص.</li>
+    <li><b>النطاق:</b> مارس إلى سبتمبر، والضواغط الثلاثة عاملة، وتشغيل مستقر (E3). خارجه تُطفأ شاشة التوصيات.</li>
+    <li><b>المستوى:</b> استشاري، لأن لا شيء يتغير حتى يدخل المشغّل نقاط الضبط بيده.</li>
+    <li><b>الثغرات المتوقعة:</b> عمر البيانات لا يظهر على الشاشة (E5)، وسبعة مشغّلين بلا تدريب (E6)، ولا قياس لمعدل التنبيهات، ولا دليل على الشتاء وبدء التشغيل (E3)، ودخول المورّد، وبنود التصدير (E8).</li>
+    <li><b>الفخ الأشهر:</b> E4 دليلًا على جودة التوصيات. E4 يثبت أن طبقتي الحماية تعملان، فلا يصل الخطأ إلى الاندفاع؛ لا أن التوصية صحيحة.</li>
+    <li><b>سقف الدرجة الآن:</b> 17 من 20. البند 4 (تغطية مصادر الخطر) لا يبلغ 2 بثلاثة مصادر، والبند 9 (الأمن والمورّد) يكتمل في 2.3.</li>
+    <li>التحقق الآلي للحجة المرجعية: <code>uv run labs/solutions/check.py 2.2</code>.</li>
+  </ul>
+</details>
+</article>
+<nav class="pager"><a href="D2_1_detector_log.html" rel="prev">→ المختبر السابق</a><a href="D2_3_stress_the_argument.html" rel="next">المختبر التالي ←</a></nav>
+</main>
+<footer><div class="wrap">أكاديمية سدايا · مسار الطلاقة في البيانات والذكاء الاصطناعي · الذكاء الاصطناعي في الطاقة والبتروكيماويات<br><span class="muted">إصدار المقرر 2027.1.0 · المحرّك 1.0.0 · بُني في ⁦2026-11-17⁩ · الإيداع edc4fac</span></div></footer>
+<script type="application/json" id="academy-data">{"v":1,"engine":"1.0.0","build":{"at":"2026-11-17T20:10:28Z","version":"2027.1.0","commit":"edc4fac"},"course":{"id":"use-sec-202","code":"USE-SEC-202","title":"الذكاء الاصطناعي في الطاقة والبتروكيماويات","track":"fluency","lang":"ar","dir":"rtl","url":"https://sdaiaacademy.github.io/use-sec-202/","repo":"SDAIAAcademy/use-sec-202","home":"../index.html"},"lab":{"id":"2.2","title":"صياغة حجة السلامة لنظام «نذير»","summary":"تصوغ الجزء الخاص بالذكاء الاصطناعي في ملف إثبات السلامة لنظام «نذير» الاستشاري لسلسلة الضواغط: الهدف، والنطاق، وادعاءات لمصادر الخطر بأدلتها أو ثغراتها، والتجاوز والبديل، ثم تقيّمها بقائمة التحقق.","minutes":40,"day":2,"unit":"اليوم 2","session":2,"deck":"../slides/day2.html#lab-2-2","prev":"D2_1_detector_log.html","next":"D2_3_stress_the_argument.html","alt":{}},"ai":{"context":{"course":"../context/course.md","courseJs":"../context/course.js","day":null,"llms":"../llms.txt"},"tasks":[],"tools":[]},"features":{},"strings":{}}</script>
+<script src="../_engine/academy.js"></script>
+</body>
+</html>

@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="ar" dir="rtl" data-ax="lab" data-track="fluency">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>المختبر 1.3 · الذروة والتكلفة وجودة السجل · الذكاء الاصطناعي في الطاقة والبتروكيماويات</title>
+<meta name="generator" content="SDAIA Academy engine 1.0.0">
+<link rel="icon" href="../_engine/icon.svg">
+<link rel="alternate" type="text/markdown" href="D1_3_where_it_fails.md">
+<link rel="describedby" href="../llms.txt">
+<link rel="stylesheet" href="../_engine/academy.css">
+</head>
+<body>
+<header>
+<div class="wrap">
+<div class="top"><div class="logo"></div><nav><a href="../index.html">صفحة المقرر</a><a href="../slides/day1.html#lab-1-3">العودة إلى الشرائح</a></nav></div>
+<span class="tag">المختبر 1.3</span>
+<h1>الذروة والتكلفة وجودة السجل</h1>
+<p>تقطّع أخطاء التنبؤات بحسب الشهر وساعات الذروة، وتسعّرها بجدول تكلفة غير متماثل، وتجد أربعة عيوب في ملف من السجل التاريخي، ثم تكتب توصية الاستعمال.</p>
+<div class="meta"><span>40 دقيقة</span><span>اليوم 1</span><span>الجلسة 3: أين يخفق التنبؤ وكم يكلف</span></div>
+</div>
+</header>
+<main class="wrap">
+<article class="lab" data-lab="1.3">
+<div class="box goal">
+  <h3>ستخرج من هذا المختبر بـ</h3>
+  <ul>
+    <li>الخطأ بحسب الشهر وفي ساعات الذروة، مع اتجاهه: هل يتنبأ النموذج بأقل من الحمل أم بأكثر؟</li>
+    <li>تكلفة الخطأ بجدول غير متماثل: الميغاواط الناقصة أغلى من الزائدة.</li>
+    <li>أربعة عيوب تسجيل في أسبوع من السجل التاريخي، وتوصية استعمال بشروطها: دليل الناتج الثاني.</li>
+  </ul>
+</div>
+
+<h2>ما تحتاجه</h2>
+<div class="files">
+  <a href="files/start/forecast_errors_2024.csv" target="_blank"><b>start/forecast_errors_2024.csv</b><span>8,784 ساعة من 2024: الحمل، والتنبؤات الأربعة، وخطأ كل منها، وعلامة ساعات الذروة</span></a>
+  <a href="files/load/cost_table.csv" target="_blank"><b>load/cost_table.csv</b><span>تكلفة الميغاواط ساعة الناقصة والزائدة</span></a>
+  <a href="files/load/historian_export_week.csv" target="_blank"><b>load/historian_export_week.csv</b><span>أسبوع من أغسطس 2024 كما صدّره السجل التاريخي</span></a>
+</div>
+<p class="small">الملف الأول نقطة البداية: فيه أعمدة المختبر 1.2 جاهزة، فلا يحتاج المختبر نتيجة سابقة. الخطأ في الملف هو التنبؤ ناقص الحمل: السالب تنبؤ أقل من الحمل.</p>
+
+<h2>الخطوات</h2>
+
+<div class="step">
+  <h3>1 · الخطأ النسبي بحسب الشهر <span class="min">8 دقائق</span></h3>
+  <p>الأعمدة: <code>C</code> الشهر، و<code>E</code> علامة الذروة، و<code>F</code> الحمل، و<code>H</code> و<code>J</code> و<code>L</code> و<code>N</code> أخطاء المورّد والاستمرارية والموسمي الساذج والمشغّل. أضف عمود الخطأ النسبي لكل تنبؤ، ثم المتوسط بحسب الشهر:</p>
+  <pre class="code" data-file="forecast_errors_2024.csv"><code>O2   =ABS(H2)/F2                      vendor relative error (repeat for J, L, N)
+     =AVERAGEIFS(O:O, C:C, 1)*100     January; change 1 to 12</code></pre>
+  <p>أو جدول محوري: الصفوف الشهر، والقيم متوسط <code>O</code>. علّم الأشهر التي يخسر فيها المورّد أمام الاستمرارية.</p>
+</div>
+
+<div class="step">
+  <h3>2 · الخطأ وانحيازه في ساعات الذروة <span class="min">8 دقائق</span></h3>
+  <p>ساعات الذروة 440 ساعة، هي أعلى 5% من حمل السنة. فيها يُشترى الاحتياطي السريع، فخطؤها أغلى.</p>
+  <pre class="code" data-file="forecast_errors_2024.csv"><code>peak MAPE   =AVERAGEIFS(O:O, E:E, 1)*100
+peak bias   =AVERAGEIFS(H:H, E:E, 1)          below zero: forecast under the load</code></pre>
+</div>
+
+<div class="step">
+  <h3>3 · سعّر الخطأ الناقص والزائد <span class="min">8 دقائق</span></h3>
+  <p>من <b>cost_table.csv</b>: الميغاواط ساعة الناقصة 4 وحدات، والزائدة وحدة واحدة. الوحدات نسبية لأن الشبكة العامة أكبر كثيرًا من ذُرى: تقارن بها التنبؤات، لا تقرأها بالريال.</p>
+  <pre class="code" data-file="forecast_errors_2024.csv"><code>P2   =IF(H2&lt;0, -4*H2, H2)              cost of the vendor's error in this hour
+     =SUM(P:P)/1000000                  million cost units for the year</code></pre>
+  <table>
+    <tr><th>التنبؤ</th><th>خطأ الذروة (%)</th><th>انحياز الذروة (ميغاواط)</th><th>التكلفة (مليون وحدة)</th></tr>
+    <tr><td>المورّد</td><td class="fill"></td><td class="fill"></td><td class="fill"></td></tr>
+    <tr><td>الاستمرارية</td><td class="fill"></td><td class="fill"></td><td class="fill"></td></tr>
+    <tr><td>الموسمي الساذج</td><td class="fill"></td><td class="fill"></td><td class="fill"></td></tr>
+    <tr><td>مشغّل الشبكة</td><td class="fill"></td><td class="fill"></td><td class="fill"></td></tr>
+  </table>
+</div>
+
+<div class="step">
+  <h3>4 · جد العيوب الأربعة في ملف السجل التاريخي <span class="min">8 دقائق</span></h3>
+  <p>افتح <b>historian_export_week.csv</b>: 169 صفًّا لأسبوع من 168 ساعة. قبل أن تحكم على نموذج بهذا الملف، جد أربعة عيوب تسجيل. أعمدة مساعدة تكفي:</p>
+  <pre class="code" data-file="historian_export_week.csv"><code>E3   =C3=C2                                   same value as the hour before
+F2   =C2=0                                    a gap written as zero
+G2   =C2/D2                                   far above 1: a spike
+H2   =COUNTIFS(A:A, A2, B:B, B2)&gt;1             an hour written twice</code></pre>
+  <table>
+    <tr><th>العيب</th><th>يبدأ عند (التاريخ والساعة)</th><th>كم ساعة</th></tr>
+    <tr><td>قيمة مجمّدة</td><td class="fill"></td><td class="fill"></td></tr>
+    <tr><td>فجوة مكتوبة أصفارًا</td><td class="fill"></td><td class="fill"></td></tr>
+    <tr><td>قفزة</td><td class="fill"></td><td class="fill"></td></tr>
+    <tr><td>ساعة مكررة</td><td class="fill"></td><td class="fill"></td></tr>
+  </table>
+</div>
+
+<div class="step">
+  <h3>5 · اكتب توصية الاستعمال بشروطها <span class="min">8 دقائق</span></h3>
+  <p>توصية لرميصاء الحميدي في ثلاثة أسطر: كيف يُستعمل التنبؤ (استشاري بجوار القاعدة، أو بدلًا منها، أو لا يُستعمل)، والشرط قبل أي شراء، والمعيار الذي يقيس به المكتب النموذج القادم. ادعاء النشرة «جدولة آلية دون مراجعة» يرفع المستوى إلى إشرافي: ما الأدلة التي يوجبها ذلك من المختبر 1.1؟</p>
+</div>
+
+<div class="step stretch">
+  <h3>✱ تمرين إضافي</h3>
+  <p>قارن تنبؤ المشغّل بتنبؤ المورّد في ساعات الذروة. انحياز المشغّل قريب من الصفر. اكتب البيانات التي تسد الفرق (الطقس، والتقويم، والأحمال الكبيرة المجدولة)، ومن يملكها في ذُرى.</p>
+</div>
+
+<h2>أسئلة تحقق</h2>
+<ol class="checks">
+  <li>ما أسوأ أشهر المورّد؟ وفي كم شهر يخسر أمام الاستمرارية؟</li>
+  <li>في الذروة، هل يتنبأ المورّد بأقل من الحمل أم بأكثر؟ وبكم ميغاواط في المتوسط؟</li>
+  <li>بعد التسعير، كم تختلف تكلفة المورّد عن تكلفة الاستمرارية؟</li>
+  <li>لو حسبت خطأ المورّد على أسبوع السجل كما صدر، كم يتغير الرقم؟</li>
+</ol>
+
+<details class="instructor">
+  <summary>للمدرّب: المفتاح والفخاخ</summary>
+  <ul>
+    <li><b>بحسب الشهر:</b> المورّد يخسر أمام الاستمرارية في يناير ويونيو ويوليو وأغسطس ونوفمبر. أسوأ أشهره يناير: 8.21% مقابل 7.86%.</li>
+    <li><b>الذروة (440 ساعة، 74,362 ميغاواط فأكثر):</b> المورّد 2.91% وانحيازه <span class="ltr">-1,793</span> ميغاواط؛ الاستمرارية 2.38% و<span class="ltr">-898</span>؛ الموسمي الساذج 8.01% و<span class="ltr">-5,418</span>؛ المشغّل 1.59% و85.</li>
+    <li><b>التكلفة (مليون وحدة):</b> المورّد 51.1، والاستمرارية 51.6، والموسمي الساذج 97.6، والمشغّل 22.4. الفرق بين المورّد والاستمرارية أقل من 1%.</li>
+    <li><b>العيوب:</b> قيمة مجمّدة من 2024-08-06 الساعة 6 لست ساعات؛ أصفار من 2024-08-08 الساعة 3 لثلاث ساعات؛ قفزة عشرة أضعاف في 2024-08-09 الساعة 14؛ الساعة 20 من 2024-08-10 مكررة. خطأ المورّد على الحمل الصحيح 3.14%، وعلى المسجل بعد حذف الأصفار فقط 4.27%.</li>
+    <li><b>الفخ:</b> القيمة في الساعة 5 من 2024-08-06 سليمة: هي آخر قراءة صحيحة، والسجل كررها. من يعدّ سبع ساعات مجمّدة عدّها معها. والساعة المكررة لا تظهر لمن يعدّ الصفوف بلا تواريخ: 169 صفًّا لأسبوع من 168 ساعة.</li>
+    <li><b>التوصية المرجعية:</b> استشاري فقط بجوار قاعدة المكتب، بلا جدولة آلية. شرطان: الطقس في النموذج، وقياس خطأ الذروة. المعيار: أن يغلب الاستمرارية في الذروة وفي التكلفة.</li>
+    <li>التحقق: <code>uv run labs/solutions/check.py 1.3</code>. الحل في <code>labs/solutions/D1_3_where_it_fails.md</code>.</li>
+  </ul>
+</details>
+</article>
+<nav class="pager"><a href="D1_2_forecast_baselines.html" rel="prev">→ المختبر السابق</a><a href="D1_4_price_maintenance.html" rel="next">المختبر التالي ←</a></nav>
+</main>
+<footer><div class="wrap">أكاديمية سدايا · مسار الطلاقة في البيانات والذكاء الاصطناعي · الذكاء الاصطناعي في الطاقة والبتروكيماويات<br><span class="muted">إصدار المقرر 2027.1.0 · المحرّك 1.0.0 · بُني في ⁦2026-11-17⁩ · الإيداع edc4fac</span></div></footer>
+<script type="application/json" id="academy-data">{"v":1,"engine":"1.0.0","build":{"at":"2026-11-17T20:10:28Z","version":"2027.1.0","commit":"edc4fac"},"course":{"id":"use-sec-202","code":"USE-SEC-202","title":"الذكاء الاصطناعي في الطاقة والبتروكيماويات","track":"fluency","lang":"ar","dir":"rtl","url":"https://sdaiaacademy.github.io/use-sec-202/","repo":"SDAIAAcademy/use-sec-202","home":"../index.html"},"lab":{"id":"1.3","title":"الذروة والتكلفة وجودة السجل","summary":"تقطّع أخطاء التنبؤات بحسب الشهر وساعات الذروة، وتسعّرها بجدول تكلفة غير متماثل، وتجد أربعة عيوب في ملف من السجل التاريخي، ثم تكتب توصية الاستعمال.","minutes":40,"day":1,"unit":"اليوم 1","session":3,"deck":"../slides/day1.html#lab-1-3","prev":"D1_2_forecast_baselines.html","next":"D1_4_price_maintenance.html","alt":{}},"ai":{"context":{"course":"../context/course.md","courseJs":"../context/course.js","day":null,"llms":"../llms.txt"},"tasks":[],"tools":[]},"features":{},"strings":{}}</script>
+<script src="../_engine/academy.js"></script>
+</body>
+</html>

@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="ar" dir="rtl" data-ax="lab" data-track="fluency">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>المختبر 2.1 · سجل الكاشف: التأخر والإنذارات الكاذبة · الذكاء الاصطناعي في الطاقة والبتروكيماويات</title>
+<meta name="generator" content="SDAIA Academy engine 1.0.0">
+<link rel="icon" href="../_engine/icon.svg">
+<link rel="alternate" type="text/markdown" href="D2_1_detector_log.md">
+<link rel="describedby" href="../llms.txt">
+<link rel="stylesheet" href="../_engine/academy.css">
+</head>
+<body>
+<header>
+<div class="wrap">
+<div class="top"><div class="logo"></div><nav><a href="../index.html">صفحة المقرر</a><a href="../slides/day2.html#lab-2-1">العودة إلى الشرائح</a></nav></div>
+<span class="tag">المختبر 2.1</span>
+<h1>سجل الكاشف: التأخر والإنذارات الكاذبة</h1>
+<p>تسجّل لكاشف أعطال على 13 تشغيلة محاكاة منشورة الإنذارات الكاذبة ودقائق التأخر والأعطال الفائتة عند ثلاثة إعدادات، وتسعّرها، وتكمل ورقة تكلفة الأخطاء.</p>
+<div class="meta"><span>40 دقيقة</span><span>اليوم 2</span><span>الجلسة 1: كاشف الأعطال في غرفة التحكم</span></div>
+</div>
+</header>
+<main class="wrap">
+<article class="lab" data-lab="2.1">
+<div class="box goal">
+  <h3>ستخرج من هذا المختبر بـ</h3>
+  <ul>
+    <li>سجل لكاشف أعطال على 13 تشغيلة: الإنذارات الكاذبة، ودقائق التأخر، وحصة الإنذار بعد العطل، عند ثلاثة إعدادات.</li>
+    <li>تكلفة كل إعداد، والإعداد الأقل تكلفة، والأعطال التي لا يكشفها أي إعداد.</li>
+    <li>ورقة تكلفة الأخطاء كاملة بسطريها: دليل الناتج الثالث.</li>
+  </ul>
+</div>
+
+<h2>ما تحتاجه</h2>
+<div class="files">
+  <a href="files/process/detector_runs.csv" target="_blank"><b>process/detector_runs.csv</b><span>13 تشغيلة × 960 عينة، عينة كل 3 دقائق: مؤشر الانحراف وإنذار كل إعداد</span></a>
+  <a href="files/process/cost_table.csv" target="_blank"><b>process/cost_table.csv</b><span>تكلفة الإنذار الكاذب، ودقيقة التأخر، والعطل الفائت، وشرط الكشف</span></a>
+  <a href="files/process/run_log.csv" target="_blank"><b>process/run_log.csv</b><span>سجل فارغ: صف لكل تشغيلة</span></a>
+  <a href="files/start/cost_sheet_after_1_4.csv" target="_blank"><b>start/cost_sheet_after_1_4.csv</b><span>ورقة تكلفة الأخطاء وفيها سطر التوربينات، لمن لم يكمل المختبر 1.4</span></a>
+</div>
+<p class="small">التشغيلات من محاكاة عملية Tennessee Eastman المنشورة: تشغيلة طبيعية واثنتا عشرة فيها عطل يبدأ عند الدقيقة 483. في الملف مؤشر انحراف حسبه كاشف بالمكونات الرئيسية دُرّب على التشغيل الطبيعي، لا متغيرات العملية. الإعدادات A وB وC حدود إنذار من الأحسّ إلى الأقل حساسية. ورقتك من المختبر 1.4، أو ملف البداية.</p>
+
+<h2>الخطوات</h2>
+
+<div class="step">
+  <h3>1 · افتح التشغيلات وارسم مؤشر الانحراف لتشغيلة واحدة <span class="min">5 دقائق</span></h3>
+  <p>الأعمدة: <code>A</code> التشغيلة، و<code>C</code> الدقيقة، و<code>D</code> المرحلة (<code>before</code> قبل العطل، <code>after</code> بعده، <code>normal</code> للتشغيلة الطبيعية R04)، و<code>E</code> مؤشر الانحراف، و<code>F</code> و<code>G</code> و<code>H</code> إنذار الإعدادات A وB وC (1 مرفوع).</p>
+  <p>صفِّ على R01 وارسم <code>E</code> على محور الدقائق. أين يقفز المؤشر؟ ثم ارسم R06: ماذا ترى؟</p>
+</div>
+
+<div class="step">
+  <h3>2 · سجّل للإعداد A <span class="min">10 دقائق</span></h3>
+  <p>لكل تشغيلة ثلاثة أرقام. مثال R01، ثم غيّر اسم التشغيلة:</p>
+  <pre class="code" data-file="detector_runs.csv"><code>false alarms   =COUNTIFS(A:A,"R01", D:D,"before", F:F,1)
+delay (min)    =MINIFS(C:C, A:A,"R01", D:D,"after", F:F,1) - 483
+share after    =AVERAGEIFS(F:F, A:A,"R01", D:D,"after")
+R04 (normal)   =COUNTIFS(A:A,"R04", F:F,1)        every alarm is false</code></pre>
+  <p>العطل <b>مكشوف</b> حين تبلغ حصة الإنذار بعده النصف على الأقل، وإلا فهو <b>فائت</b>، مهما كان أول إنذار مبكرًا. اكتب ذلك في عمود «مكشوف أم فائت» في <b>run_log.csv</b>.</p>
+</div>
+
+<div class="step">
+  <h3>3 · كرر للإعدادين B وC <span class="min">8 دقائق</span></h3>
+  <p>انسخ الصيغ واستبدل <code>F:F</code> بـ<code>G:G</code> ثم <code>H:H</code>. أو جدول محوري: الصفوف التشغيلة، والأعمدة المرحلة، والقيم مجموع الإنذار ومتوسطه.</p>
+</div>
+
+<div class="step">
+  <h3>4 · سعّر كل إعداد <span class="min">9 دقائق</span></h3>
+  <pre class="code" data-file="cost_table.csv"><code>cost = all false alarms (R04 included) * 3000
+     + delay minutes of the detected faults * 2000
+     + missed faults * 400000</code></pre>
+  <table>
+    <tr><th>الإعداد</th><th>إنذارات كاذبة</th><th>مكشوفة</th><th>فائتة</th><th>دقائق التأخر</th><th>التكلفة (ريال)</th></tr>
+    <tr><td>A</td><td class="fill"></td><td class="fill"></td><td class="fill"></td><td class="fill"></td><td class="fill"></td></tr>
+    <tr><td>B</td><td class="fill"></td><td class="fill"></td><td class="fill"></td><td class="fill"></td><td class="fill"></td></tr>
+    <tr><td>C</td><td class="fill"></td><td class="fill"></td><td class="fill"></td><td class="fill"></td><td class="fill"></td></tr>
+  </table>
+</div>
+
+<div class="step">
+  <h3>5 · اختر الإعداد وأكمل الورقة <span class="min">8 دقائق</span></h3>
+  <p>اكتب سطر «كاشف أعطال العملية» في ورقة تكلفة الأخطاء: الإعداد، والفائت، والكاذب، والتأخر، والتكلفة، والسبب. ثم سمِّ التشغيلات التي لا يكشفها أي إعداد. القرار لخولة العتيبي، صاحبة نظام الإنذارات: ماذا تقول لها عن هذه الأعطال؟</p>
+</div>
+
+<div class="step stretch">
+  <h3>✱ تمرين إضافي</h3>
+  <p>أعد التسعير بتكلفة 500 ريال للإنذار الكاذب (تحقق المشغّل وحده دون فني ميداني). أي إعداد يصير الأقل تكلفة؟ وما الذي لا يدخل جدول التكلفة حين يكثر الإنذار الكاذب؟</p>
+</div>
+
+<h2>أسئلة تحقق</h2>
+<ol class="checks">
+  <li>كم إنذارًا كاذبًا يرفع الإعداد A في التشغيلة الطبيعية R04، وكم نسبته من عيناتها؟</li>
+  <li>ما الإعداد الأقل تكلفة؟ ولماذا لا يكون الأقل إنذارًا كاذبًا؟</li>
+  <li>أي التشغيلات لا يكشفها أي إعداد؟ وما الذي يشترك فيه رسمها؟</li>
+</ol>
+
+<details class="instructor">
+  <summary>للمدرّب: المفتاح والفخاخ</summary>
+  <ul>
+    <li><b>بالإعداد:</b> A: 199 كاذبًا، 8 مكشوفة، 4 فائتة، 120 دقيقة، 2,437,000 ريال. B: 46، 8، 4، 306 دقيقة، 2,350,000. C: 5، 6، 6، 228 دقيقة، 2,871,000. الأقل تكلفة: B.</li>
+    <li><b>R04:</b> الإعداد A يرفع 83 إنذارًا في 960 عينة: 8.6%، والمورّد ضبط الحد على 1% من بيانات المعايرة.</li>
+    <li><b>لا يكشفها أي إعداد:</b> R06 وR10 وR12 وR13. حصة الإنذار بعد العطل فيها قريبة مما في التشغيل الطبيعي.</li>
+    <li><b>الفخ الأول:</b> عدّ التشغيلة مكشوفة لأن فيها إنذارًا بعد العطل. في R13 يرفع A إنذارًا في الدقيقة الأولى بعد العطل، لكن حصته 0.15: مصادفة لا كشف.</li>
+    <li><b>الفخ الثاني:</b> نسيان إنذارات R04 في المجموع، أو حساب التأخر للأعطال الفائتة.</li>
+    <li><b>التمرين الإضافي:</b> بـ500 ريال يصير A الأقل تكلفة (1,939,500). ما لا يدخل الجدول: تعوّد المشغّلين على تجاهل الإنذار، وسيل الإنذارات.</li>
+    <li>التحقق: <code>uv run labs/solutions/check.py 2.1</code>. الحل في <code>labs/solutions/D2_1_detector_log.md</code>.</li>
+  </ul>
+</details>
+</article>
+<nav class="pager"><a href="D1_4_price_maintenance.html" rel="prev">→ المختبر السابق</a><a href="D2_2_safety_argument.html" rel="next">المختبر التالي ←</a></nav>
+</main>
+<footer><div class="wrap">أكاديمية سدايا · مسار الطلاقة في البيانات والذكاء الاصطناعي · الذكاء الاصطناعي في الطاقة والبتروكيماويات<br><span class="muted">إصدار المقرر 2027.1.0 · المحرّك 1.0.0 · بُني في ⁦2026-11-17⁩ · الإيداع edc4fac</span></div></footer>
+<script type="application/json" id="academy-data">{"v":1,"engine":"1.0.0","build":{"at":"2026-11-17T20:10:28Z","version":"2027.1.0","commit":"edc4fac"},"course":{"id":"use-sec-202","code":"USE-SEC-202","title":"الذكاء الاصطناعي في الطاقة والبتروكيماويات","track":"fluency","lang":"ar","dir":"rtl","url":"https://sdaiaacademy.github.io/use-sec-202/","repo":"SDAIAAcademy/use-sec-202","home":"../index.html"},"lab":{"id":"2.1","title":"سجل الكاشف: التأخر والإنذارات الكاذبة","summary":"تسجّل لكاشف أعطال على 13 تشغيلة محاكاة منشورة الإنذارات الكاذبة ودقائق التأخر والأعطال الفائتة عند ثلاثة إعدادات، وتسعّرها، وتكمل ورقة تكلفة الأخطاء.","minutes":40,"day":2,"unit":"اليوم 2","session":1,"deck":"../slides/day2.html#lab-2-1","prev":"D1_4_price_maintenance.html","next":"D2_2_safety_argument.html","alt":{}},"ai":{"context":{"course":"../context/course.md","courseJs":"../context/course.js","day":null,"llms":"../llms.txt"},"tasks":[],"tools":[]},"features":{},"strings":{}}</script>
+<script src="../_engine/academy.js"></script>
+</body>
+</html>
