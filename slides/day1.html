@@ -1,158 +1,493 @@
 <section class="slide title" id="title" data-auto="title">
-  <aside class="notes">REPLACE: الترحيب، والتعريف بنفسك، وسؤال للقاعة يضبط الإيقاع، وإيقاع اليوم</aside>
+  <aside class="notes"><p>رحّب، وعرّف بنفسك في جملتين. ثم اسأل القاعة: من في عمله نموذج يعطي رقمًا يُتخذ به قرار تشغيلي؟ اطلب ثلاثة أمثلة سريعة واكتبها على السبورة. اليوم كله ثلاثة أسئلة نسألها لأي تطبيق: ماذا يحدث لمخرجه؟ هل يغلب القاعدة البسيطة؟ كم يكلف خطؤه؟</p></aside>
 </section>
 
-<section class="slide" id="agenda" data-auto="agenda"></section>
+<section class="slide" id="agenda" data-auto="agenda">
+  <aside class="notes"><p>أربع جلسات، في كل منها مفاهيم قصيرة ثم مختبر من 40 دقيقة على جدول بيانات. لا مختبر يحتاج نموذجًا لغويًّا. الاستراحات بزر B. الشركة طوال الورشة واحدة: ذُرى للطاقة، شركة افتراضية بيانات أحمالها وتوربيناتها وتشغيلاتها عامة منشورة.</p></aside>
+</section>
+
+<section class="slide" id="dhura-case" data-lo="LO1">
+  <div class="kicker">دراسة الحالة</div>
+  <h2>ذُرى للطاقة: شركة واحدة من البئر إلى الشبكة</h2>
+  <div class="cols cols-2">
+    <ul class="bullets">
+      <li><b>الاستكشاف والمكامن:</b> مسوح زلزالية ومحاكاة للمكمن</li>
+      <li><b>معمل الغاز:</b> سلسلة ضواغط K-201، ونظام «نذير» الاستشاري من المورّد «سِناد»</li>
+      <li><b>البتروكيماويات:</b> أبراج فصل ومتحكم متقدم وغرفة تحكم</li>
+      <li><b>الكهرباء والشبكة:</b> توربينات بدورة مركبة، ومزرعة شمسية، ومكتب يجدول الغد بتنبؤ من المورّد «أفلاك»</li>
+    </ul>
+    <div class="card c-teal"><h4>ما هو حقيقي هنا</h4><p class="small mb0">الأحمال الساعية وتدهور التوربينات وتشغيلات العملية بيانات عامة منشورة تنوب عن بيانات ذُرى. والنماذج الثلاثة دُرّبت عليها فعلًا. كل ما عدا ذلك اصطناعي: الأشخاص والمورّدان والتكاليف.</p></div>
+  </div>
+  <aside class="notes"><p>عرّف الأشخاص الذين سيتكرر ذكرهم: سفيان الراشدي يرأس لجنة السلامة، ورميصاء الحميدي صاحبة قرار التنبؤ، ومنذر السلمي صاحب قرار العمرات، وخولة العتيبي صاحبة نظام الإنذارات، والزبير المطلق مدير سلامة العمليات، وشفاء الغامدي للأمن السيبراني التشغيلي، ونوفل الدوسري صاحب قائمة حالات الاستخدام. الملف في <code>labs/files/company_profile.txt</code>.</p></aside>
+</section>
 
 <!-- الجلسة 1 -->
 
 <section class="slide section" id="s1" data-auto="section" data-session="1"></section>
 
-<section class="slide" id="s1-idea">
-  <div class="kicker">REPLACE: السؤال الذي تجيب عنه الشريحة</div>
-  <h2>REPLACE: فكرة واحدة في جملة</h2>
-  <div class="cols cols-2">
-    <ul class="bullets">
-      <li>REPLACE: ست نقاط على الأكثر، كل منها فكرة تامة</li>
-      <li>REPLACE: أبرز العبارة الأساسية، والأرقام من تشغيل المختبر لا من الذاكرة</li>
-    </ul>
-    <div class="card c-teal"><h4>في دراسة الحالة</h4><p class="small mb0">REPLACE: اربط الفكرة بدراسة الحالة وبياناتها</p></div>
+<section class="slide" id="uses-along-chain" data-lo="LO1">
+  <div class="kicker">أين يُستعمل</div>
+  <h2>الذكاء الاصطناعي يعمل على طول سلسلة الطاقة كلها</h2>
+  <div class="cols cols-4">
+    <div class="card c-teal"><h4>المكامن</h4><p class="small mb0">اقتراح الصدوع في المسح الزلزالي، ونماذج بديلة هجينة تسرّع محاكاة المكمن</p></div>
+    <div class="card c-cyan"><h4>العمليات</h4><p class="small mb0">مستشعرات برمجية (soft sensors) تقدّر ما لا يُقاس كل دقيقة، وتحسين نقاط التشغيل</p></div>
+    <div class="card c-purple"><h4>الشبكة</h4><p class="small mb0">تنبؤ الأحمال لليوم التالي، وتنبؤ إنتاج الشمس والرياح</p></div>
+    <div class="card c-coral"><h4>المعدات</h4><p class="small mb0">الصيانة التنبؤية بالعمر المتبقي، وكشف الأعطال في العملية</p></div>
   </div>
-  <div class="callout warn mt"><b>أين يقع الخطأ.</b> REPLACE: الخطأ الذي سيقع فيه المشاركون، وكيف يتعرفون عليه</div>
-  <aside class="notes">REPLACE: ما تقوله، والعرض الحي، والسؤال للقاعة، والخطأ الشائع وحلّه</aside>
+  <div class="callout note mt"><b>في ذُرى.</b> عشرة تطبيقات من هذه الأربعة في جدول المختبر 1.1. السؤال ليس «أين يوجد الذكاء الاصطناعي» بل «ماذا يفعل مخرجه».</div>
+  <aside class="notes"><p>مرّ على البطاقات بسرعة، واطلب من كل طاولة أن تضع مثالها من الافتتاح في عمود. ستعود الأمثلة في العمل التحضيري. لا تدخل في تفاصيل المحاكاة الهجينة الآن: تعود في الجلسة 1 من اليوم 2.</p></aside>
 </section>
 
-<section class="slide" id="s1-steps">
-  <div class="kicker">خطوة بخطوة</div>
-  <h2>REPLACE: عملية تظهر خطوة مع كل ضغطة</h2>
+<section class="slide" id="one-question" data-lo="LO1">
+  <div class="kicker">مستوى التحكم</div>
+  <h2>سؤال واحد يحدد المستوى: ماذا يحدث للمخرج قبل أن يتغير شيء في المحطة؟</h2>
   <div class="flow">
-    <div class="step c-teal"><b>1 · REPLACE: الاسم</b>REPLACE: ما يحدث أولًا</div>
-    <div class="arrow frag" data-frag="b">←</div><div class="step c-cyan frag" data-frag="b"><b>2 · REPLACE: الاسم</b>REPLACE: الجزء التالي</div>
-    <div class="arrow frag" data-frag="c">←</div><div class="step c-coral frag" data-frag="c"><b>3 · REPLACE: الاسم</b>REPLACE: النتيجة</div>
+    <div class="step c-teal"><b>استشاري</b>معلومة أو توصية. إنسان مسمّى يقرر ويفعل بيده</div>
+    <div class="arrow frag" data-frag="b">←</div><div class="step c-amber frag" data-frag="b"><b>إشرافي</b>يكتب هدفًا أو جدولًا ضمن حدود. إنسان يراقب ويستطيع الإيقاف</div>
+    <div class="arrow frag" data-frag="c">←</div><div class="step c-coral frag" data-frag="c"><b>حلقة مغلقة</b>يحرّك المعدة مباشرة: صمام أو مضخة أو إيقاف</div>
   </div>
-  <div class="callout tip mt frag"><b>الخلاصة.</b> REPLACE: الجملة التي تبقى في الذاكرة</div>
-  <aside class="notes">اضغط مرة لكل خطوة، وقل ما تضيفه كل خطوة قبل ظهور التالية. REPLACE: المثال الذي تشرحه</aside>
+  <div class="callout tip mt frag" data-frag="c"><b>الخلاصة.</b> كلما قلّ ما بين المخرج والمعدة، زادت الأدلة المطلوبة قبل الاستعمال.</div>
+  <aside class="notes"><p>اضغط لكل مستوى. اسأل بعد كل ضغطة: من يملك القرار هنا؟ في الاستشاري إنسان يفعل؛ في الإشرافي إنسان يستطيع أن يوقف؛ في الحلقة المغلقة لا أحد بين المخرج والفعل. الدليل كاملًا في <code>control_levels_guide.txt</code>.</p></aside>
+</section>
+
+<section class="slide" id="level-is-delivery" data-lo="LO1">
+  <div class="kicker">النموذج نفسه، مستويان</div>
+  <h2>المستوى صفة للتوصيل، لا للنموذج</h2>
+  <table class="t">
+    <tr><th>النموذج</th><th>حيث يذهب مخرجه</th><th>المستوى</th></tr>
+    <tr><td rowspan="2">مستشعر برمجي لنقاء البروبان</td><td>رقم على الشاشة، والمشغّل يقرر</td><td>استشاري</td></tr>
+    <tr class="hl"><td>يدخل المتحكم المتقدم فيحرّك معدل الراجع</td><td>حلقة مغلقة</td></tr>
+    <tr><td rowspan="2">كاشف أعطال العملية</td><td>إنذار على شاشة غرفة التحكم</td><td>استشاري</td></tr>
+    <tr class="hl"><td>منطق يوقف مضخة التغذية دون انتظار</td><td>حلقة مغلقة</td></tr>
+  </table>
+  <div class="callout warn mt"><b>أين يقع الخطأ.</b> الحكم باسم التطبيق: «مجرد مستشعر» أو «مجرد كاشف». اقرأ ما يحدث للمخرج.</div>
+  <aside class="notes"><p>هذه الصفوف الأربعة في جدول المختبر (U03 وU04 وU08 وU09). السؤال للقاعة: لو أعادت سِناد تدريب الكاشف، أي الصفين يحتاج أدلة أكثر قبل التشغيل؟ الجواب: صف الإيقاف، لأنه لا إنسان فيه.</p></aside>
+</section>
+
+<section class="slide" id="watching-is-not-advisory" data-lo="LO1">
+  <div class="kicker">الفخ الأكثر شيوعًا</div>
+  <h2>«المشغّل يراقب» لا تجعل النظام استشاريًّا</h2>
+  <div class="cols cols-2">
+    <div class="card c-coral"><h4>الوصف كما يكتبه المورّد</h4><p class="small mb0">«تنبؤ بإنتاج المزرعة الشمسية يكتب جدول شحن البطارية وتفريغها لليوم التالي تلقائيًّا ضمن حدود ثابتة؛ مسؤولة المناوبة تراقب وتستطيع إيقاف الجدول.»</p></div>
+    <div class="card c-teal"><h4>القراءة الصحيحة</h4><p class="small mb0">الجدول يُكتب دون موافقة. الإنسان يوقف ولا يقرر. هذا <b>إشرافي</b>، وأدلته: حدود تُفرض خارج النموذج، وتجاوز يدوي مجرَّب، ووضع بديل.</p></div>
+  </div>
+  <div class="callout tip mt"><b>الاختبار.</b> لو غابت مسؤولة المناوبة ساعة، هل يتغير شيء في المحطة؟ إن كان نعم، فليس استشاريًّا.</div>
+  <aside class="notes"><p>هذا التطبيق U06 في المختبر. أكثر من نصف القاعات تصنّفه استشاريًّا في المحاولة الأولى. اقرأ الكلمتين «تلقائيًّا» و«تستطيع إيقاف» بصوت عالٍ، واطرح اختبار الساعة الغائبة.</p></aside>
+</section>
+
+<section class="slide" id="evidence-ladder" data-lo="LO1">
+  <div class="kicker">الأدلة</div>
+  <h2>كل مستوى يرث أدلة ما قبله ويزيد عليها</h2>
+  <div class="ladder" style="--n:3">
+    <div class="rung c-teal"><b>استشاري</b>اختبار على بيانات لم يرها مقابل خط أساس ساذج؛ تسعير الأخطاء؛ من يقرر؛ تجربة صامتة<small>اليوم 1</small></div>
+    <div class="rung c-amber"><b>إشرافي</b>ثم: نطاق تشغيل بحدود تُفرض خارج النموذج؛ تجاوز يدوي مجرَّب؛ وضع بديل<small>اليوم 2</small></div>
+    <div class="rung c-coral on"><b>حلقة مغلقة</b>ثم: تحليل مصادر الخطر وملف إثبات سلامة؛ طبقة حماية مستقلة؛ ضبط التغيير<small>خارج الورشة</small></div>
+  </div>
+  <aside class="notes"><p>الدرجة الأولى هي يوم الورشة الأول كله: خط الأساس وتسعير الأخطاء. الدرجة الثانية هي اليوم الثاني: النطاق والتجاوز والبديل في حجة السلامة. الدرجة الثالثة أعمق من هذه الورشة: ملف إثبات السلامة الكامل لنظام حلقة مغلقة يُدرَّس في DEV-PHY-401. لا قفز: نظام بحلقة مغلقة بلا اختبار على خط أساس لا ينقذه ملف سلامة.</p></aside>
+</section>
+
+<section class="slide" id="level-is-not-risk" data-lo="LO1">
+  <div class="kicker">المستوى والخطر</div>
+  <h2>المستوى لا يقول كل شيء عن الخطر</h2>
+  <div class="cols cols-2">
+    <ul class="bullets">
+      <li>«نذير» استشاري: لا يكتب شيئًا في نظام التحكم</li>
+      <li>لكن المشغّل الذي ينفذ توصية خاطئة يقرّب ضاغطًا من الاندفاع (surge)</li>
+      <li>العاقبة سلامة، فالأدلة أثقل من استشاري عاقبته مالية</li>
+      <li>والمورّد يقترح «مرحلة ثانية» يكتب فيها النظام نقاط الضبط، ويسميها «استشارية محسّنة»</li>
+    </ul>
+    <div class="card c-coral"><h4>اقرأ الأفعال لا الصفات</h4><p class="small mb0">«يكتب نقاط الضبط مباشرة ضمن حدود، والمشغّل يراقب» وصف لمستوى إشرافي، مهما كان اسمه في العرض.</p></div>
+  </div>
+  <aside class="notes"><p>لا تحسم المرحلة الثانية الآن: تعود في المختبرين 2.3 و2.4. يكفي أن يلاحظوا أن الاسم التجاري لا يغير المستوى. ومستوى المخاطر يُبنى في اليوم 2 من مستوى التحكم والعاقبة معًا.</p></aside>
+</section>
+
+<section class="slide" id="prework-decision" data-lo="LO1">
+  <div class="kicker">العمل التحضيري</div>
+  <h2>قرارك التشغيلي هو الصف الحادي عشر في الجدول</h2>
+  <table class="t">
+    <tr><th>ما جئت به</th><th>لماذا نحتاجه</th></tr>
+    <tr><td>قرار يتكرر، ومن يتخذه، وكم مرة</td><td>يحدد ماذا سيحدث لمخرج أي نموذج: مستواه</td></tr>
+    <tr><td>الخطآن وتكلفة كل منهما</td><td>يسعّر الأخطاء كما نفعل في الجلسة 4</td></tr>
+    <tr><td>القاعدة البسيطة المستعملة اليوم</td><td>خط الأساس الذي يجب أن يغلبه أي نموذج</td></tr>
+  </table>
+  <div class="callout warn mt"><b>قبل أن تكتب.</b> لا رقم مصنف ولا اسم معدة حقيقي. غيّر الأسماء وقرّب الأرقام.</div>
+  <aside class="notes"><p>اسأل: من أكمل العمل التحضيري؟ من لم يكمله يأخذ القرار الجاهز في <code>prework_fallback.txt</code>: سحب مضخة تبريد للعمرة بجدول ثابت كل 8,000 ساعة، والأرقام فيه تقديرية واصطناعية. ذكّر بأن الورقة قد تدخل ملف المشروع الختامي، فلا تحمل بيانات من الجهة.</p></aside>
+</section>
+
+<section class="slide" id="check-control-level" data-lo="LO1">
+  <div class="kicker">نقطة تحقق</div>
+  <h2>جدول حقن يُكتب كل ليلة</h2>
+  <div class="quiz" data-type="single" data-lo="LO1">
+    <p class="lead">في معمل الغاز نموذج يحسب جرعة مانع التآكل، ويكتب جدول الحقن لليوم التالي في نظام التحكم كل ليلة ضمن حدود ثابتة. الفني يراجع السجل أسبوعيًّا ويستطيع إيقاف الجدول. ما المستوى، وما الأدلة الإضافية؟</p>
+    <div class="opts">
+      <div class="opt" data-why="يخلط بين قدرة الإنسان على الإيقاف وبين أن يقرر: الجدول يُنفَّذ دون موافقته">استشاري، لأن الفني يستطيع الإيقاف؛ يكفي اختبار على خط أساس</div>
+      <div class="opt" data-ok>إشرافي؛ يضاف نطاق بحدود تُفرض خارج النموذج، وتجاوز مجرَّب، ووضع بديل</div>
+      <div class="opt" data-why="يظن أن كل كتابة تلقائية حلقة مغلقة: النموذج يكتب جدولًا ضمن حدود ولا يحرّك المعدة مباشرة">حلقة مغلقة؛ يلزم ملف إثبات سلامة معتمد قبل أي شيء</div>
+      <div class="opt" data-why="يحكم بالنموذج لا بالتوصيل: بساطة الحساب لا تغيّر ما يحدث لمخرجه">استشاري، لأن الحساب بسيط والجرعة صغيرة</div>
+    </div>
+    <div class="callout tip why"><b>لماذا.</b> الجدول يُكتب ويُنفَّذ دون موافقة على كل يوم، والإنسان يراقب ويستطيع الإيقاف: هذا تعريف الإشرافي، وأدلته أدلة الاستشاري ثم الحدود والتجاوز والبديل.</div>
+  </div>
+  <aside class="notes"><p>الإجابة: ب. من اختار «أ» وقع في فخ «يراقب». من اختار «ج» يحتاج سؤال الدليل: هل يحرّك النموذج المضخة بنفسه، أم يكتب جدولًا ضمن حدود؟ اربطه بـU06 في المختبر.</p></aside>
 </section>
 
 <section class="slide lab" id="lab-1-1" data-auto="lab" data-lab="1.1">
-  <aside class="notes">REPLACE: ما تراقبه أثناء عمل المشاركين، والمشكلات المعتادة، والبديل لمن لم يُنهِ مختبرًا سابقًا</aside>
+  <aside class="notes"><p>راقب عمود الأدلة: الخطأ الأكثر شيوعًا كتابة أدلة الحلقة المغلقة وحدها. في الدقيقة 25 ذكّر بالصف U00. في المقارنة مع الزميل اطلب الجملة التي حسمت القرار، لا الرأي. الجدول الصحيح في ثمانية صفوف من عشرة يحقق دليل الناتج الأول.</p></aside>
 </section>
 
 <!-- الجلسة 2 -->
 
 <section class="slide section" id="s2" data-auto="section" data-session="2"></section>
 
-<section class="slide" id="s2-idea">
-  <div class="kicker">REPLACE: السؤال الذي تجيب عنه الشريحة</div>
-  <h2>REPLACE: فكرة واحدة في جملة</h2>
+<section class="slide" id="brochure-claims" data-lo="LO2">
+  <div class="kicker">نشرة المورّد «أفلاك»</div>
+  <h2>ادعاء دقة بلا سنة وبلا خط أساس لا يُقرأ بعد</h2>
   <div class="cols cols-2">
     <ul class="bullets">
-      <li>REPLACE: ست نقاط على الأكثر، كل منها فكرة تامة</li>
-      <li>REPLACE: أبرز العبارة الأساسية، والأرقام من تشغيل المختبر لا من الذاكرة</li>
+      <li>«الخطأ 4.1% على بيانات 2023 كاملة»</li>
+      <li>«أدق من التنبؤ الموسمي الساذج بنحو النصف»</li>
+      <li>«جاهز لجدولة الوحدات آليًّا دون مراجعة بشرية»</li>
+      <li>«القيمة 4.1 مليون ريال في السنة»</li>
     </ul>
-    <div class="card c-teal"><h4>في دراسة الحالة</h4><p class="small mb0">REPLACE: اربط الفكرة بدراسة الحالة وبياناتها</p></div>
+    <div class="card c-coral"><h4>ثلاثة أسئلة قبل أي رقم</h4><p class="small mb0">على أي سنة حُسب؟ هل رآها النموذج في التدريب؟ أمام أي قاعدة بسيطة، وبأي مهلة؟</p></div>
   </div>
-  <div class="callout warn mt"><b>أين يقع الخطأ.</b> REPLACE: الخطأ الذي سيقع فيه المشاركون، وكيف يتعرفون عليه</div>
-  <aside class="notes">REPLACE: ما تقوله، والعرض الحي، والسؤال للقاعة، والخطأ الشائع وحلّه</aside>
+  <aside class="notes"><p>اقرأ الادعاءات الأربعة بصوت عالٍ واسأل: أيها يصدق رقمًا ويضلل معنى؟ لا تجب الآن. ادعاء الجدولة الآلية يعيدنا إلى الجلسة 1: هو مستوى إشرافي يحتاج أدلة أكثر. الملف <code>vendor_brochure.txt</code>.</p></aside>
 </section>
 
-<section class="slide" id="s2-steps">
-  <div class="kicker">خطوة بخطوة</div>
-  <h2>REPLACE: عملية تظهر خطوة مع كل ضغطة</h2>
-  <div class="flow">
-    <div class="step c-teal"><b>1 · REPLACE: الاسم</b>REPLACE: ما يحدث أولًا</div>
-    <div class="arrow frag" data-frag="b">←</div><div class="step c-cyan frag" data-frag="b"><b>2 · REPLACE: الاسم</b>REPLACE: الجزء التالي</div>
-    <div class="arrow frag" data-frag="c">←</div><div class="step c-coral frag" data-frag="c"><b>3 · REPLACE: الاسم</b>REPLACE: النتيجة</div>
+<section class="slide" id="two-baselines" data-lo="LO2">
+  <div class="kicker">خط الأساس الساذج</div>
+  <h2>قاعدتان لا تتعلمان شيئًا، وعلى النموذج أن يغلبهما</h2>
+  <div class="cols cols-2">
+    <div class="card c-teal"><h4>الاستمرارية</h4><p>غدًا مثل اليوم: الحمل في الساعة نفسها أمس.</p><p class="small mb0">قوية حين يتغير الطلب ببطء من يوم إلى يوم.</p></div>
+    <div class="card c-purple"><h4>الموسمي الساذج</h4><p>غدًا مثل الأسبوع الماضي: الحمل في الساعة نفسها قبل سبعة أيام.</p><p class="small mb0">تحفظ نمط أيام الأسبوع، وتتأخر حين يتغير الطقس.</p></div>
   </div>
-  <div class="callout tip mt frag"><b>الخلاصة.</b> REPLACE: الجملة التي تبقى في الذاكرة</div>
-  <aside class="notes">اضغط مرة لكل خطوة، وقل ما تضيفه كل خطوة قبل ظهور التالية. REPLACE: المثال الذي تشرحه</aside>
+  <div class="callout tip mt"><b>القاعدة.</b> النموذج يُقاس أمام <b>أقوى</b> القاعدتين، لا أمام الأضعف.</div>
+  <aside class="notes"><p>كتاب Hyndman وAthanasopoulos في التنبؤ يستعمل الطرق البسيطة، ومنها الساذج والموسمي الساذج، معايير مقارنة في الكتاب كله. القاعدة البسيطة ليست خصمًا ضعيفًا: في كثير من الشبكات يصعب غلب الاستمرارية. Sources: Hyndman and Athanasopoulos, Forecasting: Principles and Practice, 3rd edition, chapter 5.</p></aside>
+</section>
+
+<section class="slide" id="same-lead-time" data-lo="LO2">
+  <div class="kicker">المهلة</div>
+  <h2>خط الأساس يصدر بالمهلة نفسها التي يصدر بها التنبؤ</h2>
+  <div class="flow">
+    <div class="step c-teal"><b>اليوم ظهرًا</b>المكتب يجدول وحدات الغد</div>
+    <div class="arrow">←</div>
+    <div class="step c-cyan"><b>ما يُعرف الآن</b>حمل اليوم حتى الآن، وحمل الأسبوع الماضي</div>
+    <div class="arrow">←</div>
+    <div class="step c-coral"><b>ما لا يُعرف</b>حمل الساعة السابقة لساعة الغد</div>
+  </div>
+  <div class="callout warn mt"><b>أين يقع الخطأ.</b> استمرارية «الساعة السابقة» تعرف ما لا يعرفه تنبؤ يصدر قبل 24 ساعة، فتبدو أقوى مما هي وتظلم النموذج. في جدول البيانات: 24 صفًّا للاستمرارية، و168 للموسمي الساذج.</div>
+  <aside class="notes"><p>ارسم خطًّا زمنيًّا على السبورة: لحظة الإصدار، ثم الساعة المتنبأ بها بعد 24 ساعة. كل ما على يمين لحظة الإصدار ممنوع على خط الأساس كما هو ممنوع على النموذج. هذا أكثر خطأ تقني في المختبر 1.2.</p></aside>
+</section>
+
+<section class="slide" id="training-year" data-lo="LO2">
+  <div class="kicker">بيانات لم يرها</div>
+  <h2>الرقم المحسوب على سنة التدريب يقيس الحفظ، لا التنبؤ</h2>
+  <div class="cols cols-2">
+    <div class="stat center"><div class="big">2023</div><div class="lbl">سنة دُرّب عليها نموذج «أفلاك»، وعليها حُسب رقم النشرة</div></div>
+    <div class="stat center"><div class="big">2024</div><div class="lbl">سنة لم يرها: عليها تختبره في المختبر</div></div>
+  </div>
+  <div class="callout tip mt"><b>اطلب دائمًا.</b> فترة الاختبار، وأنها بعد فترة التدريب في الزمن، لا مقتطعة منها عشوائيًّا.</div>
+  <aside class="notes"><p>في ملف الأحمال عمود تنبؤ المورّد فارغ في 2023 عمدًا: لا يُختبر النموذج على سنة تدريبه. الفرق بين الرقمين سيظهر في جدولهم. اربطه بـUSE-FLU-103: الأداء على بيانات التدريب ليس دليلًا.</p></aside>
+</section>
+
+<section class="slide" id="mae-and-mape" data-lo="LO2">
+  <div class="kicker">مقياسا الخطأ</div>
+  <h2>متوسط الخطأ المطلق بالميغاواط، والنسبي بالنسبة المئوية</h2>
+  <table class="t">
+    <tr><th>المقياس</th><th>يُحسب</th><th>يجيب عن</th></tr>
+    <tr><td><b>متوسط الخطأ المطلق</b> (MAE)</td><td>متوسط |التنبؤ ناقص الحمل|</td><td>كم ميغاواط احتياطي نحتاج عادة؟</td></tr>
+    <tr><td><b>متوسط الخطأ النسبي المطلق</b> (MAPE)</td><td>متوسط |الخطأ| مقسومًا على الحمل</td><td>كم نخطئ نسبة إلى الحجم؟ للمقارنة بين شبكتين</td></tr>
+    <tr><td><b>الانحياز</b></td><td>متوسط الخطأ بإشارته</td><td>هل نخطئ إلى جهة واحدة؟</td></tr>
+  </table>
+  <div class="callout note mt"><b>والتحسن على خط الأساس</b> = 1 ناقص (MAE النموذج ÷ MAE خط الأساس). نسبة ما يقلّه النموذج من الخطأ.</div>
+  <aside class="notes"><p>المقياسان المطلقان لا يقولان شيئًا عن الاتجاه. الانحياز يعود في الجلسة 3 حين نصل إلى الذروة. الصيغ في صفحة المختبر جاهزة للنسخ.</p></aside>
+</section>
+
+<section class="slide" id="strongest-baseline" data-lo="LO2">
+  <div class="kicker">صحيح بالحرف</div>
+  <h2>«أدق من الموسمي الساذج بالنصف» قد يكون صحيحًا ومضللًا معًا</h2>
+  <div class="cols cols-2">
+    <ul class="bullets">
+      <li>المورّد يختار خط الأساس الذي يقارن به</li>
+      <li>الأضعف يعطي أكبر تحسن، فيظهر في النشرة</li>
+      <li>السؤال الذي يغيّر القرار: كم يضيف على <b>أقوى</b> القاعدتين؟</li>
+      <li>والقيمة بالريال تُحسب على القاعدة المستعملة في المكتب اليوم</li>
+    </ul>
+    <div class="card c-amber"><h4>ما تطلبه في العقد</h4><p class="small mb0">جدول أخطاء على سنة لم يرها النموذج، أمام الاستمرارية والموسمي الساذج بالمهلة نفسها، وخطأ الذروة. يُسلَّم قبل التجربة لا بعدها.</p></div>
+  </div>
+  <aside class="notes"><p>لا تكشف الأرقام: هم يحسبونها الآن. بعد المختبر قل: النشرة لم تكذب في أي رقم، لكنها اختارت السنة وخط الأساس. بند العقد في البطاقة يعود في خريطة الفرص.</p></aside>
+</section>
+
+<section class="slide" id="check-forecast-claim" data-lo="LO2">
+  <div class="kicker">نقطة تحقق</div>
+  <h2>عرض مورّد جديد لتنبؤ الأحمال</h2>
+  <div class="quiz" data-type="single" data-lo="LO2">
+    <p class="lead">مورّد آخر يعرض على مكتب الشبكة تنبؤًا لليوم التالي: «خطؤنا 3% على العام الماضي، وأفضل من التنبؤ الساذج بأربعين في المئة». ما أول ما تطلبه قبل أي تجربة؟</p>
+    <div class="opts">
+      <div class="opt" data-why="يطلب مقياسًا آخر للحساب نفسه: الرقم الجديد يرث مشكلة السنة وخط الأساس">الخطأ المطلق بالميغاواط بدل النسبة المئوية</div>
+      <div class="opt" data-why="يظن أن تعقيد النموذج دليل على جودته: الخوارزمية لا تقول على أي بيانات قيس">اسم الخوارزمية وعدد متغيراتها</div>
+      <div class="opt" data-why="يقبل الرقم ويؤجل السؤال: التجربة الصامتة تأتي بعد اختبار على بيانات لم يرها، لا بدلًا منه">تجربة صامتة ثلاثة أشهر قبل أي سؤال</div>
+      <div class="opt" data-ok>هل كان العام الماضي في التدريب، وأي ساذج قارن به وبأي مهلة</div>
+    </div>
+    <div class="callout tip why"><b>لماذا.</b> رقم الدقة يُقرأ بسنته وخط أساسه. سنة التدريب تقيس الحفظ، والساذج الأضعف بمهلة غير مهلة التنبؤ يضخّم التحسن.</div>
+  </div>
+  <aside class="notes"><p>الإجابة: د. «ج» خيار جيد لاحقًا، لكنه لا يجيب عن السؤالين اللذين يحسمان قراءة الرقم. من اختار «أ» يحتاج تذكيرًا: المقياس الآخر يرث السنة نفسها.</p></aside>
 </section>
 
 <section class="slide lab" id="lab-1-2" data-auto="lab" data-lab="1.2">
-  <aside class="notes">REPLACE: ما تراقبه أثناء عمل المشاركين، والمشكلات المعتادة، والبديل لمن لم يُنهِ مختبرًا سابقًا</aside>
+  <aside class="notes"><p>الخطأ الأكثر شيوعًا: استمرارية بصف واحد بدل 24، أو متوسط على العمود كله يدخل صفوف 2023 الفارغة. من يتأخر في الحساب يفتح <code>files/start/forecast_errors_2024.csv</code>، ففيه الأعمدة جاهزة. الأرقام المرجعية في تفاصيل المدرّب في صفحة المختبر.</p></aside>
 </section>
 
 <!-- الجلسة 3 -->
 
 <section class="slide section" id="s3" data-auto="section" data-session="3"></section>
 
-<section class="slide" id="s3-idea">
-  <div class="kicker">REPLACE: السؤال الذي تجيب عنه الشريحة</div>
-  <h2>REPLACE: فكرة واحدة في جملة</h2>
-  <div class="cols cols-2">
-    <ul class="bullets">
-      <li>REPLACE: ست نقاط على الأكثر، كل منها فكرة تامة</li>
-      <li>REPLACE: أبرز العبارة الأساسية، والأرقام من تشغيل المختبر لا من الذاكرة</li>
-    </ul>
-    <div class="card c-teal"><h4>في دراسة الحالة</h4><p class="small mb0">REPLACE: اربط الفكرة بدراسة الحالة وبياناتها</p></div>
+<section class="slide" id="results-1-2" data-lo="LO2">
+  <div class="kicker">ما وجدتموه في المختبر 1.2</div>
+  <h2>النموذج يغلب القاعدتين، والاستمرارية بفارق ضئيل</h2>
+  <div class="bars">
+    <div class="row"><span>الموسمي الساذج</span><div class="bar c-purple" style="--w:100%"></div><span class="val">8.33%</span></div>
+    <div class="row"><span>الاستمرارية</span><div class="bar c-teal" style="--w:54%"></div><span class="val">4.50%</span></div>
+    <div class="row"><span>المورّد «أفلاك»</span><div class="bar c-coral" style="--w:53%"></div><span class="val">4.39%</span></div>
+    <div class="row"><span>مشغّل الشبكة</span><div class="bar c-cyan" style="--w:26%"></div><span class="val">2.16%</span></div>
   </div>
-  <div class="callout warn mt"><b>أين يقع الخطأ.</b> REPLACE: الخطأ الذي سيقع فيه المشاركون، وكيف يتعرفون عليه</div>
-  <aside class="notes">REPLACE: ما تقوله، والعرض الحي، والسؤال للقاعة، والخطأ الشائع وحلّه</aside>
+  <p class="caption">متوسط الخطأ النسبي المطلق على 8,784 ساعة من 2024. التحسن على الاستمرارية 1.8%، وعلى الموسمي الساذج 48.4% (بالخطأ المطلق). النشرة: 4.1% على 2023.</p>
+  <aside class="notes"><p>اطلب من طاولة أن تقرأ حكمها في سطر. الأرقام من تشغيل الحل على ملفات المشاركين (<code>check.py 1.2</code>). تنبؤ المشغّل المنشور يعرف الطقس، وخطؤه نحو نصف خطأ المورّد: هذا هو السقف الذي يعرفه الجميع.</p></aside>
 </section>
 
-<section class="slide" id="s3-steps">
-  <div class="kicker">خطوة بخطوة</div>
-  <h2>REPLACE: عملية تظهر خطوة مع كل ضغطة</h2>
-  <div class="flow">
-    <div class="step c-teal"><b>1 · REPLACE: الاسم</b>REPLACE: ما يحدث أولًا</div>
-    <div class="arrow frag" data-frag="b">←</div><div class="step c-cyan frag" data-frag="b"><b>2 · REPLACE: الاسم</b>REPLACE: الجزء التالي</div>
-    <div class="arrow frag" data-frag="c">←</div><div class="step c-coral frag" data-frag="c"><b>3 · REPLACE: الاسم</b>REPLACE: النتيجة</div>
+<section class="slide" id="months-hide" data-lo="LO2">
+  <div class="kicker">المتوسط يخفي</div>
+  <h2>متوسط السنة يخفي خمسة أشهر يخسر فيها النموذج</h2>
+  <table class="t small">
+    <tr><th>الشهر</th><th class="num">المورّد</th><th class="num">الاستمرارية</th><th>من يغلب</th></tr>
+    <tr class="hl"><td>يناير</td><td class="num">8.21%</td><td class="num">7.86%</td><td>الاستمرارية</td></tr>
+    <tr><td>أبريل</td><td class="num">4.05%</td><td class="num">4.78%</td><td>المورّد</td></tr>
+    <tr class="hl"><td>يوليو</td><td class="num">4.63%</td><td class="num">4.47%</td><td>الاستمرارية</td></tr>
+    <tr class="hl"><td>أغسطس</td><td class="num">2.51%</td><td class="num">2.48%</td><td>الاستمرارية</td></tr>
+    <tr><td>سبتمبر</td><td class="num">3.44%</td><td class="num">3.57%</td><td>المورّد</td></tr>
+  </table>
+  <p class="caption">الخطأ النسبي المطلق بحسب الشهر، 2024. يخسر المورّد أيضًا في يونيو ونوفمبر. أسوأ أشهره يناير.</p>
+  <aside class="notes"><p>هذه الخطوة الأولى من المختبر 1.3، فاعرض الجدول بعد أن يبدأ الحساب أو بعد المختبر بحسب إيقاع القاعة. السؤال: لماذا يناير؟ موجات البرد تغيّر الحمل من يوم لآخر، والنموذج لا يعرف الطقس.</p></aside>
+</section>
+
+<section class="slide" id="peak-under" data-lo="LO2">
+  <div class="kicker">ساعات الذروة</div>
+  <h2>في الذروة يتنبأ النموذج بأقل من الحمل، وهذا أغلى خطأ</h2>
+  <div class="cols cols-3">
+    <div class="stat"><div class="big">440</div><div class="lbl">ساعة ذروة: أعلى 5% من حمل السنة</div></div>
+    <div class="stat"><div class="big"><span class="ltr">-1,793</span></div><div class="lbl">ميغاواط متوسط خطأ المورّد في الذروة: تنبؤ ناقص</div></div>
+    <div class="stat"><div class="big"><span class="ltr">-898</span></div><div class="lbl">ميغاواط للاستمرارية في الساعات نفسها</div></div>
   </div>
-  <div class="callout tip mt frag"><b>الخلاصة.</b> REPLACE: الجملة التي تبقى في الذاكرة</div>
-  <aside class="notes">اضغط مرة لكل خطوة، وقل ما تضيفه كل خطوة قبل ظهور التالية. REPLACE: المثال الذي تشرحه</aside>
+  <div class="callout warn mt"><b>أين يقع الخطأ.</b> الحكم بالخطأ المطلق وحده. خطأ المورّد في الذروة 2.91%، والاستمرارية 2.38%: النموذج الذي يغلب في المتوسط يخسر حيث يكلف الخطأ أكثر.</div>
+  <aside class="notes"><p>الانحياز السالب يعني أن المكتب يجدول وحدات أقل من الحاجة، ثم يشتري احتياطيًّا سريعًا. تنبؤ المشغّل انحيازه في الذروة 85 ميغاواط فقط. الأرقام من <code>check.py 1.3</code>.</p></aside>
+</section>
+
+<section class="slide" id="asymmetric-cost" data-lo="LO2">
+  <div class="kicker">تسعير الخطأ</div>
+  <h2>الميغاواط الناقصة أغلى من الزائدة، فسعّر كل جهة بسعرها</h2>
+  <div class="cols cols-2">
+    <table class="t">
+      <tr><th>الخطأ</th><th>ما يحدث</th><th class="num">التكلفة</th></tr>
+      <tr><td>تنبؤ أقل من الحمل</td><td>احتياطي سريع</td><td class="num">4 وحدات / ميغاواط ساعة</td></tr>
+      <tr><td>تنبؤ أعلى من الحمل</td><td>وحدة مجدولة بلا حاجة</td><td class="num">وحدة / ميغاواط ساعة</td></tr>
+    </table>
+    <div class="bars">
+      <div class="row"><span>الموسمي الساذج</span><div class="bar c-purple" style="--w:100%"></div><span class="val">97.6</span></div>
+      <div class="row"><span>الاستمرارية</span><div class="bar c-teal" style="--w:53%"></div><span class="val">51.6</span></div>
+      <div class="row"><span>المورّد</span><div class="bar c-coral" style="--w:52%"></div><span class="val">51.1</span></div>
+      <div class="row"><span>المشغّل</span><div class="bar c-cyan" style="--w:23%"></div><span class="val">22.4</span></div>
+    </div>
+  </div>
+  <p class="caption">تكلفة أخطاء 2024 بالمليون وحدة. الوحدات نسبية لأن الشبكة العامة أكبر كثيرًا من ذُرى. الفرق بين المورّد والاستمرارية أقل من 1%.</p>
+  <aside class="notes"><p>السؤال للقاعة: كم كانت القيمة في النشرة؟ 4.1 مليون ريال، محسوبة على الموسمي الساذج. على القاعدة المستعملة اليوم الفرق شبه معدوم. هذه هي القيمة التي ستدخل الخريطة في المختبر 2.4 (الحالة U05).</p></aside>
+</section>
+
+<section class="slide" id="renewables" data-lo="LO2">
+  <div class="kicker">تنبؤ المصادر المتجددة</div>
+  <h2>تنبؤ الشمس يخطئ مع السحب والغبار، لا مع أيام الأسبوع</h2>
+  <div class="cols cols-2">
+    <ul class="bullets">
+      <li>الحمل يتبع الناس والطقس؛ إنتاج الشمس يتبع السماء</li>
+      <li>الاستمرارية «مثل أمس» ضعيفة في يوم غائم بعد يوم صافٍ</li>
+      <li>خط الأساس المناسب: الإنتاج في سماء صافية لهذا اليوم، أو تنبؤ الطقس العام</li>
+      <li>ومتى كتب التنبؤ جدول البطارية، صار المستوى إشرافيًّا</li>
+    </ul>
+    <div class="card c-purple"><h4>في ذُرى</h4><p class="small mb0">U06: تنبؤ المزرعة الشمسية يكتب جدول البطارية تلقائيًّا. سجلّه التاريخي سنة واحدة، وقراءاته غير محققة: الجاهزية ستظهر ضعيفة في الخريطة.</p></div>
+  </div>
+  <aside class="notes"><p>لا مختبر للشمس في هذه الورشة: الفكرة أن خط الأساس يُختار بحسب ما يحرّك الظاهرة. الغبار في المملكة يغيّر إنتاج الألواح، فتنبؤ لا يعرف العوالق يخطئ في أيام بعينها. الأرقام في البطاقة من ملف الحالات <code>map/use_cases.csv</code>.</p></aside>
+</section>
+
+<section class="slide" id="historian-faults" data-lo="LO2">
+  <div class="kicker">جودة بيانات السجل التاريخي</div>
+  <h2>قبل أن تحكم على نموذج، افحص البيانات التي تحكم بها</h2>
+  <div class="cols cols-4">
+    <div class="card c-teal"><h4>قيمة مجمّدة</h4><p class="small mb0">المستشعر أو الاتصال توقف، والسجل يكرر آخر قراءة ساعات</p></div>
+    <div class="card c-cyan"><h4>فجوة أصفار</h4><p class="small mb0">انقطاع يُكتب صفرًا بدل «لا قيمة»</p></div>
+    <div class="card c-amber"><h4>قفزة</h4><p class="small mb0">خطأ وحدة أو فاصلة: قيمة عشرة أضعاف</p></div>
+    <div class="card c-coral"><h4>ساعة مكررة</h4><p class="small mb0">تغيير توقيت أو تصدير مزدوج: 169 صفًّا لأسبوع</p></div>
+  </div>
+  <div class="callout warn mt"><b>أين يقع الخطأ.</b> حذف الأصفار وحدها ثم الحساب. على الأسبوع نفسه خطأ المورّد 3.14% على الحمل الصحيح، و4.27% على المسجل بعد حذف الأصفار: العيب في التسجيل لا في النموذج.</div>
+  <aside class="notes"><p>السجل التاريخي (historian) يخزن قراءات المصنع كل دقيقة أو ساعة، وهو مصدر بيانات التدريب والاختبار معًا. عيوبه تذهب في الاتجاهين: تُدرّب نموذجًا على خطأ، وتحكم ظلمًا على نموذج صحيح. الأسبوع في <code>historian_export_week.csv</code>، والعيوب الأربعة مزروعة في بيانات عامة.</p></aside>
+</section>
+
+<section class="slide" id="use-recommendation" data-lo="LO2">
+  <div class="kicker">دليل الناتج</div>
+  <h2>توصية الاستعمال ثلاثة أسطر: الاستعمال، والشرط، والمعيار</h2>
+  <table class="t">
+    <tr><th>السطر</th><th>مثال من صيغة مقبولة</th></tr>
+    <tr><td><b>الاستعمال</b></td><td>استشاري بجوار قاعدة المكتب، لا بدلًا منها، ولا جدولة آلية</td></tr>
+    <tr><td><b>الشرط</b></td><td>قبل أي شراء: الطقس في النموذج، وخطأ الذروة مقيس</td></tr>
+    <tr><td><b>المعيار</b></td><td>يغلب الاستمرارية في الذروة وفي تكلفة الخطأ، على سنة لم يرها</td></tr>
+  </table>
+  <aside class="notes"><p>جدول الأخطاء مع هذه التوصية هو دليل الناتج الثاني. التوصية التي تقول «لا تشترِ» مقبولة إن كان معيارها مكتوبًا. التوصية التي تقول «اشترِ لأنه أدق» دون الذروة والتكلفة لا تُقبل.</p></aside>
+</section>
+
+<section class="slide" id="check-peak-decision" data-lo="LO2">
+  <div class="kicker">نقطة تحقق</div>
+  <h2>المتوسط أفضل، والذروة أسوأ</h2>
+  <div class="quiz" data-type="single" data-lo="LO2">
+    <p class="lead">تنبؤ جديد خطؤه السنوي أقل من الاستمرارية بقليل، لكنه في ساعات الذروة يتنبأ بأقل من الحمل بضعف ما تفعله الاستمرارية. والميغاواط الناقصة تكلف أربعة أضعاف الزائدة. بماذا توصي؟</p>
+    <div class="opts">
+      <div class="opt" data-ok>أسعّر الأخطاء بالتكلفتين، وأحكم بالذروة والتكلفة قبل أي استعمال</div>
+      <div class="opt" data-why="يحكم بالمتوسط وحده: المتوسط يخفي أغلى الساعات">أعتمده، لأن خطأه السنوي أقل</div>
+      <div class="opt" data-why="يرفض دون قياس: قد يغلب في التكلفة رغم الذروة، والتسعير يحسم">أرفضه، لأن أي انحياز في الذروة مرفوض</div>
+      <div class="opt" data-why="يعالج العرَض بالحدس: إضافة رقم ثابت لا تقوم على تسعير ولا تُختبر">أعتمده وأضيف هامشًا ثابتًا في كل الساعات</div>
+    </div>
+    <div class="callout tip why"><b>لماذا.</b> قرار الشراء يُبنى على تكلفة الخطأ حيث يقع، لا على متوسطه. في ذُرى غلب المورّد في المتوسط، وخسر في الذروة، وتساوى تقريبًا في التكلفة.</div>
+  </div>
+  <aside class="notes"><p>الإجابة: أ. «ج» حكم قبل القياس. «د» حل شائع في المكاتب: هامش ثابت؛ اسأل: كم يكلف في الساعات غير الذروة؟</p></aside>
 </section>
 
 <section class="slide lab" id="lab-1-3" data-auto="lab" data-lab="1.3">
-  <aside class="notes">REPLACE: ما تراقبه أثناء عمل المشاركين، والمشكلات المعتادة، والبديل لمن لم يُنهِ مختبرًا سابقًا</aside>
+  <aside class="notes"><p>المختبر يبدأ من <code>start/forecast_errors_2024.csv</code>، فلا يحتاج نتيجة 1.2. راقب إشارة الخطأ: السالب تنبؤ أقل من الحمل. في خطوة السجل، من يعدّ سبع ساعات مجمّدة عدّ معها آخر قراءة سليمة. اطلب التوصية مكتوبة في ثلاثة أسطر قبل نهاية الوقت.</p></aside>
 </section>
 
 <!-- الجلسة 4 -->
 
 <section class="slide section" id="s4" data-auto="section" data-session="4"></section>
 
-<section class="slide" id="s4-idea">
-  <div class="kicker">REPLACE: السؤال الذي تجيب عنه الشريحة</div>
-  <h2>REPLACE: فكرة واحدة في جملة</h2>
+<section class="slide" id="recap-rare-events" data-lo="LO3">
+  <div class="kicker">من USE-FLU-103</div>
+  <h2>حين يندر الحدث، تكذب الدقة ويصدق العدّ</h2>
   <div class="cols cols-2">
     <ul class="bullets">
-      <li>REPLACE: ست نقاط على الأكثر، كل منها فكرة تامة</li>
-      <li>REPLACE: أبرز العبارة الأساسية، والأرقام من تشغيل المختبر لا من الذاكرة</li>
+      <li>قاعدة «لا عطل أبدًا» دقيقة في أغلب الأيام، ولا تنفع</li>
+      <li>المعدّل الأساسي (base rate) يحدد كم إنذارًا كاذبًا يرافق كل إنذار صادق</li>
+      <li>العتبة سياسة تختارها الجهة، لا خاصية في النموذج</li>
     </ul>
-    <div class="card c-teal"><h4>في دراسة الحالة</h4><p class="small mb0">REPLACE: اربط الفكرة بدراسة الحالة وبياناتها</p></div>
+    <div class="card c-teal"><h4>الجديد اليوم</h4><p class="small mb0">نسعّر كل خطأ بالريال، ونضيف ما لم يكن في المقرر السابق: <b>متى</b> جاء التنبيه، لا هل جاء فقط.</p></div>
   </div>
-  <div class="callout warn mt"><b>أين يقع الخطأ.</b> REPLACE: الخطأ الذي سيقع فيه المشاركون، وكيف يتعرفون عليه</div>
-  <aside class="notes">REPLACE: ما تقوله، والعرض الحي، والسؤال للقاعة، والخطأ الشائع وحلّه</aside>
+  <aside class="notes"><p>شريحة تذكير واحدة: هذه المفاهيم درسوها في USE-FLU-103، الجدول ذو الألف حالة. لا تُعِد الدرس. اسأل فقط: من يذكر ماذا حدث لقاعدة «لا شيء» في جدول الألف حالة؟</p></aside>
 </section>
 
-<section class="slide" id="s4-steps">
-  <div class="kicker">خطوة بخطوة</div>
-  <h2>REPLACE: عملية تظهر خطوة مع كل ضغطة</h2>
-  <div class="flow">
-    <div class="step c-teal"><b>1 · REPLACE: الاسم</b>REPLACE: ما يحدث أولًا</div>
-    <div class="arrow frag" data-frag="b">←</div><div class="step c-cyan frag" data-frag="b"><b>2 · REPLACE: الاسم</b>REPLACE: الجزء التالي</div>
-    <div class="arrow frag" data-frag="c">←</div><div class="step c-coral frag" data-frag="c"><b>3 · REPLACE: الاسم</b>REPLACE: النتيجة</div>
+<section class="slide" id="scarce-labels" data-lo="LO3">
+  <div class="kicker">الأعطال النادرة</div>
+  <h2>الأعطال نادرة، والأعطال الموسومة أندر</h2>
+  <div class="cols cols-3">
+    <div class="stat"><div class="big">11</div><div class="lbl">عطلًا موسومًا لتوربينات ذُرى في خمس سنوات</div></div>
+    <div class="stat"><div class="big">18</div><div class="lbl">حدثًا موسومًا لكاشف أعطال البتروكيماويات</div></div>
+    <div class="stat"><div class="big">100</div><div class="lbl">محرك محاكاة حتى العطل في البيانات العامة التي نعمل عليها</div></div>
   </div>
-  <div class="callout tip mt frag"><b>الخلاصة.</b> REPLACE: الجملة التي تبقى في الذاكرة</div>
-  <aside class="notes">اضغط مرة لكل خطوة، وقل ما تضيفه كل خطوة قبل ظهور التالية. REPLACE: المثال الذي تشرحه</aside>
+  <div class="callout note mt"><b>لهذا نعمل على بيانات محاكاة.</b> بيانات C-MAPSS من NASA تشغّل محركات توربينية حتى العطل، فتعطي ما لا تملكه جهة واحدة: مئة عطل معروف الموعد. الثمن: المحاكاة ليست محطتك.</div>
+  <aside class="notes"><p>الرقمان الأولان من ملف الحالات الاصطناعي <code>map/use_cases.csv</code> (U07 وU08). المئة: 60 محركًا درّب عليها النموذج و40 في المختبر، من مجموعة FD001. اسأل: لو جاءك مورّد بنموذج دُرّب على 11 عطلًا، ماذا تسأل؟ على كم اختُبر؟</p></aside>
+</section>
+
+<section class="slide" id="lead-time" data-lo="LO3">
+  <div class="kicker">العمر المتبقي وزمن الإنذار المسبق</div>
+  <h2>التنبيه الصحيح هو الذي يأتي قبل أن يحتاجه الفريق</h2>
+  <div class="flow">
+    <div class="step c-teal"><b>أول تنبيه</b>النموذج يقدّر أن العمر المتبقي نزل تحت العتبة</div>
+    <div class="arrow">←</div>
+    <div class="step c-amber"><b>15 دورة</b>يحتاجها فريق العمرات لتجهيز القطع والفريق</div>
+    <div class="arrow">←</div>
+    <div class="step c-coral"><b>العطل</b>إن سبق التجهيزَ صار توقفًا غير مخطط</div>
+  </div>
+  <div class="callout tip mt"><b>المهلة</b> = دورة العطل ناقص دورة أول تنبيه. أقل من 15: متأخر. أكثر من 15: في وقته، وما زاد عمرٌ متروك.</div>
+  <aside class="notes"><p>الدورة هنا دورة تشغيل من بيانات المحاكاة. في محطة حقيقية تكون ساعات تشغيل أو مرات بدء. المهلة اللازمة 15 دورة من جدول التكلفة الاصطناعي. اكتب الصيغة على السبورة: هي عمود <code>E</code> في المختبر.</p></aside>
+</section>
+
+<section class="slide" id="two-maintenance-errors" data-lo="LO3">
+  <div class="kicker">خطآن بثمنين</div>
+  <h2>التنبيه المتأخر يكلف توقفًا، والمبكر يكلف عمرًا متروكًا</h2>
+  <table class="t">
+    <tr><th>ما يحدث</th><th>البند في جدول التكلفة</th><th class="num">ريال</th></tr>
+    <tr><td>تنبيه متأخر أو لا تنبيه</td><td>توقف غير مخطط</td><td class="num">1,800,000</td></tr>
+    <tr><td>تنبيه في وقته</td><td>عمرة مخططة</td><td class="num">400,000</td></tr>
+    <tr><td>تنبيه أبكر من اللازم</td><td>كل دورة عمر تُترك</td><td class="num">6,000</td></tr>
+  </table>
+  <div class="callout warn mt"><b>أين يقع الخطأ.</b> عدّ «الأعطال التي سبقها تنبيه» وحده. التنبيه الذي يأتي قبل العطل بخمس دورات «سبق العطل» وفات الفريق.</div>
+  <aside class="notes"><p>التكاليف اصطناعية، بحجم معقول لتوربين غاز. اطلب من القاعة أن تقرأ عتبة المورّد في جدول التكلفة: 20 دورة. السؤال الذي يحمله المختبر: هل 20 هي العتبة الأقل تكلفة لذُرى؟</p></aside>
+</section>
+
+<section class="slide" id="model-bias-near-failure" data-lo="LO3">
+  <div class="kicker">مسار النموذج</div>
+  <h2>النموذج يقدّر عمرًا أطول من الحقيقي حين يقترب العطل</h2>
+  <div class="cols cols-2">
+    <ul class="bullets">
+      <li>بعيدًا عن العطل تقديره سقف ثابت تقريبًا، وهذا متوقع</li>
+      <li>في آخر 60 دورة يتنبأ بأكثر من الباقي بنحو 10 دورات في المتوسط</li>
+      <li>فالعتبة الصغيرة تُعبر متأخرة: التنبيه يأتي بعد فوات المهلة</li>
+    </ul>
+    <div class="card c-coral"><h4>اسأل المورّد</h4><p class="small mb0">ما خطؤك قرب العطل تحديدًا، لا على عمر المعدة كله؟ وفي أي جهة؟</p></div>
+  </div>
+  <aside class="notes"><p>في تشغيل بناء المقرر: جذر متوسط مربع الخطأ 21.0 دورة على المحركات الأربعين، وانحياز 9.9 دورة في آخر 60 دورة. ارسم مسارات التوربينات الثلاثة من <code>turbine_traces.csv</code> أمام القاعة إن سمح الوقت: الخطوة الأولى من المختبر.</p></aside>
+</section>
+
+<section class="slide" id="threshold-is-cost" data-lo="LO3">
+  <div class="kicker">العتبة</div>
+  <h2>العتبة قرار تكلفة يتخذه صاحب القرار، لا رقم يأتي مع النموذج</h2>
+  <div class="cols cols-2">
+    <div class="card c-teal"><h4>عتبة صغيرة</h4><p class="small mb0">عمر متروك قليل، وتنبيهات متأخرة كثيرة</p></div>
+    <div class="card c-purple"><h4>عتبة كبيرة</h4><p class="small mb0">لا تأخير، وعمر متروك كثير</p></div>
+  </div>
+  <div class="callout tip mt"><b>الطريقة.</b> لكل عتبة: المتأخر × 1,800,000 + ما في وقته × 400,000 + الدورات المتروكة × 6,000. الأقل تكلفة هي عتبتك، ما دامت التكاليف هي هذه.</div>
+  <aside class="notes"><p>العبارة الأخيرة مهمة: «ما دامت التكاليف هي هذه». التمرين الإضافي يُنزل تكلفة التوقف إلى النصف، فتتغير العتبة. القرار لمنذر السلمي، مهندس الموثوقية، والنموذج يعطيه منحنى لا قرارًا.</p></aside>
+</section>
+
+<section class="slide" id="cost-of-errors-sheet" data-lo="LO3">
+  <div class="kicker">دليل الناتج الثالث</div>
+  <h2>ورقة تكلفة الأخطاء: سطر لكل نموذج، وعتبة لكل سطر</h2>
+  <table class="t small">
+    <tr><th>النموذج</th><th>العتبة أو الإعداد</th><th>الفائت أو المتأخر</th><th>الكاذب أو المتروك</th><th>المهلة أو التأخر</th><th>التكلفة</th><th>السبب</th></tr>
+    <tr><td>العمر المتبقي للتوربينات</td><td colspan="6" class="muted">اليوم، في المختبر 1.4</td></tr>
+    <tr><td>كاشف أعطال العملية</td><td colspan="6" class="muted">غدًا، في المختبر 2.1</td></tr>
+  </table>
+  <aside class="notes"><p>الورقة <code>cost_of_errors_sheet.csv</code> تكتمل غدًا. من لم يكمل سطر اليوم يبدأ غدًا من <code>start/cost_sheet_after_1_4.csv</code>. الورقة تدخل ملف المشروع الختامي.</p></aside>
+</section>
+
+<section class="slide" id="check-threshold" data-lo="LO3">
+  <div class="kicker">نقطة تحقق</div>
+  <h2>عتبة المورّد الموصى بها</h2>
+  <div class="quiz" data-type="single" data-lo="LO3">
+    <p class="lead">يسلّمك المورّد نموذج العمر المتبقي مع «عتبة موصى بها» قدرها 20 دورة، ويقول إنها تعطي أعلى دقة على بياناته. ماذا تفعل قبل التشغيل؟</p>
+    <div class="opts">
+      <div class="opt" data-why="يعامل العتبة صفةً في النموذج: الدقة على بيانات المورّد لا تعرف تكاليف جهتك">أعتمد 20، فالمورّد أعرف بنموذجه</div>
+      <div class="opt" data-why="يحسب عدد الأعطال التي سبقها تنبيه، ويتجاهل أن التنبيه قد يأتي بعد فوات المهلة">أختار العتبة التي تلتقط أكثر الأعطال قبل وقوعها</div>
+      <div class="opt" data-ok>أحسب لكل عتبة المتأخر والمتروك بتكاليفنا، وأختار الأقل تكلفة</div>
+      <div class="opt" data-why="يختار الأكثر أمانًا ظاهريًّا: العتبة الكبيرة تترك عمرًا كثيرًا وقد تكلف أكثر">أختار أكبر عتبة ممكنة حتى لا يتأخر أي تنبيه</div>
+    </div>
+    <div class="callout tip why"><b>لماذا.</b> العتبة تبادل بين خطأين بثمنين تحددهما جهتك. لا يحسم هذا التبادل إلا جدول تكلفتك.</div>
+  </div>
+  <aside class="notes"><p>الإجابة: ج. المختبر يجيب عن «ب» و«د» بالأرقام: العتبة الكبيرة جدًّا ترتفع تكلفتها من جديد.</p></aside>
 </section>
 
 <section class="slide lab" id="lab-1-4" data-auto="lab" data-lab="1.4">
-  <aside class="notes">REPLACE: ما تراقبه أثناء عمل المشاركين، والمشكلات المعتادة، والبديل لمن لم يُنهِ مختبرًا سابقًا</aside>
+  <aside class="notes"><p>الخطآن الشائعان: نسيان أن صف «بلا تنبيه» متأخر (عند العتبة 10)، وحساب العمر المتروك للمتأخرة أيضًا. من يجد العتبة الأقل تكلفة مبكرًا يأخذ التمرين الإضافي. الأرقام المرجعية في تفاصيل المدرّب في صفحة المختبر.</p></aside>
 </section>
 
 <section class="slide" id="wrap-up">
   <div class="kicker">خلاصة اليوم 1</div>
   <h2>ثلاثة أمور تبقى معك</h2>
   <div class="cols cols-3">
-    <div class="card c-teal"><h4>تذكّر</h4><p class="small mb0">REPLACE: فكرة يحتفظ بها المشاركون</p></div>
-    <div class="card c-coral"><h4>تذكّر</h4><p class="small mb0">REPLACE: فكرة يحتفظ بها المشاركون</p></div>
-    <div class="card c-purple"><h4>تذكّر</h4><p class="small mb0">REPLACE: فكرة يحتفظ بها المشاركون</p></div>
+    <div class="card c-teal"><h4>المستوى من التوصيل</h4><p class="small mb0">اسأل ماذا يحدث للمخرج قبل أن يتغير شيء. الجواب يحدد الأدلة.</p></div>
+    <div class="card c-coral"><h4>أقوى قاعدة بسيطة</h4><p class="small mb0">على سنة لم يرها النموذج، وبالمهلة نفسها، وفي الذروة.</p></div>
+    <div class="card c-purple"><h4>كل خطأ له ثمن</h4><p class="small mb0">العتبة الأقل تكلفة تتبع جدول تكاليفك، لا توصية المورّد.</p></div>
   </div>
+  <aside class="notes"><p>اطلب من كل مشارك أن يكتب على ورقة العمل التحضيري: ما القاعدة البسيطة التي يجب أن يغلبها نموذج قراره؟ وكم يكلف خطؤه المتأخر؟</p></aside>
 </section>
 
 <section class="slide dark" id="next" data-label="التالي">
   <div class="kicker">التالي</div>
-  <h2>اليوم 2: REPLACE: موضوع هذه الوحدة في كلمات قليلة</h2>
-  <p class="lead">REPLACE: ما يجهزه المشاركون قبل ذلك، والمختبرات غير المكتملة يمكن إكمالها في المنزل</p>
-  <aside class="notes">REPLACE: الحسابات أو التثبيتات أو القراءة التي يحتاجها المشاركون قبل الوحدة التالية</aside>
+  <h2>اليوم 2: من الإنذار إلى حجة السلامة وخريطة الفرص</h2>
+  <p class="lead">اقرأ وصف نظام «نذير» وسجل مصادر الخطر قبل الغد. أكمل سطر التوربينات في ورقة تكلفة الأخطاء إن لم تكمله.</p>
+  <aside class="notes"><p>الملفان: <code>safety/nadhir_description.txt</code> و<code>safety/hazard_log.csv</code>، عشر دقائق قراءة. من لم يكمل المختبر 1.4 يبدأ غدًا من <code>start/cost_sheet_after_1_4.csv</code>، فلا يتأخر.</p></aside>
 </section>

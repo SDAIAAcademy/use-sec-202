@@ -1,37 +1,90 @@
 <article class="lab" data-lab="1.4">
-  <div class="box goal">
-    <h3>الهدف</h3>
-    <p>REPLACE: في النهاية يستطيع المشاركون …</p>
-  </div>
-
-  <h2>ما تحتاجه</h2>
+<div class="box goal">
+  <h3>ستخرج من هذا المختبر بـ</h3>
   <ul>
-    <li>REPLACE: الملفات والأداة والحساب التي يستخدمها المختبر</li>
+    <li>لكل عتبة من سبع: كم تنبيهًا جاء متأخرًا، وكم دورة عمر تُركت، وكم تكلف.</li>
+    <li>العتبة الأقل تكلفة، وكم تكلف عتبة المورّد أكثر منها.</li>
+    <li>السطر الأول في ورقة تكلفة الأخطاء، التي تكملها في المختبر 2.1.</li>
   </ul>
+</div>
 
-  <div class="step">
-    <h3>REPLACE: الخطوة الأولى <span class="min">15 د</span></h3>
-    <p>REPLACE: ما يفعله المشارك ولماذا، في جملتين</p>
-    <div class="prompt" data-tool="بيانات صناعية عامة">REPLACE: الأمر الذي ينسخه المشاركون، والأجزاء التي يغيّرونها <span class="ph">ملوّنة</span></div>
-  </div>
+<h2>ما تحتاجه</h2>
+<div class="files">
+  <a href="files/turbines/alerts_by_threshold.csv" target="_blank"><b>turbines/alerts_by_threshold.csv</b><span>40 توربينًا × 7 عتبات: دورة العطل، ودورة أول تنبيه</span></a>
+  <a href="files/turbines/cost_table.csv" target="_blank"><b>turbines/cost_table.csv</b><span>المهلة اللازمة، وتكلفة التوقف غير المخطط، والعمرة، والدورة المتروكة</span></a>
+  <a href="files/turbines/turbine_traces.csv" target="_blank"><b>turbines/turbine_traces.csv</b><span>مسار تقدير النموذج لثلاثة توربينات حتى العطل</span></a>
+  <a href="files/cost_of_errors_sheet.csv" target="_blank"><b>cost_of_errors_sheet.csv</b><span>ورقة تكلفة الأخطاء الفارغة</span></a>
+</div>
+<p class="small">التوربينات مشتقة من بيانات C-MAPSS العامة من NASA: محاكاة لتدهور محركات توربينية حتى العطل، تنوب عن توربينات ذُرى. النموذج دُرّب على 60 محركًا، والملف عن 40 لم يرها. جدول التكلفة اصطناعي.</p>
 
-  <div class="step">
-    <h3>REPLACE: الخطوة الثانية <span class="min">10 د</span></h3>
-    <p>REPLACE: ما يفعله المشارك ولماذا، في جملتين</p>
-  </div>
+<h2>الخطوات</h2>
 
-  <div class="step stretch">
-    <h3>✱ إضافي</h3>
-    <p>REPLACE: توسعة لمن ينهي مبكرًا</p>
-  </div>
+<div class="step">
+  <h3>1 · اقرأ جدول التكلفة وانظر في ثلاثة مسارات <span class="min">6 دقائق</span></h3>
+  <p>ارسم من <b>turbine_traces.csv</b> لكل توربين خطين على محور الدورات: العمر المتبقي الحقيقي، وتقدير النموذج. أين يقترب التقدير من الحقيقة؟ وفي أي جهة يخطئ حين يقترب العطل؟</p>
+  <p>ثم اقرأ <b>cost_table.csv</b>. فريق العمرات يحتاج 15 دورة لتجهيز القطع. التنبيه بعد ذلك متأخر، فيصير العطل توقفًا غير مخطط.</p>
+</div>
 
-  <h2>أسئلة تحقق</h2>
-  <ol class="checks">
-    <li>REPLACE: سؤال يبيّن أن المختبر نجح</li>
-  </ol>
+<div class="step">
+  <h3>2 · احسب المهلة وصنّف التوربينات عند العتبة 30 <span class="min">8 دقائق</span></h3>
+  <p>المهلة هي ما بين أول تنبيه والعطل. صنّف كل صف: متأخر (أقل من 15 دورة أو بلا تنبيه)، أو في وقته. ما زاد على 15 دورة عمرٌ متروك.</p>
+  <pre class="code" data-file="alerts_by_threshold.csv"><code>E2   =IF(D2="", "", C2-D2)                lead time, cycles
+F2   =IF(OR(D2="", E2&lt;15), 1, 0)           1 = late or no alert
+G2   =IF(F2=1, 0, E2-15)                  cycles of life left unused</code></pre>
+  <p>صفِّ الجدول على العتبة 30 وعُدّ المتأخر وما في وقته.</p>
+</div>
 
-  <details class="instructor">
-    <summary>للمدرّب</summary>
-    <p>REPLACE: مفتاح الإجابة والفخاخ والأخطاء الشائعة</p>
-  </details>
+<div class="step">
+  <h3>3 · عُدّ المتأخر وما في وقته عند العتبات السبع <span class="min">8 دقائق</span></h3>
+  <pre class="code" data-file="alerts_by_threshold.csv"><code>late     =COUNTIFS(B:B, 30, F:F, 1)
+timely   =COUNTIFS(B:B, 30, F:F, 0)
+wasted   =SUMIFS(G:G, B:B, 30)</code></pre>
+  <p>أو جدول محوري: الصفوف العتبة، والقيم مجموع <code>F</code> ومجموع <code>G</code> وعدد التوربينات.</p>
+</div>
+
+<div class="step">
+  <h3>4 · سعّر كل عتبة <span class="min">10 دقائق</span></h3>
+  <pre class="code" data-file="alerts_by_threshold.csv"><code>cost  = late*1800000 + timely*400000 + wasted*6000</code></pre>
+  <table>
+    <tr><th>العتبة</th><th>متأخرة</th><th>في وقتها</th><th>دورات متروكة</th><th>التكلفة (ريال)</th></tr>
+    <tr><td>10</td><td class="fill"></td><td class="fill"></td><td class="fill"></td><td class="fill"></td></tr>
+    <tr><td>20 (المورّد)</td><td class="fill"></td><td class="fill"></td><td class="fill"></td><td class="fill"></td></tr>
+    <tr><td>30</td><td class="fill"></td><td class="fill"></td><td class="fill"></td><td class="fill"></td></tr>
+    <tr><td>40</td><td class="fill"></td><td class="fill"></td><td class="fill"></td><td class="fill"></td></tr>
+    <tr><td>50</td><td class="fill"></td><td class="fill"></td><td class="fill"></td><td class="fill"></td></tr>
+    <tr><td>60</td><td class="fill"></td><td class="fill"></td><td class="fill"></td><td class="fill"></td></tr>
+    <tr><td>80</td><td class="fill"></td><td class="fill"></td><td class="fill"></td><td class="fill"></td></tr>
+  </table>
+</div>
+
+<div class="step">
+  <h3>5 · اختر العتبة واكتب سطرها <span class="min">8 دقائق</span></h3>
+  <p>في <b>cost_of_errors_sheet.csv</b>، سطر «العمر المتبقي للتوربينات»: العتبة، والمتأخرة، والدورات المتروكة، ووسيط المهلة، والتكلفة، وسبب الاختيار في جملة. وسيط المهلة: <code>=MEDIAN</code> على مهل العتبة المختارة. القرار لمنذر السلمي، مهندس الموثوقية: اكتب له ما يتغير لو تغيرت التكاليف.</p>
+</div>
+
+<div class="step stretch">
+  <h3>✱ تمرين إضافي</h3>
+  <p>أعد التسعير بنصف تكلفة التوقف غير المخطط (900,000 ريال). هل تتغير العتبة الأقل تكلفة؟ ماذا يعني ذلك لمن يقول إن «العتبة الصحيحة» صفة في النموذج؟</p>
+</div>
+
+<h2>أسئلة تحقق</h2>
+<ol class="checks">
+  <li>عند عتبة المورّد 20، كم توربينًا جاء تنبيهه متأخرًا من 40؟</li>
+  <li>ما العتبة الأقل تكلفة؟ وكم ريالًا تكلف عتبة المورّد أكثر منها؟</li>
+  <li>لماذا ترتفع التكلفة من جديد عند العتبة 80؟</li>
+  <li>من المسارات الثلاثة: في أي جهة يخطئ النموذج قرب العطل، وكيف يفسر ذلك تأخر التنبيهات؟</li>
+</ol>
+
+<details class="instructor">
+  <summary>للمدرّب: المفتاح والفخاخ</summary>
+  <ul>
+    <li><b>التكاليف (ريال):</b> 10: 56,948,000؛ 20: 43,506,000؛ 30: 29,498,000؛ 40: 26,678,000؛ 50: 25,876,000؛ 60: 23,596,000؛ 80: 30,406,000.</li>
+    <li><b>المتأخرة:</b> 29 و19 و8 و5 و3 و0 و0. عند العتبة 10 توربين واحد بلا تنبيه، ويُحسب متأخرًا.</li>
+    <li><b>الأقل تكلفة:</b> 60 دورة، صفر متأخرة، و1,266 دورة متروكة، ووسيط المهلة 46.5. عتبة المورّد 20 تكلف 19,910,000 ريال أكثر.</li>
+    <li><b>التمرين الإضافي:</b> بنصف تكلفة التوقف تصير الأقل تكلفة 40 (22,178,000). العتبة قرار يتبع التكاليف.</li>
+    <li><b>المسارات:</b> النموذج يقدّر عمرًا أطول من الحقيقي قرب العطل (انحيازه 9.9 دورة في آخر 60 دورة، في تشغيل بناء المقرر)، فيتأخر التنبيه عند العتبات الصغيرة.</li>
+    <li><b>الفخ:</b> نسيان أن صف «بلا تنبيه» متأخر، أو حساب العمر المتروك للمتأخرة أيضًا.</li>
+    <li>من يتأخر في 2.1 يبدأ من <code>files/start/cost_sheet_after_1_4.csv</code>. التحقق: <code>uv run labs/solutions/check.py 1.4</code>.</li>
+  </ul>
+</details>
 </article>

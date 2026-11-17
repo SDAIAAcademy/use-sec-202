@@ -5,7 +5,7 @@ AI in Energy and Petrochemicals
 
 مسار الطلاقة في البيانات والذكاء الاصطناعي · أكاديمية سدايا · USE-SEC-202 · المستوى 200
 
-REPLACE: سطر واحد تحت العنوان: ما يستطيع المشارك فعله بعد المقرر
+تحكم على تطبيق للذكاء الاصطناعي في الطاقة بثلاثة أسئلة: هل يغلب القاعدة البسيطة، وكم يكلف خطؤه، ومن يملك إيقافه. ثم ترتّب الحالات في خريطة تدافع عنها
 
 يعمل المديرون والمهندسون الذين يقررون أين يكون الذكاء الاصطناعي آمنًا وجديرًا بالاستخدام على شركة طاقة متكاملة افتراضية ببيانات عامة واصطناعية. ويختبرون تنبؤًا بالأحمال مقابل خطوط الأساس، ويقدّرون تكلفة الإنذارات الكاذبة في نماذج الصيانة واكتشاف الأعطال، ويصوغون الجزء الخاص بالذكاء الاصطناعي في ملف إثبات السلامة، وينتهون بخريطة للفرص والمخاطر يدافعون عنها.
 
@@ -29,9 +29,9 @@ REPLACE: سطر واحد تحت العنوان: ما يستطيع المشارك
 
 | الوحدة | العنوان | الجلسات | الشرائح |
 |---|---|---|---|
-| اليوم 1 | REPLACE: موضوع هذه الوحدة في كلمات قليلة | REPLACE: عنوان الجلسة 1; REPLACE: عنوان الجلسة 2; REPLACE: عنوان الجلسة 3; REPLACE: عنوان الجلسة 4 | [`slides/day1.html`](slides/day1.html) |
-| اليوم 2 | REPLACE: موضوع هذه الوحدة في كلمات قليلة | REPLACE: عنوان الجلسة 1; REPLACE: عنوان الجلسة 2; REPLACE: عنوان الجلسة 3; REPLACE: عنوان الجلسة 4 | [`slides/day2.html`](slides/day2.html) |
-| المناقشة الختامية | REPLACE: عنوان المناقشة الختامية |  | [`slides/capstone.html`](slides/capstone.html) |
+| اليوم 1 | هل يغلب النموذج القاعدة البسيطة، وكم يكلف خطؤه؟ | مستوى التحكم يحدد الأدلة; خط الأساس الساذج أولًا; أين يخفق التنبؤ وكم يكلف; الأعطال النادرة وثمن التنبيه | [`slides/day1.html`](slides/day1.html) |
+| اليوم 2 | من الإنذار إلى حجة السلامة وخريطة الفرص | كاشف الأعطال في غرفة التحكم; حجة السلامة: من الادعاء إلى الدليل; ما حول النموذج: الأمن والبيانات والصلاحية; خريطة الفرص والمخاطر | [`slides/day2.html`](slides/day2.html) |
+| المناقشة الختامية | الخريطة أمام لجنة السلامة |  | [`slides/capstone.html`](slides/capstone.html) |
 <!-- /academy:units -->
 
 ## دراسة الحالة
@@ -45,14 +45,14 @@ REPLACE: سطر واحد تحت العنوان: ما يستطيع المشارك
 
 | | الجلسة | المختبر | الملف |
 |---|---|---|---|
-| 1.1 | اليوم 1 · الجلسة 1 | REPLACE: ما يبنيه المشاركون في المختبر 1.1 | [`D1_1.html`](labs/D1_1.html) |
-| 1.2 | اليوم 1 · الجلسة 2 | REPLACE: ما يبنيه المشاركون في المختبر 1.2 | [`D1_2.html`](labs/D1_2.html) |
-| 1.3 | اليوم 1 · الجلسة 3 | REPLACE: ما يبنيه المشاركون في المختبر 1.3 | [`D1_3.html`](labs/D1_3.html) |
-| 1.4 | اليوم 1 · الجلسة 4 | REPLACE: ما يبنيه المشاركون في المختبر 1.4 | [`D1_4.html`](labs/D1_4.html) |
-| 2.1 | اليوم 2 · الجلسة 1 | REPLACE: ما يبنيه المشاركون في المختبر 2.1 | [`D2_1.html`](labs/D2_1.html) |
-| 2.2 | اليوم 2 · الجلسة 2 | REPLACE: ما يبنيه المشاركون في المختبر 2.2 | [`D2_2.html`](labs/D2_2.html) |
-| 2.3 | اليوم 2 · الجلسة 3 | REPLACE: ما يبنيه المشاركون في المختبر 2.3 | [`D2_3.html`](labs/D2_3.html) |
-| 2.4 | اليوم 2 · الجلسة 4 | REPLACE: ما يبنيه المشاركون في المختبر 2.4 | [`D2_4.html`](labs/D2_4.html) |
+| 1.1 | اليوم 1 · الجلسة 1 | عشرة تطبيقات وثلاثة مستويات | [`D1_1_control_levels.html`](labs/D1_1_control_levels.html) |
+| 1.2 | اليوم 1 · الجلسة 2 | تنبؤ المورّد أمام خطّي الأساس | [`D1_2_forecast_baselines.html`](labs/D1_2_forecast_baselines.html) |
+| 1.3 | اليوم 1 · الجلسة 3 | الذروة والتكلفة وجودة السجل | [`D1_3_where_it_fails.html`](labs/D1_3_where_it_fails.html) |
+| 1.4 | اليوم 1 · الجلسة 4 | تسعير أخطاء نموذج الصيانة | [`D1_4_price_maintenance.html`](labs/D1_4_price_maintenance.html) |
+| 2.1 | اليوم 2 · الجلسة 1 | سجل الكاشف: التأخر والإنذارات الكاذبة | [`D2_1_detector_log.html`](labs/D2_1_detector_log.html) |
+| 2.2 | اليوم 2 · الجلسة 2 | صياغة حجة السلامة لنظام «نذير» | [`D2_2_safety_argument.html`](labs/D2_2_safety_argument.html) |
+| 2.3 | اليوم 2 · الجلسة 3 | فحص حجة صاغها مساعد | [`D2_3_stress_the_argument.html`](labs/D2_3_stress_the_argument.html) |
+| 2.4 | اليوم 2 · الجلسة 4 | أربع حالات على الخريطة | [`D2_4_opportunity_risk_map.html`](labs/D2_4_opportunity_risk_map.html) |
 <!-- /academy:labs -->
 
 ## المشروع الختامي
@@ -78,7 +78,31 @@ REPLACE: سطر واحد تحت العنوان: ما يستطيع المشارك
 <!-- academy:sources -->
 ## المصادر
 
-- REPLACE: كل مصدر يستشهد به المقرر مع عنوانه، في course.json ضمن "sources"؛ هذه القائمة تُكتب من هناك
+### المرجعيات الوطنية
+
+- [الهيئة الوطنية للأمن السيبراني: ضوابط الأمن السيبراني للأنظمة التشغيلية (OTCC-1:2022)](https://nca.gov.sa/otcc_ar.pdf)
+- [الهيئة الوطنية للأمن السيبراني: الضوابط الأساسية للأمن السيبراني](https://nca.gov.sa/ecc-ar.pdf)
+- [الهيئة الوطنية للأمن السيبراني: قائمة الضوابط](https://nca.gov.sa/ar/regulatory-documents/controls-list/)
+- [سدايا: مبادئ أخلاقيات الذكاء الاصطناعي](https://sdaia.gov.sa/ar/SDAIA/about/Documents/ai-principles.pdf)
+
+### البيانات العامة المستعملة في المختبرات
+
+- [U.S. Energy Information Administration: Hourly Electric Grid Monitor (EIA-930), about the data](https://www.eia.gov/electricity/gridmonitor/about)
+- [NASA Open Data Portal: CMAPSS Jet Engine Simulated Data](https://data.nasa.gov/dataset/cmapss-jet-engine-simulated-data)
+- [Tennessee Eastman process simulation data, the files of the Braatz group (mirror)](https://github.com/camaramm/tennessee-eastman-profBraatz)
+- [Downs and Vogel: A plant-wide industrial process control problem (1993)](https://doi.org/10.1016/0098-1354(93)80018-I)
+
+### المنهج والأدلة
+
+- [Hyndman and Athanasopoulos: Forecasting: Principles and Practice, 3rd edition, chapter 5 (simple methods and accuracy)](https://otexts.com/fpp3/toolbox.html)
+- [Safety-Critical Systems Club: Goal Structuring Notation (GSN)](https://scsc.uk/gsn)
+- [International Society of Automation: the ISA-18 series of standards on alarm management](https://www.isa.org/standards-and-publications/isa-standards/isa-18-series-of-standards)
+- [International Energy Agency: Energy and AI, executive summary (2025)](https://www.iea.org/reports/energy-and-ai/executive-summary)
+
+### الأدوات
+
+- [Orange Data Mining](https://orangedatamining.com/)
+- [KNIME Analytics Platform](https://www.knime.com/knime-analytics-platform)
 <!-- /academy:sources -->
 
 ### المرجعيات الوطنية
