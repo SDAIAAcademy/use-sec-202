@@ -1,0 +1,848 @@
+{
+ "forecast": {
+  "hours": 8784,
+  "in_sample_mape_2023": 4.1,
+  "peak_hours": 440,
+  "peak_floor_mw": 74362,
+  "vendor": {
+   "mae": 2307,
+   "mape": 4.39,
+   "peak_mape": 2.91,
+   "peak_bias": -1793,
+   "cost_units_m": 51.1
+  },
+  "persistence": {
+   "mae": 2349,
+   "mape": 4.5,
+   "peak_mape": 2.38,
+   "peak_bias": -898,
+   "cost_units_m": 51.6
+  },
+  "seasonal": {
+   "mae": 4467,
+   "mape": 8.33,
+   "peak_mape": 8.01,
+   "peak_bias": -5418,
+   "cost_units_m": 97.6
+  },
+  "operator": {
+   "mae": 1140,
+   "mape": 2.16,
+   "peak_mape": 1.59,
+   "peak_bias": 85,
+   "cost_units_m": 22.4
+  },
+  "skill_vs_persistence": 1.8,
+  "skill_vs_seasonal": 48.4,
+  "cost_vs_persistence": -0.9,
+  "by_month": {
+   "1": {
+    "vendor": 8.21,
+    "persistence": 7.86,
+    "seasonal": 15.82,
+    "operator": 3.51
+   },
+   "2": {
+    "vendor": 4.67,
+    "persistence": 4.69,
+    "seasonal": 7.14,
+    "operator": 2.1
+   },
+   "3": {
+    "vendor": 3.47,
+    "persistence": 3.89,
+    "seasonal": 4.73,
+    "operator": 1.87
+   },
+   "4": {
+    "vendor": 4.05,
+    "persistence": 4.78,
+    "seasonal": 7.11,
+    "operator": 1.75
+   },
+   "5": {
+    "vendor": 5.95,
+    "persistence": 6.35,
+    "seasonal": 8.77,
+    "operator": 3.11
+   },
+   "6": {
+    "vendor": 3.96,
+    "persistence": 3.89,
+    "seasonal": 6.83,
+    "operator": 2.21
+   },
+   "7": {
+    "vendor": 4.63,
+    "persistence": 4.47,
+    "seasonal": 10.89,
+    "operator": 2.86
+   },
+   "8": {
+    "vendor": 2.51,
+    "persistence": 2.48,
+    "seasonal": 6.53,
+    "operator": 1.41
+   },
+   "9": {
+    "vendor": 3.44,
+    "persistence": 3.57,
+    "seasonal": 10.31,
+    "operator": 1.56
+   },
+   "10": {
+    "vendor": 3.21,
+    "persistence": 3.38,
+    "seasonal": 8.12,
+    "operator": 1.51
+   },
+   "11": {
+    "vendor": 4.93,
+    "persistence": 4.75,
+    "seasonal": 7.05,
+    "operator": 2.13
+   },
+   "12": {
+    "vendor": 3.62,
+    "persistence": 3.88,
+    "seasonal": 6.46,
+    "operator": 1.81
+   }
+  },
+  "months_vendor_loses_to_persistence": [
+   1,
+   6,
+   7,
+   8,
+   11
+  ],
+  "worst_month": 1
+ },
+ "historian": {
+  "rows": 169,
+  "planted": [
+   {
+    "fault": "stuck",
+    "from": [
+     "2024-08-06",
+     6
+    ],
+    "hours": 6
+   },
+   {
+    "fault": "zeros",
+    "from": [
+     "2024-08-08",
+     3
+    ],
+    "hours": 3
+   },
+   {
+    "fault": "spike",
+    "from": [
+     "2024-08-09",
+     14
+    ],
+    "hours": 1
+   },
+   {
+    "fault": "duplicate",
+    "from": [
+     "2024-08-10",
+     20
+    ],
+    "hours": 1
+   }
+  ],
+  "faulty_rows": 11,
+  "mape_true": 3.14,
+  "mape_recorded_nonzero": 4.27
+ },
+ "turbines": {
+  "turbines": 40,
+  "train_engines": 60,
+  "rmse_all": 21.0,
+  "rmse_last_60": 21.0,
+  "bias_last_60": 9.9,
+  "per_threshold": {
+   "10": {
+    "no_alert": 1,
+    "late": 29,
+    "timely": 11,
+    "median_lead": 11.0,
+    "wasted_cycles": 58,
+    "cost": 56948000
+   },
+   "20": {
+    "no_alert": 0,
+    "late": 19,
+    "timely": 21,
+    "median_lead": 16.5,
+    "wasted_cycles": 151,
+    "cost": 43506000
+   },
+   "30": {
+    "no_alert": 0,
+    "late": 8,
+    "timely": 32,
+    "median_lead": 24.5,
+    "wasted_cycles": 383,
+    "cost": 29498000
+   },
+   "40": {
+    "no_alert": 0,
+    "late": 5,
+    "timely": 35,
+    "median_lead": 31.0,
+    "wasted_cycles": 613,
+    "cost": 26678000
+   },
+   "50": {
+    "no_alert": 0,
+    "late": 3,
+    "timely": 37,
+    "median_lead": 38.0,
+    "wasted_cycles": 946,
+    "cost": 25876000
+   },
+   "60": {
+    "no_alert": 0,
+    "late": 0,
+    "timely": 40,
+    "median_lead": 46.5,
+    "wasted_cycles": 1266,
+    "cost": 23596000
+   },
+   "80": {
+    "no_alert": 0,
+    "late": 0,
+    "timely": 40,
+    "median_lead": 72.0,
+    "wasted_cycles": 2401,
+    "cost": 30406000
+   }
+  },
+  "best_threshold": 60,
+  "vendor_default": 20,
+  "saving_vs_default": 19910000,
+  "best_threshold_if_unplanned_halves": 40,
+  "cost_if_unplanned_halves": {
+   "10": 30848000,
+   "20": 26406000,
+   "30": 22298000,
+   "40": 22178000,
+   "50": 23176000,
+   "60": 23596000,
+   "80": 30406000
+  }
+ },
+ "detector": {
+  "runs": 13,
+  "fault_runs": 12,
+  "normal_run": "R04",
+  "onset_sample": 161,
+  "components": 9,
+  "log": {
+   "R01": {
+    "fault": 4,
+    "A": {
+     "false_alarms": 4,
+     "delay_min": 0,
+     "share_after": 0.99
+    },
+    "B": {
+     "false_alarms": 0,
+     "delay_min": 6,
+     "share_after": 0.98
+    },
+    "C": {
+     "false_alarms": 0,
+     "delay_min": 0,
+     "share_after": 0.54
+    }
+   },
+   "R02": {
+    "fault": 1,
+    "A": {
+     "false_alarms": 3,
+     "delay_min": 3,
+     "share_after": 1.0
+    },
+    "B": {
+     "false_alarms": 0,
+     "delay_min": 9,
+     "share_after": 1.0
+    },
+    "C": {
+     "false_alarms": 0,
+     "delay_min": 9,
+     "share_after": 1.0
+    }
+   },
+   "R03": {
+    "fault": 13,
+    "A": {
+     "false_alarms": 1,
+     "delay_min": 21,
+     "share_after": 0.96
+    },
+    "B": {
+     "false_alarms": 0,
+     "delay_min": 114,
+     "share_after": 0.95
+    },
+    "C": {
+     "false_alarms": 0,
+     "delay_min": 114,
+     "share_after": 0.95
+    }
+   },
+   "R04": {
+    "fault": "none",
+    "A": {
+     "false_alarms": 83
+    },
+    "B": {
+     "false_alarms": 16
+    },
+    "C": {
+     "false_alarms": 4
+    }
+   },
+   "R05": {
+    "fault": 10,
+    "A": {
+     "false_alarms": 8,
+     "delay_min": 21,
+     "share_after": 0.63
+    },
+    "B": {
+     "false_alarms": 1,
+     "delay_min": 48,
+     "share_after": 0.56
+    },
+    "C": {
+     "false_alarms": 0,
+     "delay_min": 66,
+     "share_after": 0.37
+    }
+   },
+   "R06": {
+    "fault": 3,
+    "A": {
+     "false_alarms": 24,
+     "delay_min": 18,
+     "share_after": 0.16
+    },
+    "B": {
+     "false_alarms": 2,
+     "delay_min": 126,
+     "share_after": 0.07
+    },
+    "C": {
+     "false_alarms": 0,
+     "delay_min": 150,
+     "share_after": 0.01
+    }
+   },
+   "R07": {
+    "fault": 6,
+    "A": {
+     "false_alarms": 0,
+     "delay_min": 0,
+     "share_after": 1.0
+    },
+    "B": {
+     "false_alarms": 0,
+     "delay_min": 6,
+     "share_after": 1.0
+    },
+    "C": {
+     "false_alarms": 0,
+     "delay_min": 0,
+     "share_after": 1.0
+    }
+   },
+   "R08": {
+    "fault": 11,
+    "A": {
+     "false_alarms": 10,
+     "delay_min": 15,
+     "share_after": 0.76
+    },
+    "B": {
+     "false_alarms": 1,
+     "delay_min": 21,
+     "share_after": 0.62
+    },
+    "C": {
+     "false_alarms": 0,
+     "delay_min": 18,
+     "share_after": 0.47
+    }
+   },
+   "R09": {
+    "fault": 2,
+    "A": {
+     "false_alarms": 6,
+     "delay_min": 33,
+     "share_after": 0.99
+    },
+    "B": {
+     "false_alarms": 0,
+     "delay_min": 39,
+     "share_after": 0.98
+    },
+    "C": {
+     "false_alarms": 0,
+     "delay_min": 42,
+     "share_after": 0.98
+    }
+   },
+   "R10": {
+    "fault": 15,
+    "A": {
+     "false_alarms": 1,
+     "delay_min": 186,
+     "share_after": 0.19
+    },
+    "B": {
+     "false_alarms": 0,
+     "delay_min": 279,
+     "share_after": 0.1
+    },
+    "C": {
+     "false_alarms": 0,
+     "delay_min": 1734,
+     "share_after": 0.02
+    }
+   },
+   "R11": {
+    "fault": 8,
+    "A": {
+     "false_alarms": 10,
+     "delay_min": 27,
+     "share_after": 0.98
+    },
+    "B": {
+     "false_alarms": 4,
+     "delay_min": 63,
+     "share_after": 0.97
+    },
+    "C": {
+     "false_alarms": 0,
+     "delay_min": 63,
+     "share_after": 0.97
+    }
+   },
+   "R12": {
+    "fault": 5,
+    "A": {
+     "false_alarms": 4,
+     "delay_min": 0,
+     "share_after": 0.41
+    },
+    "B": {
+     "false_alarms": 0,
+     "delay_min": 6,
+     "share_after": 0.32
+    },
+    "C": {
+     "false_alarms": 0,
+     "delay_min": 0,
+     "share_after": 0.24
+    }
+   },
+   "R13": {
+    "fault": 9,
+    "A": {
+     "false_alarms": 45,
+     "delay_min": 0,
+     "share_after": 0.15
+    },
+    "B": {
+     "false_alarms": 22,
+     "delay_min": 18,
+     "share_after": 0.05
+    },
+    "C": {
+     "false_alarms": 1,
+     "delay_min": 15,
+     "share_after": 0.01
+    }
+   }
+  },
+  "per_setting": {
+   "A": {
+    "false_alarms": 199,
+    "missed": 4,
+    "detected": 8,
+    "delay_minutes": 120,
+    "cost": 2437000
+   },
+   "B": {
+    "false_alarms": 46,
+    "missed": 4,
+    "detected": 8,
+    "delay_minutes": 306,
+    "cost": 2350000
+   },
+   "C": {
+    "false_alarms": 5,
+    "missed": 6,
+    "detected": 6,
+    "delay_minutes": 228,
+    "cost": 2871000
+   }
+  },
+  "best_setting": "B",
+  "normal_run_rate_A": 8.6,
+  "missed_by_all": [
+   "R06",
+   "R10",
+   "R12",
+   "R13"
+  ]
+ },
+ "applications": {
+  "levels": {
+   "U01": "advisory",
+   "U02": "advisory",
+   "U03": "advisory",
+   "U04": "closed",
+   "U05": "advisory",
+   "U06": "supervisory",
+   "U07": "advisory",
+   "U08": "advisory",
+   "U09": "closed",
+   "U10": "advisory"
+  },
+  "counts": {
+   "advisory": 7,
+   "supervisory": 1,
+   "closed": 2
+  },
+  "pass_rows": 8
+ },
+ "safety": {
+  "hazards": 6,
+  "evidence_items": 8,
+  "checklist_items": 10,
+  "max_score": 20,
+  "draft_faults": [
+   "F1",
+   "F2",
+   "F3",
+   "F4",
+   "F5",
+   "F6"
+  ],
+  "draft_scores": {
+   "1": 1,
+   "2": 0,
+   "3": 0,
+   "4": 2,
+   "5": 0,
+   "6": 0,
+   "7": 0,
+   "8": 0,
+   "9": 0,
+   "10": 1
+  },
+  "draft_total": 4,
+  "missing_evidence": "E9",
+  "missing_goal": "G9"
+ },
+ "map": {
+  "scores": {
+   "U01": {
+    "id": "U01",
+    "name": "اقتراح الصدوع في المسح الزلزالي",
+    "level": "advisory",
+    "consequence": "economic",
+    "value": 5.8,
+    "energy_cost_m": 1.08,
+    "net_value": 4.72,
+    "value_score": 2,
+    "value_score_before_energy": 3,
+    "readiness": 3,
+    "criteria": [
+     1,
+     1,
+     1,
+     0,
+     0
+    ],
+    "tier": 1,
+    "needs_authority": false,
+    "authority": ""
+   },
+   "U02": {
+    "id": "U02",
+    "name": "نموذج بديل هجين لمحاكاة المكمن",
+    "level": "advisory",
+    "consequence": "economic",
+    "value": 22.0,
+    "energy_cost_m": 0.16,
+    "net_value": 21.84,
+    "value_score": 4,
+    "value_score_before_energy": 4,
+    "readiness": 5,
+    "criteria": [
+     1,
+     1,
+     1,
+     1,
+     1
+    ],
+    "tier": 1,
+    "needs_authority": false,
+    "authority": ""
+   },
+   "U03": {
+    "id": "U03",
+    "name": "مستشعر برمجي لنقاء البروبان، للعرض",
+    "level": "advisory",
+    "consequence": "production",
+    "value": 3.2,
+    "energy_cost_m": 0.0,
+    "net_value": 3.2,
+    "value_score": 2,
+    "value_score_before_energy": 2,
+    "readiness": 5,
+    "criteria": [
+     1,
+     1,
+     1,
+     1,
+     1
+    ],
+    "tier": 1,
+    "needs_authority": false,
+    "authority": ""
+   },
+   "U04": {
+    "id": "U04",
+    "name": "المستشعر البرمجي يغذّي المتحكم المتقدم",
+    "level": "closed",
+    "consequence": "production",
+    "value": 9.5,
+    "energy_cost_m": 0.0,
+    "net_value": 9.5,
+    "value_score": 3,
+    "value_score_before_energy": 3,
+    "readiness": 4,
+    "criteria": [
+     1,
+     1,
+     0,
+     1,
+     1
+    ],
+    "tier": 3,
+    "needs_authority": true,
+    "authority": "مهندسة التحكم في العمليات المناوبة"
+   },
+   "U05": {
+    "id": "U05",
+    "name": "تنبؤ الأحمال لليوم التالي",
+    "level": "advisory",
+    "consequence": "economic",
+    "value": 0.4,
+    "energy_cost_m": 0.0,
+    "net_value": 0.4,
+    "value_score": 1,
+    "value_score_before_energy": 1,
+    "readiness": 5,
+    "criteria": [
+     1,
+     1,
+     1,
+     1,
+     1
+    ],
+    "tier": 1,
+    "needs_authority": false,
+    "authority": ""
+   },
+   "U06": {
+    "id": "U06",
+    "name": "تنبؤ الإنتاج الشمسي يجدول البطارية",
+    "level": "supervisory",
+    "consequence": "economic",
+    "value": 2.4,
+    "energy_cost_m": 0.0,
+    "net_value": 2.4,
+    "value_score": 2,
+    "value_score_before_energy": 2,
+    "readiness": 2,
+    "criteria": [
+     0,
+     1,
+     0,
+     0,
+     1
+    ],
+    "tier": 1,
+    "needs_authority": true,
+    "authority": "مسؤولة مناوبة مكتب الشبكة"
+   },
+   "U07": {
+    "id": "U07",
+    "name": "العمر المتبقي لتوربينات الغاز",
+    "level": "advisory",
+    "consequence": "production",
+    "value": 14.0,
+    "energy_cost_m": 0.0,
+    "net_value": 14.0,
+    "value_score": 3,
+    "value_score_before_energy": 3,
+    "readiness": 4,
+    "criteria": [
+     1,
+     0,
+     1,
+     1,
+     1
+    ],
+    "tier": 1,
+    "needs_authority": false,
+    "authority": ""
+   },
+   "U08": {
+    "id": "U08",
+    "name": "كاشف أعطال العملية، إنذار على الشاشة",
+    "level": "advisory",
+    "consequence": "safety",
+    "value": 7.5,
+    "energy_cost_m": 0.0,
+    "net_value": 7.5,
+    "value_score": 3,
+    "value_score_before_energy": 3,
+    "readiness": 3,
+    "criteria": [
+     1,
+     0,
+     1,
+     0,
+     1
+    ],
+    "tier": 2,
+    "needs_authority": false,
+    "authority": ""
+   },
+   "U09": {
+    "id": "U09",
+    "name": "كاشف الأعطال يوقف مضخة التغذية",
+    "level": "closed",
+    "consequence": "safety",
+    "value": 8.0,
+    "energy_cost_m": 0.0,
+    "net_value": 8.0,
+    "value_score": 3,
+    "value_score_before_energy": 3,
+    "readiness": 3,
+    "criteria": [
+     1,
+     0,
+     1,
+     0,
+     1
+    ],
+    "tier": 3,
+    "needs_authority": true,
+    "authority": "مدير سلامة العمليات"
+   },
+   "U10": {
+    "id": "U10",
+    "name": "«نذير»: توصيات توزيع الحمل على الضواغط",
+    "level": "advisory",
+    "consequence": "safety",
+    "value": 18.0,
+    "energy_cost_m": 0.01,
+    "net_value": 17.99,
+    "value_score": 4,
+    "value_score_before_energy": 4,
+    "readiness": 3,
+    "criteria": [
+     1,
+     0,
+     1,
+     1,
+     0
+    ],
+    "tier": 2,
+    "needs_authority": false,
+    "authority": ""
+   },
+   "U11": {
+    "id": "U11",
+    "name": "«نذير»، المرحلة الثانية: كتابة نقاط الضبط",
+    "level": "supervisory",
+    "consequence": "safety",
+    "value": 26.0,
+    "energy_cost_m": 0.01,
+    "net_value": 25.99,
+    "value_score": 4,
+    "value_score_before_energy": 4,
+    "readiness": 3,
+    "criteria": [
+     1,
+     0,
+     1,
+     1,
+     0
+    ],
+    "tier": 3,
+    "needs_authority": true,
+    "authority": "مشرف غرفة التحكم المناوب، بتفويض من مدير سلامة العمليات"
+   },
+   "U12": {
+    "id": "U12",
+    "name": "كاميرات تحليل الشعلة والتسرب",
+    "level": "advisory",
+    "consequence": "safety",
+    "value": 1.6,
+    "energy_cost_m": 0.05,
+    "net_value": 1.55,
+    "value_score": 2,
+    "value_score_before_energy": 2,
+    "readiness": 2,
+    "criteria": [
+     0,
+     0,
+     1,
+     0,
+     1
+    ],
+    "tier": 2,
+    "needs_authority": false,
+    "authority": ""
+   }
+  },
+  "lab_cases": [
+   "U01",
+   "U07",
+   "U10",
+   "U11"
+  ],
+  "candidates": [
+   "U02",
+   "U03",
+   "U05",
+   "U07"
+  ],
+  "pilot": "U02",
+  "top_value": "U11",
+  "price_per_mwh": 180,
+  "energy_changes_score": [
+   "U01"
+  ],
+  "need_authority": [
+   "U04",
+   "U06",
+   "U09",
+   "U11"
+  ]
+ }
+}
