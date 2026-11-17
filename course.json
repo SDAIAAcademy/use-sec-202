@@ -528,6 +528,14 @@
         {
           "title": "سدايا: مبادئ أخلاقيات الذكاء الاصطناعي",
           "url": "https://sdaia.gov.sa/en/SDAIA/about/Documents/ai-principles.pdf"
+        },
+        {
+          "title": "سدايا: الإطار الوطني لإدارة مخاطر الذكاء الاصطناعي، النص العربي (أبريل 2026)",
+          "url": "https://sdaia.gov.sa/ar/MediaCenter/KnowledgeCenter/ResearchLibrary/ExecutiveSummaryAr.pdf"
+        },
+        {
+          "title": "SDAIA: National AI Risk Management Framework, English executive summary (April 2026)",
+          "url": "https://sdaia.gov.sa/en/MediaCenter/KnowledgeCenter/ResearchLibrary/ExecutiveSummaryEn.pdf"
         }
       ]
     },
@@ -537,6 +545,10 @@
         {
           "title": "U.S. Energy Information Administration: Hourly Electric Grid Monitor (EIA-930), about the data",
           "url": "https://www.eia.gov/electricity/gridmonitor/about"
+        },
+        {
+          "title": "U.S. Energy Information Administration: copyrights and reuse (public domain, acknowledgment requested)",
+          "url": "https://www.eia.gov/about/copyrights_reuse.php"
         },
         {
           "title": "NASA Open Data Portal: CMAPSS Jet Engine Simulated Data",

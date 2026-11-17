@@ -44,6 +44,10 @@ AI in Energy and Petrochemicals
 | تدهور التوربينات | بيانات C-MAPSS من NASA، المجموعة FD001 | 60 محركًا لتدريب نموذج العمر المتبقي، و40 للمختبر |
 | تشغيلات العملية | محاكاة Tennessee Eastman (ملفات مجموعة Braatz) | مؤشر انحراف محسوب لكاشف أعطال، لا متغيرات العملية |
 
+المجموعات الثلاث عامة وليست سعودية: أحمال شبكة في ولاية تكساس الأمريكية، ومحاكاة لمحركات توربينية مروحية، ومحاكاة لعملية كيميائية. تنوب عن بيانات الشركة لأنها منشورة ومعروفة الأعطال، ولا تمثّل شبكة المملكة ولا معاملها.
+
+**الإسناد والترخيص.** بيانات EIA-930 في الملك العام بحسب صفحة حقوق النشر لإدارة معلومات الطاقة الأمريكية، وتطلب الإدارة ذكر المصدر: Source: U.S. Energy Information Administration, Hourly Electric Grid Monitor (EIA-930), 2023 and 2024. صفحة بيانات C-MAPSS في بوابة NASA للبيانات المفتوحة تقول إن الترخيص غير محدد، فلا تُنشر ملفاتها الأصلية: في المقرر أعمار وتنبيهات مشتقة منها ومخرجات نموذج دُرّب عليها، مع الإسناد إلى NASA. والنسخة المنشورة من ملفات Tennessee Eastman لا تذكر ترخيصًا، فلا يُنشر منها إلا مؤشر محسوب، مع الإسناد إلى Downs وVogel (1993) ومجموعة Braatz.
+
 ## العمل التحضيري
 
 ساعتان قبل الورشة: يأتي المشارك بقرار تشغيلي واحد من عمله يمكن أن يساعد فيه نموذج، ومن يتخذه وكم مرة، والخطآن الممكنان وتكلفة كل منهما تقديرًا، والقاعدة البسيطة المستعملة اليوم. الدليل في `labs/files/prework_guide.txt` والورقة في `labs/files/prework_sheet.csv`، ولمن لم يتيسر له قرار قرار جاهز في `labs/files/prework_fallback.txt`. يدخل القرار جدول المختبر 1.1 صفًّا حادي عشر. لا رقم مصنف ولا اسم معدة حقيقي.
@@ -121,10 +125,13 @@ AI in Energy and Petrochemicals
 - [الهيئة الوطنية للأمن السيبراني: الضوابط الأساسية للأمن السيبراني](https://nca.gov.sa/ecc-ar.pdf)
 - [الهيئة الوطنية للأمن السيبراني: قائمة الضوابط](https://nca.gov.sa/ar/regulatory-documents/controls-list/)
 - [سدايا: مبادئ أخلاقيات الذكاء الاصطناعي](https://sdaia.gov.sa/en/SDAIA/about/Documents/ai-principles.pdf)
+- [سدايا: الإطار الوطني لإدارة مخاطر الذكاء الاصطناعي، النص العربي (أبريل 2026)](https://sdaia.gov.sa/ar/MediaCenter/KnowledgeCenter/ResearchLibrary/ExecutiveSummaryAr.pdf)
+- [SDAIA: National AI Risk Management Framework, English executive summary (April 2026)](https://sdaia.gov.sa/en/MediaCenter/KnowledgeCenter/ResearchLibrary/ExecutiveSummaryEn.pdf)
 
 ### البيانات العامة المستعملة في المختبرات
 
 - [U.S. Energy Information Administration: Hourly Electric Grid Monitor (EIA-930), about the data](https://www.eia.gov/electricity/gridmonitor/about)
+- [U.S. Energy Information Administration: copyrights and reuse (public domain, acknowledgment requested)](https://www.eia.gov/about/copyrights_reuse.php)
 - [NASA Open Data Portal: CMAPSS Jet Engine Simulated Data](https://data.nasa.gov/dataset/cmapss-jet-engine-simulated-data)
 - [Tennessee Eastman process simulation data, the files of the Braatz group (mirror)](https://github.com/camaramm/tennessee-eastman-profBraatz)
 - [Downs and Vogel: A plant-wide industrial process control problem (1993)](https://doi.org/10.1016/0098-1354%2893%2980018-I)
@@ -146,4 +153,4 @@ AI in Energy and Petrochemicals
 
 - الضوابط الأساسية للأمن السيبراني وضوابط الأمن السيبراني للأنظمة التشغيلية الصادرة عن الهيئة الوطنية للأمن السيبراني: الضوابط الأساسية https://nca.gov.sa/ecc-ar.pdf، وضوابط الأنظمة التشغيلية (OTCC-1:2022) https://nca.gov.sa/otcc_ar.pdf، وقائمة الضوابط https://nca.gov.sa/ar/regulatory-documents/controls-list/
 - مبادئ أخلاقيات الذكاء الاصطناعي الصادرة عن سدايا: https://sdaia.gov.sa/en/SDAIA/about/Documents/ai-principles.pdf
-- الإطار الوطني لإدارة مخاطر الذكاء الاصطناعي: يُذكر باسمه؛ لم يُعثر له على عنوان رسمي منشور وقت بناء المقرر. سلّم المخاطر في الورشة سلّم عمل، لا سلّم الإطار.
+- الإطار الوطني لإدارة مخاطر الذكاء الاصطناعي الصادر عن سدايا (أبريل 2026): النص العربي https://sdaia.gov.sa/ar/MediaCenter/KnowledgeCenter/ResearchLibrary/ExecutiveSummaryAr.pdf والملخص التنفيذي بالإنجليزية https://sdaia.gov.sa/en/MediaCenter/KnowledgeCenter/ResearchLibrary/ExecutiveSummaryEn.pdf. سلّم المخاطر في الورشة (ثلاث درجات من العاقبة ومستوى التحكم) سلّم عمل خاص بالورشة، لا سلّم الإطار.
